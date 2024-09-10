@@ -1,0 +1,65 @@
+#heroSection{
+    height: 432px;
+    border-bottom-right-radius: 1000px;
+    border-bottom: 1px solid #9AFF12;
+    position: relative;
+}
+
+#heroImage{
+    height: auto;
+    max-width: 350px;
+}
+
+.navbar-fixed{
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+}
+
+.heading1{
+    font-size: 2em;
+}
+
+.heading2{
+    font-size: 1.7rem;
+}
+
+.p1{
+    font-size: 18px;
+}
+
+.event-card:hover{
+    box-shadow: 0 0 15px 9AFF12, 0 0 25px 9AFF12, 0 0 35px 9AFF12;
+    transition: box-shadow 0.3s ease-in-out;
+}
+
+@media (max-width: 1139px){
+    #heroSection{
+        border-bottom-right-radius: 0;
+        height: fit-content;
+    }
+
+    #heroImage{
+        position: static;
+        display: block;
+        margin: auto;
+    }
+}
+
+@media (max-width: 775px){
+    #heroSection{
+        border-bottom-right-radius: 0;
+        height: fit-content;
+    }
+
+    #heroImage{
+        position: static;
+        display: block;
+        margin: auto;
+    }
+
+    #heroText{
+        width: 100%;
+    }
+}
