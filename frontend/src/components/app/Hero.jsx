@@ -11,7 +11,7 @@ function Hero() {
 
         <p className='w-full md:text-lg mt-4'>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum, nemo laboriosam tenetur iusto sit fugit soluta recusandae? Culpa harum molestias tenetur esse enim sed repudiandae commodi voluptas, veritatis deleniti, porro, repellendus asperiores? Ea laborum necessitatibus dolores! Obcaecati non magni, doloribus reprehenderit voluptates quae corporis, laborum atque vitae officiis aut eius! Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iure magni eos amet qui dicta ex voluptate quos eligendi maiores laborum.</p>
 
-        <LinkButton text={"Rules and Regulations"} link = {"/rules"} classes={"my-5 md:mx-10 mx-auto w-48"}></LinkButton>
+        <LinkButton text={"Rules and Regulations"} link = {"/guidlines"} classes={"my-5 md:mx-10 mx-auto w-48"}></LinkButton>
 
       </div>
 

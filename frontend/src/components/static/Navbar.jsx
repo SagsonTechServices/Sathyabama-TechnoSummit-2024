@@ -1,5 +1,6 @@
 import React from 'react'
 import logo from '../../assets/logo.jpeg'
+import {Link} from 'react-router-dom'
 
 function Navbar() {
   return (
@@ -24,67 +25,67 @@ function Navbar() {
       <ul
         tabIndex={0}
         className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow">
-        <li><a>Home</a></li>
-      <li><a>Contact us</a></li>
-      <li><a>Guidlines</a></li>
+        <li><Link to={'/'}>Home</Link></li>
+      <li><Link to={'/contact'}>Contact us</Link></li>
+      <li><Link to={'/guidlines'}>Guidlines</Link></li>
         <li className='md:block hidden'>
         <details>
           <summary>Events</summary>
           <ul className="p-2 bg-white text-base-100 font-semibold">
-            <li><a>Hackathons</a></li>
-            <li><a>Makathons/Buildathons</a></li>
-            <li><a>Technical paper presentation</a></li>
-            <li><a>Robotics/Drones competition</a></li>
-            <li><a>Coding Challenges</a></li>
-            <li><a>Design Challenges</a></li>
-            <li><a>App development</a></li>
-            <li><a>AR VR Challenges</a></li>
-            <li><a>Technical debate</a></li>
-            <li><a>Project Exhibition</a></li>
-            <li><a>Technical quiz</a></li>
-            <li><a>You tube Challenges</a></li>
-            <li><a>Gaming</a></li>
-            <li><a>Go carting</a></li>
-            <li><a>Food carnival</a></li>
+            <li><Link to={'/event/hackathons'}>Hackathons</Link></li>
+            <li><Link to={'/event/makathons'}>Makathons/Buildathons</Link></li>
+            <li><Link to={'/event/technical-paper-presentation'}>Technical paper presentation</Link></li>
+            <li><Link to={'/event/robotics'}>Robotics/Drones competition</Link></li>
+            <li><Link to={'/event/coding-challenges'}>Coding Challenges</Link></li>
+            <li><Link to={'/event/design-challenges'}>Design Challenges</Link></li>
+            <li><Link to={'/event/app-development'}>App development</Link></li>
+            <li><Link to={'/event/ar-vr-challenges'}>AR VR Challenges</Link></li>
+            <li><Link to={'/event/technical-debates'}>Technical debate</Link></li>
+            <li><Link to={'/event/project-exhibition'}>Project Exhibition</Link></li>
+            <li><Link to={'/event/technical-quiz'}>Technical quiz</Link></li>
+            <li><Link to={'/event/youtube-challenges'}>Youtube Challenges</Link></li>
+            <li><Link to={'/event/gaming'}>Gaming</Link></li>
+            <li><Link to={'/event/go-carting'}>Go carting</Link></li>
+            <li><Link to={'/event/food-carnival'}>Food carnival</Link></li>
           </ul>
         </details>
         </li>
-        <li><a href="/"><button className='btn'>About Sathyabama</button></a></li>
+        <li><a href="/venues">All Venues</a></li>
       </ul>
     </div>
     <a><img src={logo} alt="logo" className='w-32 cursor-pointer'/></a>
   </div>
   <div className="navbar-center hidden lg:flex">
     <ul className="menu menu-horizontal px-1 font-bold">
-      <li><a>Home</a></li>
-      <li><a>Contact us</a></li>
-      <li><a>Guidlines</a></li>
+      <li><Link to={'/'}>Home</Link></li>
+      <li><Link to={'/contact'}>Contact us</Link></li>
+      <li><Link to={'/guidlines'}>Guidlines</Link></li>
       <li>
         <details>
           <summary>Events</summary>
           <ul className="p-2 bg-white text-base-100 font-semibold">
-            <li><a>Hackathons</a></li>
-            <li><a>Makathons/Buildathons</a></li>
-            <li><a>Technical paper presentation</a></li>
-            <li><a>Robotics/Drones competition</a></li>
-            <li><a>Coding Challenges</a></li>
-            <li><a>Design Challenges</a></li>
-            <li><a>App development</a></li>
-            <li><a>AR VR Challenges</a></li>
-            <li><a>Technical debate</a></li>
-            <li><a>Project Exhibition</a></li>
-            <li><a>Technical quiz</a></li>
-            <li><a>You tube Challenges</a></li>
-            <li><a>Gaming</a></li>
-            <li><a>Go carting</a></li>
-            <li><a>Food carnival</a></li>
+          <li><Link to={'/event/hackathons'}>Hackathons</Link></li>
+            <li><Link to={'/event/makathons'}>Makathons/Buildathons</Link></li>
+            <li><Link to={'/event/technical-paper-presentation'}>Technical paper presentation</Link></li>
+            <li><Link to={'/event/robotics'}>Robotics/Drones competition</Link></li>
+            <li><Link to={'/event/coding-challenges'}>Coding Challenges</Link></li>
+            <li><Link to={'/event/design-challenges'}>Design Challenges</Link></li>
+            <li><Link to={'/event/app-development'}>App development</Link></li>
+            <li><Link to={'/event/ar-vr-challenges'}>AR VR Challenges</Link></li>
+            <li><Link to={'/event/technical-debates'}>Technical debate</Link></li>
+            <li><Link to={'/event/project-exhibition'}>Project Exhibition</Link></li>
+            <li><Link to={'/event/technical-quiz'}>Technical quiz</Link></li>
+            <li><Link to={'/event/youtube-challenges'}>Youtube Challenges</Link></li>
+            <li><Link to={'/event/gaming'}>Gaming</Link></li>
+            <li><Link to={'/event/go-carting'}>Go carting</Link></li>
+            <li><Link to={'/event/food-carnival'}>Food carnival</Link></li>
           </ul>
         </details>
       </li>
     </ul>
   </div>
   <div className="navbar-end">
-    <a className="btn btn-secondary btn-sm md:block hidden pt-2">About Sathyabama</a>
+    <Link to={'/venues'}><button className="btn btn-primary btn-sm md:block hidden">All Venues</button></Link>
   </div>
 </div>
     </div>
