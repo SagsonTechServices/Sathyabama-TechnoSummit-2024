@@ -2,7 +2,7 @@ import React from 'react';
 import Heading2 from '../utils/Heading2';
 import LinkButton from '../utils/LinkButton';
 import map from '../../assets/map.png'
-import venue from '../../assets/sathyabama.png'
+import venue from '../../assets/Sathyabama.png'
 import poster from '../../assets/posters/dummy.jpeg'
 import Badge from '../utils/Badge';
 
