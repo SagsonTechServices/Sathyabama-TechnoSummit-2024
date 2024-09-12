@@ -9,6 +9,7 @@ import PaymentSummary from './components/Pages/PaymentSummaryPage'
 import VenuesPage from './components/Pages/VenuesPage'
 import RegistrationPage from './components/Pages/RegistrationPage'
 import {Routes , Route} from 'react-router-dom'
+import AboutPage from './components/Pages/AboutPage'
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
 
       <Routes>
         <Route path='/' element={<LandingPage></LandingPage>}></Route>  
+        <Route path='/about' element={<AboutPage></AboutPage>}></Route>
         <Route path='/event/:name' element={<EventPage></EventPage>}></Route>  
         <Route path='/venues' element={<VenuesPage></VenuesPage>}></Route>  
         <Route path='/payment/details' element={<PaymentDetailsPage></PaymentDetailsPage>}></Route>  
