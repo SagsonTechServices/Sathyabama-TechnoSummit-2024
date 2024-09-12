@@ -1,9 +1,10 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 function AppButton({btnText, className, link}) {
     return(
         <div>
-            <a href={link}><button className={`btn w-52 md:btn-wide btn-primary ${className}`}>{btnText}</button></a>
+            <Link to={link}><button className={`btn w-52 md:btn-wide btn-primary ${className}`}>{btnText}</button></Link>
         </div>
     )
 }

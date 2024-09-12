@@ -1,8 +1,10 @@
 import React from 'react';
 import Heading2 from '../utils/Heading2';
 import LinkButton from '../utils/LinkButton';
+import map from '../../assets/map.png'
+import venue from '../../assets/sathyabama.png'
+import poster from '../../assets/posters/dummy.jpeg'
 import Badge from '../utils/Badge';
-import AppButton from '../utils/AppButton';
 
 function Events() {
     return (
@@ -15,7 +17,7 @@ function Events() {
             </div>
             <div className='flex flex-col gap-5 md:grid md:grid-cols-2 md:gap-10'>
                 <div>
-                    <img src='./src/assets/dummy.jpg' />
+                    <img src={poster} />
                 </div>
                 <div className='flex flex-col gap-4'>
                     <div className='flex flex-col md:flex-row w-full gap-3 md:gap-4 md:col-span-3 md:justify-between'>
@@ -32,15 +34,15 @@ function Events() {
 
                     <div className='flex flex-col gap-4 md:col-span-7'>
                         <div>
-                            <img src='./src/assets/venue.jpg' />
+                            <img src={venue} />
                         </div>
                         <div className='w-full'>
-                            <img src='./src/assets/map.png' className='object-cover w-full h-auto' />
+                            <img src={map} className='object-cover w-full h-auto' />
                         </div>
                     </div>
                 </div>
                 <div className='flex justify-center'>
-                    <AppButton btnText={"Register"}></AppButton>
+                    <LinkButton text={"Register"} link={'/event/registration'}></LinkButton>
                 </div>
             </div>
         </div>
