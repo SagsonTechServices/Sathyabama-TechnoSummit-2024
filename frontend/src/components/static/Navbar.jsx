@@ -32,21 +32,19 @@ function Navbar() {
         <details>
           <summary>Events</summary>
           <ul className="p-2 bg-white text-base-100 font-semibold">
-            <li><Link to={'/event/hackathons'}>Hackathons</Link></li>
-            <li><Link to={'/event/makathons'}>Makathons/Buildathons</Link></li>
-            <li><Link to={'/event/technical-paper-presentation'}>Technical paper presentation</Link></li>
-            <li><Link to={'/event/robotics'}>Robotics/Drones competition</Link></li>
-            <li><Link to={'/event/coding-challenges'}>Coding Challenges</Link></li>
-            <li><Link to={'/event/design-challenges'}>Design Challenges</Link></li>
-            <li><Link to={'/event/app-development'}>App development</Link></li>
-            <li><Link to={'/event/ar-vr-challenges'}>AR VR Challenges</Link></li>
-            <li><Link to={'/event/technical-debates'}>Technical debate</Link></li>
-            <li><Link to={'/event/project-exhibition'}>Project Exhibition</Link></li>
-            <li><Link to={'/event/technical-quiz'}>Technical quiz</Link></li>
-            <li><Link to={'/event/youtube-challenges'}>Youtube Challenges</Link></li>
-            <li><Link to={'/event/gaming'}>Gaming</Link></li>
-            <li><Link to={'/event/go-carting'}>Go carting</Link></li>
-            <li><Link to={'/event/food-carnival'}>Food carnival</Link></li>
+            <li><Link to={'/event/11'}>Hackathon</Link></li>
+            <li><Link to={'/event/3'}>Makathon/Buildathon</Link></li>
+            <li><Link to={'/event/4'}>Technical paper presentation</Link></li>
+            <li><Link to={'/event/1'}>Coding Challenge</Link></li>
+            <li><Link to={'/event/2'}>Design Challenge</Link></li>
+            <li><Link to={'/event/6'}>App Arena</Link></li>
+            <li><Link to={'/event/10'}>AR VR Challenges</Link></li>
+            <li><Link to={'/event/7'}>Technical debate</Link></li>
+            <li><Link to={'/event/8'}>Project Exhibition</Link></li>
+            <li><Link to={'/event/5'}>Technical quiz</Link></li>
+            <li><Link to={'/event/12'}>Youtube Challenges</Link></li>
+            <li><Link to={'/event/9'}>Next Gen Gamers</Link></li>
+            <li><Link to={'/event/13'}>Food carnival</Link></li>
           </ul>
         </details>
         </li>
@@ -64,21 +62,19 @@ function Navbar() {
         <details>
           <summary>Events</summary>
           <ul className="p-2 bg-white text-base-100 font-semibold">
-          <li><Link to={'/event/hackathons'}>Hackathons</Link></li>
-            <li><Link to={'/event/makathons'}>Makathons/Buildathons</Link></li>
-            <li><Link to={'/event/technical-paper-presentation'}>Technical paper presentation</Link></li>
-            <li><Link to={'/event/robotics'}>Robotics/Drones competition</Link></li>
-            <li><Link to={'/event/coding-challenges'}>Coding Challenges</Link></li>
-            <li><Link to={'/event/design-challenges'}>Design Challenges</Link></li>
-            <li><Link to={'/event/app-development'}>App development</Link></li>
-            <li><Link to={'/event/ar-vr-challenges'}>AR VR Challenges</Link></li>
-            <li><Link to={'/event/technical-debates'}>Technical debate</Link></li>
-            <li><Link to={'/event/project-exhibition'}>Project Exhibition</Link></li>
-            <li><Link to={'/event/technical-quiz'}>Technical quiz</Link></li>
-            <li><Link to={'/event/youtube-challenges'}>Youtube Challenges</Link></li>
-            <li><Link to={'/event/gaming'}>Gaming</Link></li>
-            <li><Link to={'/event/go-carting'}>Go carting</Link></li>
-            <li><Link to={'/event/food-carnival'}>Food carnival</Link></li>
+          <li><Link to={'/event/11'}>Hackathon</Link></li>
+            <li><Link to={'/event/3'}>Makathon/Buildathon</Link></li>
+            <li><Link to={'/event/4'}>Technical paper presentation</Link></li>
+            <li><Link to={'/event/1'}>Coding Challenge</Link></li>
+            <li><Link to={'/event/2'}>Design Challenge</Link></li>
+            <li><Link to={'/event/6'}>App Arena</Link></li>
+            <li><Link to={'/event/10'}>AR VR Challenges</Link></li>
+            <li><Link to={'/event/7'}>Technical debate</Link></li>
+            <li><Link to={'/event/8'}>Project Exhibition</Link></li>
+            <li><Link to={'/event/5'}>Technical quiz</Link></li>
+            <li><Link to={'/event/12'}>Youtube Challenges</Link></li>
+            <li><Link to={'/event/9'}>Next Gen Gamers</Link></li>
+            <li><Link to={'/event/13'}>Food carnival</Link></li>
           </ul>
         </details>
       </li>
