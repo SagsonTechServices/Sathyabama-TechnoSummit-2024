@@ -27,7 +27,7 @@ function Navbar() {
         <li><a>Home</a></li>
       <li><a>Contact us</a></li>
       <li><a>Guidlines</a></li>
-        <li>
+        <li className='md:block hidden'>
         <details>
           <summary>Events</summary>
           <ul className="p-2 bg-white text-base-100 font-semibold">
