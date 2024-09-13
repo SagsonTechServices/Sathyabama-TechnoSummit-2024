@@ -4,52 +4,25 @@ import LinkButton from '../utils/LinkButton';
 import Badge from '../utils/Badge';
 import eventsData from '../../../data/eventData'
 import { useParams } from 'react-router-dom';
+import PosterContainer from '../app/PosterContainer';
+import BadgeContainer from '../app/BadgeContainer';
+import VenueImageContainer from '../app/VenueImageContainer';
+import MapContainer from '../app/MapContainer';
+import EventDataContainer from '../app/EventDataContainer';
 
 function Events() {
-    const {eventId} = useParams();
+    const { eventId } = useParams();
     const eventData = eventsData.find(event => event.id === parseInt(eventId));
 
-    if(!eventData) return <h1>Loading...</h1>
+    if (!eventData) return <h1>Loading...</h1>
 
-    return (
-        <div className='flex flex-col px-5 py-20 container max-w-screen-2xl md:px-20 mt-10'>
-            <div className='flex flex-col'>
-                <Heading2 text={`${eventData.details.name}`}></Heading2> <span><div className="badge mt-2 badge-warning text-lg py-3">{`Rs.${eventData.details.fee} per member`}</div></span>
-                <p className='text lg mt-2 mb-5 text-justify'>
-                    {eventData.details.desc}
-                </p>
-            </div>
-            <div className='flex flex-col gap-5 md:grid md:grid-cols-2 md:gap-10'>
-                <div>
-                    <img src={eventData.details.poster} />
-                </div>
-                <div className='flex flex-col gap-4'>
-                    <div className='flex flex-col md:flex-row w-full gap-3 md:gap-4 md:col-span-3 md:justify-between'>
-                        <div>
-                            <Badge text={eventData.details.date} className='p-5 md:p-10'></Badge>
-                        </div>
-                        <div>
-                            <Badge text={eventData.details.time} className='p-5 md:p-10'></Badge>
-                        </div>
-                        <div>
-                            <Badge text={eventData.details.venue} className='p-10'></Badge>
-                        </div>
-                    </div>
-
-                    <div className='flex flex-col gap-4 md:col-span-7'>
-                        <div className='w-full text-center'> 
-                            <img src={eventData.details.venueImg} />
-                        </div>
-                        <div className='w-full'>
-                            <img src={eventData.details.mapSS} className='object-cover w-full h-auto' />
-                        </div>
-                    </div>
-                </div>
-                <div className='flex justify-center'>
-                    <LinkButton text={"Register"} link={`/event/registration/${eventData.id}`}></LinkButton>
-                </div>
-            </div>
-        </div>
+    return (<div>
+        <EventDataContainer></EventDataContainer>
+        <PosterContainer></PosterContainer>
+        <BadgeContainer></BadgeContainer>
+        <VenueImageContainer></VenueImageContainer>
+        <MapContainer></MapContainer>
+    </div>
     )
 }
 
