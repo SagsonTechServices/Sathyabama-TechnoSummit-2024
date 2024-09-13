@@ -14,7 +14,7 @@ function Events() {
     return (
         <div className='flex flex-col px-5 py-20 container max-w-screen-2xl md:px-20 mt-10'>
             <div className='flex flex-col'>
-                <Heading2 text={eventData.details.name}></Heading2>
+                <Heading2 text={`${eventData.details.name}`}></Heading2> <span><div className="badge mt-2 badge-warning text-lg py-3">{`Rs.${eventData.details.fee} per member`}</div></span>
                 <p className='text lg mt-2 mb-5 text-justify'>
                     {eventData.details.desc}
                 </p>
@@ -37,7 +37,7 @@ function Events() {
                     </div>
 
                     <div className='flex flex-col gap-4 md:col-span-7'>
-                        <div>
+                        <div className='w-full text-center'> 
                             <img src={eventData.details.venueImg} />
                         </div>
                         <div className='w-full'>

@@ -2,8 +2,8 @@ import React from "react"
 
 function Badge({text, className=""}) {
     return(
-        <div className="w-full flex grow">
-            <span className={`flex grow items-center justify-center badge badge-lg badge-primary badge-outline rounded-none w-full max-w-xs text-center ${className}`}>{text}</span>
+        <div className="w-full flex grow primary-shadow">
+            <span className={`flex grow items-center justify-center badge outline-none badge-lg badge-primary badge-outline rounded-md w-full max-w-xs text-center ${className}`}>{text}</span>
         </div>
     )
 }
