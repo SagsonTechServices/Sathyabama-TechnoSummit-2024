@@ -28,6 +28,9 @@ function Navbar() {
         <li><Link to={'/'}>Home</Link></li>
       <li><Link to={'/about'}>About us</Link></li>
       <li><Link to={'/guidlines'}>Guidlines</Link></li>
+      <li><Link to={'/patrons'}>Our Patrons</Link></li>
+      <li><Link to={'/technosummit/events/schedules'}>Event Schedules</Link></li>
+      <li><Link to={'/download-brochure'}>Download brochure</Link></li>
         <li className='md:block hidden'>
         <details>
           <summary>Events</summary>
@@ -58,6 +61,9 @@ function Navbar() {
       <li><Link to={'/'}>Home</Link></li>
       <li><Link to={'/about'}>About us</Link></li>
       <li><Link to={'/guidlines'}>Guidlines</Link></li>
+      <li><Link to={'/patrons'}>Our Patrons</Link></li>
+      <li><Link to={'/technosummit/events/schedules'}>Event Schedules</Link></li>
+      <li><Link to={'/download-brochure'}>Download brochure</Link></li>
       <li>
         <details>
           <summary>Events</summary>

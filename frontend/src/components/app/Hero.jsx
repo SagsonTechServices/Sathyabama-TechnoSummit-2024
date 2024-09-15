@@ -9,7 +9,7 @@ function Hero() {
       <div className='heroText'>
         <Heading1 text={"TechnoSummit 2024"}></Heading1>
 
-        <p className='w-full md:text-lg mt-4'>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum, nemo laboriosam tenetur iusto sit fugit soluta recusandae? Culpa harum molestias tenetur esse enim sed repudiandae commodi voluptas, veritatis deleniti, porro, repellendus asperiores? Ea laborum necessitatibus dolores! Obcaecati non magni, doloribus reprehenderit voluptates quae corporis, laborum atque vitae officiis aut eius! Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iure magni eos amet qui dicta ex voluptate quos eligendi maiores laborum.</p>
+        <p className='w-full md:text-lg mt-4'>Technosummit 2024 an opportunity for the students to immerse themselves in the future of technology. This edition of technosummit 2024 promises an exhilarating journey in to the world of technology and innovation.The fest would pull out all the stops to bring a dynamic, engaging, and intellectually stimulating experience that the students don’t want to miss. The yearly extravagance is scheduled to be conducted on the 15th and 16th of September 2024. </p>
 
         <LinkButton text={"Rules and Regulations"} link = {"/guidlines"} classes={"my-5 md:mx-10 mx-auto w-48"}></LinkButton>
 
