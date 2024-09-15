@@ -152,7 +152,7 @@ const eventData = [
         details: {
             name: "Next Gen Gamers" , 
             facultyCoordinator: "Dr.S.GOWRI" , 
-            desc: "Dive into the future of gaming at Next Gen Gamersâ€” Where innovation and competition collide. Join us for cutting-edge tournaments, expert panels, and exclusive previews of the latest tech. Experience tomorrow's gaming today.", 
+            desc: "Next-Gen Gamers is where the future of gaming comes to life. Dive into an event where innovation and competition collide, offering an exhilarating gaming experience for enthusiasts of all levels. As part of the Techno Summit 2024, this event is packed with cutting-edge tournaments, giving participants the chance to showcase their skills in a variety of popular and emerging games. Experience tomorrow's gaming today in an immersive environment, complete with state-of-the-art gaming setups, engaging challenges, and the opportunity to win epic loot. Whether you're here to compete, learn, or explore, Next-Gen Gamers is the ultimate destination for those looking to level up their gaming experience and connect with a vibrant community of gamers.", 
             fee: 100 , 
             gpay: "9444157282" , 
             venue: "St.Pauls - Machine Vision Lab & Web 3.0 Lab",
@@ -188,7 +188,7 @@ const eventData = [
         details: {
             name: "Hackathon" , 
             facultyCoordinator: "Dr.A.Deepa" , 
-            desc: "24 Hours Hackathon.", 
+            desc: "Join us for a thrilling 24-hour hackathon, part of Technosummit 2024 at Sathyabama Institute of Science and Technology, where innovation meets creativity! Participants will tackle exciting problem statements, solving real-world challenges across various domains. Teams of up to 6 members, with at least one female participant, will collaborate to create impactful solutions. With two rounds of judging, participants will present their ideas mid-event, followed by final evaluations. Stay onsite for the full experience as you bring your ideas to life and compete for exciting prizes. Ready to code, build, and innovate? Sign up now!", 
             fee: 100 , 
             gpay: "9445265143" , 
             venue: "Sathyabama",
@@ -224,7 +224,7 @@ const eventData = [
         details: {
             name: "Food carnival" , 
             facultyCoordinator: "Dr.S.Prayla Shyry" , 
-            desc: "Not yet described", 
+            desc: "A celebration of culinary delights, where people come together to indulge in a variety of dishes and experience the rich flavors of different cuisines. It is a vibrant and lively event that showcases the diversity and creativity of food. The atmosphere is filled with the aroma of spices, the sizzle of grills, and the laughter of people enjoying their meals. It is a feast for the senses, offering a unique opportunity to explore new flavors, discover local specialties, and connect with others who share a love for food.", 
             fee: 500 , 
             gpay: "9445104773" , 
             venue: "Sathyabama",
