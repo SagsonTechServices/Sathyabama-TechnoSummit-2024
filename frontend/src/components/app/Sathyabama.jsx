@@ -12,7 +12,7 @@ function Sathyabama() {
                         <Heading1 text={"INSTITUE OF SCIENCE AND TECHNOLOGY"} className={'text-2xl text-white'}></Heading1>
                         <Heading1 text={"(DEEMED TO BE UNIVERSITY)"} className={'text-lg text-white'}></Heading1>
                         <Heading1 text={"CATEGORY-1 UNIVERSITY BY UGC"} className={'text-xl text-white'}></Heading1>
-                        <Heading1 text={"Accredited with Grade \"A++\" by NAAX | Approved by AICTE "} className={'text-xl text-white'}></Heading1>
+                        <Heading1 text={"Accredited with Grade \"A++\" by NAAC | Approved by AICTE "} className={'text-xl text-white'}></Heading1>
                     </div>
                 </div>
             </div>

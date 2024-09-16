@@ -7,13 +7,14 @@ import EventPage from './components/Pages/EventPage'
 import PaymentDetailsPage from './components/Pages/PaymentDetailsPage'
 import VenuesPage from './components/Pages/VenuesPage'
 import RegistrationPage from './components/Pages/RegistrationPage'
-import {Routes , Route} from 'react-router-dom'
+import { Routes, Route } from 'react-router-dom'
 import AboutPage from './components/Pages/AboutPage'
 import PatronsPage from './components/Pages/PatronsPage'
 import SchedulePage from './components/Pages/SchedulePage'
 import DownloadBrochure from './components/Pages/DownloadBrochure'
 import RegisteredPageForDeptCoords from './components/Pages/RegisteredPageForDeptCoords'
 import StaffLoginPage from './components/Pages/StaffLoginPage'
+import EventCoordinators from './components/Pages/EventCoordinatorsPage'
 
 function App() {
   return (
@@ -32,6 +33,7 @@ function App() {
         <Route path='/download-brochure' element={<DownloadBrochure></DownloadBrochure>}></Route>
         <Route path='/dept-coordinator/registered-students' element={<RegisteredPageForDeptCoords></RegisteredPageForDeptCoords>}></Route>
         <Route path='/staff/login' element={<StaffLoginPage></StaffLoginPage>}></Route>
+				<Route path='' element={<EventCoordinators></EventCoordinators>}></Route>
       </Routes>  
 
       <Footer></Footer>
