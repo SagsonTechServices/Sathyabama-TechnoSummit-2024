@@ -1,6 +1,4 @@
 import React from 'react'
-import DeskCard from '../utils/DeskCard'
-import venue from '../../assets/Sathyabama.png'
 import VenueCard from '../utils/VenueCard'
 import venueDetails from '../../data/VenuesData'
 

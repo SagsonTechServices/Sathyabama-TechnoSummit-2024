@@ -1,4 +1,4 @@
-import sathyabama from "../src/assets/Sathyabama.png"
+import sathyabama from "../src/assets/venue.jpg"
 import map from "../src/assets/map.png"
 import poster from "../src/assets/posters/dummy.jpeg"
 
@@ -8,12 +8,12 @@ const eventData = [
         details: {
             name: "Coding Challenge" , 
             facultyCoordinator: "Dr Kamatchi K S" , 
-            desc: "A coding contest is a competitive event where participants solve programming problems within a set timeframe. Contestants are typically given a set of algorithmic or computational challenges, and their solutions are evaluated based on correctness, efficiency, and sometimes creativity. These contests can be individual or team-based and often attract programmers of various skill levels, from beginners to experts. They provide an opportunity to test and improve coding skills, solve complex problems, and sometimes win prizes or gain recognition." , 
+            desc: "A Coding challenge contest is an exhilarating event where participants are tasked with solving complex algorithmic problems within a set timeframe. Contestants range from amateur enthusiasts to seasoned professionals, all vying to demonstrate their coding prowess and problem-solving skills. These contests often feature a variety of problems, from basic to highly intricate, requiring not only knowledge of programming languages but also critical thinking and creativity. Competitors must efficiently write and test code to achieve optimal solutions, often under pressure. Prizes, recognition, and the thrill of competition motivate many to excel. Additionally, such contests foster a sense of community and collaboration among participants, who share a passion for coding and innovation. Whether online or in-person, these challenges are a celebrated opportunity for developers to showcase their talent and push the boundaries of their technical abilities." , 
             fee: 100 , 
             gpay: "8903676173" , 
             venue: "Information Technology Lab",
-            time: "9.30 AM to 12.30 PM",
-            date: "10/15/2024",
+            time: "10:00 AM to 12:00 PM",
+            date: "15/10/2024",
             max: "n" , 
             min: "n",
             venueImg: sathyabama , 
@@ -26,12 +26,12 @@ const eventData = [
         details: {
             name: "Design Challenges" , 
             facultyCoordinator: "Dr. B. Shamreen Ahamed" , 
-            desc: "Participants will tackle a range of design problems, from sustainable product development to user experience enhancements. Each challenge is crafted to inspire out-of-the-box thinking and foster collaborative problem-solving. At the end of the event, participants will have the opportunity to present their solutions. Outstanding designs will be recognized with awards and featured in our Innovation Showcase." , 
+            desc: "A design challenges event is typically a competition where participants tackle complex design problems or create innovative solutions within a set timeframe. These events often focus on areas such as product design, user experience, architecture, or graphic design. Participants might work in teams of 2 to 4 members, and they are usually provided with a specific brief or problem to address. The challenges are designed to test creativity, technical skills, and problem-solving abilities. Judging criteria often include originality, feasibility, impact, and presentation. These events are popular for fostering innovation, networking opportunities, and showcasing emerging talent in the design community." , 
             fee: 100 , 
             gpay: "9841777440" , 
-            venue: "Sathyabama",
-            time: "to be updated",
-            date: "to be updated",
+            venue: "TBA",
+            time: "TBA",
+            date: "TBA",
             max: "n" , 
             min: "n",
             venueImg: sathyabama , 
@@ -42,14 +42,14 @@ const eventData = [
     {
         id: 3 , 
         details: {
-            name: "Buildathon/Makeathon" , 
+            name: "Build-athon" , 
             facultyCoordinator: "Dr.R.M.Gomathi" , 
-            desc: "The Build-a-thon is an one-day intensive hardware development competition, where teams of 2 to 6 students will collaborate to design, build, and present innovative hardware solutions. The event is strictly focused on hardware development. During the registration process, participants will be provided with a set of themes, from which they must select one. Each team is required to bring their own hardware components based on the chosen problem theme, as no hardware support will be provided by the organizers." , 
+            desc: "A build-a-thon is a hackathon for builders. It's an intensive hardware development competition, where a team of students will collaborate to design, build, and present innovative hardware solutions to the real world problems. We welcome all skills to build things you can see, touch and feel - electrical and mechanical engineers and product designers. Buildathons can introduce students to digital innovations like coding, robotics, and artificial intelligence. It can help students to develop soft skills like communication, time management, and decision making.The event is strictly focused on hardware development. Each team is required to bring their own hardware components based on the theme provided, as no hardware support will be provided by the organizers." , 
             fee: 100 , 
             gpay: "9940284213" , 
             venue: "Sathyabama",
-            time: "10AM to 12PM",
-            date: "10/15/2024",
+            time: "10:00 AM to 12:00 PM",
+            date: "15/10/2024",
             max: "6" , 
             min: "2",
             venueImg: sathyabama , 
@@ -67,7 +67,7 @@ const eventData = [
             gpay: "9443579393" , 
             venue: "St.Paul's Block",
             time: "Session 1: 10.00 am to 12.00pm.\tSession 2: 1.00 pm to 3.00 pm",
-            date: "10/15/2024",
+            date: "15/10/2024",
             max: "n" , 
             min: "n",
             venueImg: sathyabama , 
@@ -80,12 +80,12 @@ const eventData = [
         details: {
             name: "Technical Quiz" , 
             facultyCoordinator: "Dr.M.Maheswari, Dr.S.L.Jany shabu, Dr.J.Refonna" , 
-            desc: "Get ready to test your technical prowess in technical quiz,a dynamic and challenging quiz competition designed to ignite your curiosity and push your limits", 
+            desc: "This event aimed to promote knowledge sharing, critical thinking, and friendly competition among participants. This quiz event offers a diverse range of thought-provoking questions that will challenge and entertain you. Participants showcase their expertise in areas such as science, technology, engineering, and current affairs. It follows a dynamic format with multiple rounds, including an Engineered Round where Questions are covered from a wide range of different engineering stream. A general Knowledge Round where Questions covering a wide range of topics and a Rapid-Fire Round where Quick questions to test participant’s spontaneity. This round is aimed at verdict out the best team and the quiz masters. The team Which scores the highest point will be the winner.", 
             fee: 100 , 
             gpay: "9443491990" , 
             venue: "St.Paul's Lab",
-            time: "3.15pm to 4.15pm",
-            date: "10/04/2024",
+            time: "3:15 PM to 4:15 PM",
+            date: "04/10/2024",
             max: "2" , 
             min: "2",
             venueImg: sathyabama , 
@@ -103,7 +103,7 @@ const eventData = [
             gpay: "9566067363" , 
             venue: "St.Paul's Block",
             time: "10:00 AM to 02:00 PM",
-            date: "10/15/2024",
+            date: "15/10/2024",
             max: "4" , 
             min: "2",
             venueImg: sathyabama , 
@@ -120,8 +120,8 @@ const eventData = [
             fee: 50 , 
             gpay: "9444200310" , 
             venue: "St.Paul's Block",
-            time: "11:00AM to 2:30PM",
-            date: "10/15/2024",
+            time: "11:00 AM to 2:30 PM",
+            date: "15/10/2024",
             max: "6" , 
             min: "1",
             venueImg: sathyabama , 
@@ -134,12 +134,12 @@ const eventData = [
         details: {
             name: "Project Exhibition" , 
             facultyCoordinator: "Dr. Shanmuga Prabha P" , 
-            desc: "The Techno Summit 2k 24 - Project Exhibition is an exciting event that brings together innovative projects from diverse academic disciplines. Students from fields such as engineering, computer science, business, arts, social sciences, and natural sciences showcase their creativity, research, and technical skills through interactive displays and presentations. The exhibition serves as a platform for students to present solutions to real-world challenges, cutting-edge technologies, and artistic expressions. Visitors have the opportunity to engage with the projects, discuss with the creators, and gain insights into the latest advancements and creative endeavors in each field. The exhibition encourages cross-disciplinary collaboration, fostering a learning environment that values innovation, practical solutions, and academic excellence.", 
+            desc: "The Techno Summit 2k24 - Project Exhibition is an exciting event that brings together innovative projects from diverse academic disciplines. Students from fields such as engineering, computer science, business, arts, social sciences, and natural sciences showcase their creativity, research, and technical skills through interactive displays and presentations. The exhibition serves as a platform for students to present solutions to real-world challenges, cutting-edge technologies, and artistic expressions. Visitors have the opportunity to engage with the projects, discuss with the creators, and gain insights into the latest advancements and creative endeavors in each field. The exhibition encourages cross-disciplinary collaboration, fostering a learning environment that values innovation, practical solutions, and academic excellence.", 
             fee: 0 , 
             gpay: "7092072387" , 
             venue: "SCAS BLOCK",
             time: "10:00 AM",
-            date: "10/15/2024",
+            date: "15/10/2024",
             max: "5" , 
             min: "3",
             venueImg: sathyabama , 
@@ -155,9 +155,9 @@ const eventData = [
             desc: "Next-Gen Gamers is where the future of gaming comes to life. Dive into an event where innovation and competition collide, offering an exhilarating gaming experience for enthusiasts of all levels. As part of the Techno Summit 2024, this event is packed with cutting-edge tournaments, giving participants the chance to showcase their skills in a variety of popular and emerging games. Experience tomorrow's gaming today in an immersive environment, complete with state-of-the-art gaming setups, engaging challenges, and the opportunity to win epic loot. Whether you're here to compete, learn, or explore, Next-Gen Gamers is the ultimate destination for those looking to level up their gaming experience and connect with a vibrant community of gamers.", 
             fee: 100 , 
             gpay: "9444157282" , 
-            venue: "St.Pauls - Machine Vision Lab & Web 3.0 Lab",
-            time: "1.00pm - 3.15pm",
-            date: "10/16/2024",
+            venue: "St.Paul's - Machine Vision Lab & Web 3.0 Lab",
+            time: "1:00 PM to 3:00 PM",
+            date: "16/10/2024",
             max: "5" , 
             min: "1",
             venueImg: sathyabama , 
@@ -170,12 +170,12 @@ const eventData = [
         details: {
             name: "ARVR Challenges" , 
             facultyCoordinator: "DR.P.Jeyanthi" , 
-            desc: "The Project can be simulation, AR VR Game ,  Interactive Experience, or any creative use of AR/VR. Project can be build using any platform.", 
+            desc: "Augmented Reality and Virtual Reality Project: Students should come up with something innovative, engaging and technically sound. Topics or Concepts: 1. ECOQuest: Immersive AR/VR experience designed to raise awareness about environmental. Interactive environment Ex: Rainforest, Coral Reefs. 2. Agriculture – used in agriculture to improve crop management and Training Ex: Crop Monitoring 3. Healthcare-EX: Surgery planning simulation Pain Management Mental Health 4. Defense- Provide  Realistic Training Experience", 
             fee: 100 , 
             gpay: "9384001375" , 
-            venue: "Sathyabama",
-            time: "to be updated",
-            date: "10/15/2024",
+            venue: "TBA",
+            time: "10:00 AM to 01:00 PM",
+            date: "15/10/2024",
             max: "6" , 
             min: "2",
             venueImg: sathyabama , 
@@ -191,9 +191,9 @@ const eventData = [
             desc: "Join us for a thrilling 24-hour hackathon, part of Technosummit 2024 at Sathyabama Institute of Science and Technology, where innovation meets creativity! Participants will tackle exciting problem statements, solving real-world challenges across various domains. Teams of up to 6 members, with at least one female participant, will collaborate to create impactful solutions. With two rounds of judging, participants will present their ideas mid-event, followed by final evaluations. Stay onsite for the full experience as you bring your ideas to life and compete for exciting prizes. Ready to code, build, and innovate? Sign up now!", 
             fee: 100 , 
             gpay: "9445265143" , 
-            venue: "Sathyabama",
-            time: "to be updated",
-            date: "10/15/2024",
+            venue: "TBA",
+            time: "10:00 AM(15.10.2024) to 10:00 AM(16.10.2024)",
+            date: "15/10/2024",
             max: "6" , 
             min: "2",
             venueImg: sathyabama , 
@@ -206,12 +206,12 @@ const eventData = [
         details: {
             name: "Youtube Challenges" , 
             facultyCoordinator: "P. Nandhini" , 
-            desc: "The creator then invites others to participate by making their own version of the video and sharing it on social media. YouTube Challenges are a great way to increase your subscriber count and attract new followers.", 
+            desc: "Get ready for our exciting YouTube challenge event on the Sathyabama campus! Participants have 30 to 60 seconds to showcase their creativity. Capture the vibrant campus life with positive, uplifting content—no harmful behavior or hate speech allowed. Use pleasant, non-violent background music to enhance your video. Submit your video to the team for verification. Only videos from registered participants will be accepted. After verification, your video will be uploaded to our channel. Promote your video to increase its view count—winners will be chosen based on views. Let’s make this challenge memorable and showcase the best of Sathyabama!", 
             fee: 100 , 
             gpay: "9445265143" , 
-            venue: "Sathyabama",
-            time: "to be updated",
-            date: "10/15/2024",
+            venue: "TBA",
+            time: "9:30 AM to 12:30 PM",
+            date: "16/10/2024",
             max: "3" , 
             min: "2",
             venueImg: sathyabama , 
@@ -227,26 +227,52 @@ const eventData = [
             desc: "A celebration of culinary delights, where people come together to indulge in a variety of dishes and experience the rich flavors of different cuisines. It is a vibrant and lively event that showcases the diversity and creativity of food. The atmosphere is filled with the aroma of spices, the sizzle of grills, and the laughter of people enjoying their meals. It is a feast for the senses, offering a unique opportunity to explore new flavors, discover local specialties, and connect with others who share a love for food.", 
             fee: 500 , 
             gpay: "9445104773" , 
-            venue: "Sathyabama",
-            time: "to be updated",
-            date: "10/16/2024",
+            venue: "Dr Remibai Auditorium(outside stall)",
+            time: "9:00 AM to 3:00 PM",
+            date: "16/10/2024",
             max: "3" , 
             min: "2",
             venueImg: sathyabama , 
             mapSS: map,
             poster: poster
         }
-    } 
+    } ,
+    {
+        id: 14 , 
+        details: {
+            name: "Go Karting" , 
+            facultyCoordinator: "Dr.Nancy Noella R S" , 
+            desc: "The Go Karting Challenge in TechnoSummit 2k24 will be done in two rounds. 1) Still Round : Kart puzzle 2) Dynamic Round : Driving the cart" ,
+            fee: 100 , 
+            gpay: "9446329124" , 
+            venue: "TBA",
+            time: "TBA",
+            date: "16/10/2024",
+            max: "3" , 
+            min: "2",
+            venueImg: sathyabama , 
+            mapSS: map,
+            poster: poster
+        }
+    } ,
+    {
+        id: 15 , 
+        details: {
+            name: "Drones and Robotics design challenge" , 
+            facultyCoordinator: "Dr.Sonia Jenifer Rayen" , 
+            desc: "Drones Gaming Challenge, where the thrill of drone racing meets the excitement of gaming! In this innovative competition, players will navigate high-speed drones and design drones.  With cutting-edge technology and heart-pumping action, this challenge demands skill, strategy, and quick reflexes. Join us as we take drone gaming to new heights!",
+            fee: 300 , 
+            gpay: "9962742851" , 
+            venue: "TBA",
+            time: "TBA",
+            date: "TBA",
+            max: "3" , 
+            min: "1",
+            venueImg: sathyabama , 
+            mapSS: map,
+            poster: poster
+        }
+    }
 ]
 
 export default eventData
-
-
-
-
-
-
-
-
-
-
