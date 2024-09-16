@@ -5,7 +5,7 @@ import { useParams } from "react-router-dom";
 import eventData from "../../../data/eventData";
 import MemberForm from "../app/MemberForm";
 import axios from "axios";
-import MessageModal from "../utils/MessageModal";
+import LinkButton from '../utils/LinkButton'
 
 function RegistrationPage() {
   const { eventId } = useParams();
@@ -14,7 +14,12 @@ function RegistrationPage() {
 
   // modalState 
   const [isModalOpen , setIsModalOpen] = useState(false);
-  const [modalData, setModalData] = useState({});
+  const [modalData, setModalData] = useState({
+    eventName: "",
+    teamName: "",
+    noOfMembers: 0,
+    amount: 0
+  });
 
   const [step, setStep] = useState(1); // Step tracking
   const [step1Data, setStep1Data] = useState({
@@ -88,11 +93,16 @@ function RegistrationPage() {
           amount: response.data.amountToBePaid,
           noOfMembers: registrationData.numberOfMembers
         })
-        setIsModalOpen(!isModalOpen);
+
+        setIsModalOpen(true);
       })
       .catch((error) => {
         console.log("error: ", error);
       });
+  }
+
+  function handleCloseModal(){
+    setIsModalOpen(false);
   }
 
   return (
@@ -257,8 +267,28 @@ function RegistrationPage() {
         </div>
       </div>
 
-      {/* message modal  */}
-      <MessageModal state={isModalOpen} eventName={modalData.eventName} teamName={modalData.teamName} message={modalData.message} id={"payment_details"} amount={modalData.amount} noOfMembers={modalData.noOfMembers}></MessageModal>
+      {/* Modal */}
+      {isModalOpen && (
+        <dialog open className="modal">
+          <div className="modal-box w-2/4 max-w-5xl bg-base-200">
+            <h3 className="font-bold text-xl text-primary">Event: {modalData.eventName}</h3>
+            <h3 className="font-bold text-lg">Team Name: {modalData.teamName}</h3>
+            <p className="py-4">Registration successful for {modalData.noOfMembers} members.</p>
+            <h3 className="font-bold text-lg">
+              Registration fee to be paid: <span className="text-warning">{modalData.amount} INR</span>
+            </h3>
+            <div className="flex flex-wrap justify-start align-middle w-full mt-4 gap-5">
+              <LinkButton text={"View venues"} link={'/venues'}></LinkButton>
+              <LinkButton text={"View schedules"} link={'/technosummit/events/schedules'}></LinkButton>
+            </div>
+            <div className="modal-action">
+              <button className="btn btn-secondary" onClick={handleCloseModal}>
+                Close
+              </button>
+            </div>
+          </div>
+        </dialog>
+      )}
 
     </div>
   );

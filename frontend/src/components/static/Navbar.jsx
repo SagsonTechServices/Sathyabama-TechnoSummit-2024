@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom'
 function Navbar() {
 	return (
 		<div>
-			<div className="navbar bg-base-100 navbar-fixed z-10 max-w-screen-2xl container md:px-20 px-2">
+			<div className="navbar bg-base-100 navbar-fixed z-50 max-w-screen-2xl container md:px-20 px-2">
 				<div className="navbar-start">
 					<div className="dropdown">
 						<div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -66,6 +66,7 @@ function Navbar() {
 						<li><Link to={'/patrons'}>Our Patrons</Link></li>
 						<li><Link to={'/technosummit/events/schedules'}>Event Schedules</Link></li>
 						<li><Link to={'/download-brochure'}>Download brochure</Link></li>
+						<li><a href="/venues">All Venues</a></li>
 						<li>
 							<details>
 								<summary>Events</summary>
@@ -91,7 +92,7 @@ function Navbar() {
 					</ul>
 				</div>
 				<div className="navbar-end">
-					<Link to={'/venues'}><button className="btn btn-primary btn-sm md:block hidden">All Venues</button></Link>
+					<Link to={'/staff/login'}><button className="btn btn-primary btn-sm md:block hidden">Login (Only staff)</button></Link>
 				</div>
 			</div>
 		</div>

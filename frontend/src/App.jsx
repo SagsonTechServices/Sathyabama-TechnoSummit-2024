@@ -12,6 +12,8 @@ import AboutPage from './components/Pages/AboutPage'
 import PatronsPage from './components/Pages/PatronsPage'
 import SchedulePage from './components/Pages/SchedulePage'
 import DownloadBrochure from './components/Pages/DownloadBrochure'
+import RegisteredPageForDeptCoords from './components/Pages/RegisteredPageForDeptCoords'
+import StaffLoginPage from './components/Pages/StaffLoginPage'
 
 function App() {
   return (
@@ -28,6 +30,8 @@ function App() {
         <Route path='/patrons' element={<PatronsPage></PatronsPage>}></Route>
         <Route path='/technosummit/events/schedules' element={<SchedulePage></SchedulePage>}></Route>
         <Route path='/download-brochure' element={<DownloadBrochure></DownloadBrochure>}></Route>
+        <Route path='/dept-coordinator/registered-students' element={<RegisteredPageForDeptCoords></RegisteredPageForDeptCoords>}></Route>
+        <Route path='/staff/login' element={<StaffLoginPage></StaffLoginPage>}></Route>
       </Routes>  
 
       <Footer></Footer>
