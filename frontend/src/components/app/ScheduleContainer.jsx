@@ -20,7 +20,7 @@ function Schedule() {
                                 <th>{index+1}</th>
                                 <td>{event.details.name}</td>
                                 <td className="font-bold">{event.details.date}</td>
-                                <td className="font-bold">{event.details.time}</td>
+                                <td className="font-bold text-primary">{event.details.time}</td>
                             </tr>
                         ))}
                     </tbody>

@@ -5,17 +5,22 @@ import { useParams } from "react-router-dom";
 import eventData from "../../../data/eventData";
 import MemberForm from "../app/MemberForm";
 import axios from "axios";
-import MessageModal from "../utils/MessageModal";
+import LinkButton from '../utils/LinkButton'
 
 function RegistrationPage() {
 	const { eventId } = useParams();
 	const event = eventData.find((event) => event.id === parseInt(eventId));
 	const backendURL = import.meta.env.VITE_BACKEND_URL;
 
-	// modalState
-	const [isModalOpen, setIsModalOpen] = useState(false);
-	const [modalData, setModalData] = useState({});
 
+  // modalState 
+  const [isModalOpen , setIsModalOpen] = useState(false);
+  const [modalData, setModalData] = useState({
+    eventName: "",
+    teamName: "",
+    noOfMembers: 0,
+    amount: 0
+  });
 	const [step, setStep] = useState(1); // Step tracking
 	const [step1Data, setStep1Data] = useState({
 		teamName: "",
@@ -280,13 +285,30 @@ function RegistrationPage() {
 					</button>
 				</div>
 			</div>
-
-			{/* Message Modal */}
-			<MessageModal
-				state={isModalOpen}
-				data={modalData}
-				onClose={() => setIsModalOpen(!isModalOpen)}
-			></MessageModal>
+      
+       {/* Modal */}
+      {isModalOpen && (
+        <dialog open className="modal">
+          <div className="modal-box w-2/4 max-w-5xl bg-base-200">
+            <h3 className="font-bold text-xl text-primary">Event: {modalData.eventName}</h3>
+            <h3 className="font-bold text-lg">Team Name: {modalData.teamName}</h3>
+            <p className="py-4">Registration successful for {modalData.noOfMembers} members.</p>
+            <h3 className="font-bold text-lg">
+              Registration fee to be paid: <span className="text-warning">{modalData.amount} INR</span>
+            </h3>
+            <div className="flex flex-wrap justify-start align-middle w-full mt-4 gap-5">
+              <LinkButton text={"View venues"} link={'/venues'}></LinkButton>
+              <LinkButton text={"View schedules"} link={'/technosummit/events/schedules'}></LinkButton>
+            </div>
+            <div className="modal-action">
+              <button className="btn btn-secondary" onClick={handleCloseModal}>
+                Close
+              </button>
+            </div>
+          </div>
+        </dialog>
+      )}
+			
 		</div>
 	);
 }

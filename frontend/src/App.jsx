@@ -12,27 +12,33 @@ import AboutPage from './components/Pages/AboutPage'
 import PatronsPage from './components/Pages/PatronsPage'
 import SchedulePage from './components/Pages/SchedulePage'
 import DownloadBrochure from './components/Pages/DownloadBrochure'
+import RegisteredPageForDeptCoords from './components/Pages/RegisteredPageForDeptCoords'
+import StaffLoginPage from './components/Pages/StaffLoginPage'
 import EventCoordinators from './components/Pages/EventCoordinatorsPage'
 
 function App() {
-	return (
-		<div>
-			<Navbar></Navbar>
-			<Routes>
-				<Route path='/' element={<LandingPage></LandingPage>}></Route>
-				<Route path='/about' element={<AboutPage></AboutPage>}></Route>
-				<Route path='/event/:eventId' element={<EventPage></EventPage>}></Route>
-				<Route path='/venues' element={<VenuesPage></VenuesPage>}></Route>
-				<Route path='/payment/details' element={<PaymentDetailsPage></PaymentDetailsPage>}></Route>
-				<Route path='/event/registration/:eventId' element={<RegistrationPage></RegistrationPage>}></Route>
-				<Route path='/patrons' element={<PatronsPage></PatronsPage>}></Route>
-				<Route path='/technosummit/events/schedules' element={<SchedulePage></SchedulePage>}></Route>
-				<Route path='/download-brochure' element={<DownloadBrochure></DownloadBrochure>}></Route>
+  return (
+    <div>
+      <Navbar></Navbar>
+
+      <Routes>
+        <Route path='/' element={<LandingPage></LandingPage>}></Route>  
+        <Route path='/about' element={<AboutPage></AboutPage>}></Route>
+        <Route path='/event/:eventId' element={<EventPage></EventPage>}></Route>  
+        <Route path='/venues' element={<VenuesPage></VenuesPage>}></Route>  
+        <Route path='/payment/details' element={<PaymentDetailsPage></PaymentDetailsPage>}></Route>  
+        <Route path='/event/registration/:eventId' element={<RegistrationPage></RegistrationPage>}></Route>  
+        <Route path='/patrons' element={<PatronsPage></PatronsPage>}></Route>
+        <Route path='/technosummit/events/schedules' element={<SchedulePage></SchedulePage>}></Route>
+        <Route path='/download-brochure' element={<DownloadBrochure></DownloadBrochure>}></Route>
+        <Route path='/dept-coordinator/registered-students' element={<RegisteredPageForDeptCoords></RegisteredPageForDeptCoords>}></Route>
+        <Route path='/staff/login' element={<StaffLoginPage></StaffLoginPage>}></Route>
 				<Route path='' element={<EventCoordinators></EventCoordinators>}></Route>
-			</Routes>
-			<Footer></Footer>
-		</div>
-	)
+      </Routes>  
+
+      <Footer></Footer>
+    </div>
+  )
 }
 
 export default App
