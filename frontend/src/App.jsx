@@ -24,7 +24,7 @@ function App() {
         <Route path='/event/:eventId' element={<EventPage></EventPage>}></Route>  
         <Route path='/venues' element={<VenuesPage></VenuesPage>}></Route>  
         <Route path='/payment/details' element={<PaymentDetailsPage></PaymentDetailsPage>}></Route>  
-        <Route path='/event/registration' element={<RegistrationPage></RegistrationPage>}></Route>  
+        <Route path='/event/registration/:eventId' element={<RegistrationPage></RegistrationPage>}></Route>  
         <Route path='/patrons' element={<PatronsPage></PatronsPage>}></Route>
         <Route path='/technosummit/events/schedules' element={<SchedulePage></SchedulePage>}></Route>
         <Route path='/download-brochure' element={<DownloadBrochure></DownloadBrochure>}></Route>

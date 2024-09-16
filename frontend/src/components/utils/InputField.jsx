@@ -1,6 +1,6 @@
 import React from "react";
 
-function InputField({type , label , placeholder , }) {
+function InputField({ type, label, placeholder, value, name, onChange }) {
   return (
     <div>
       <label className="form-control w-full mx-auto my-3">
@@ -10,6 +10,9 @@ function InputField({type , label , placeholder , }) {
         <input
           type={type}
           placeholder={placeholder}
+          value={value}
+          name={name}
+          onChange={onChange}  // Add onChange handler
           className="input input-bordered w-full bg-base-200"
         />
       </label>
@@ -18,3 +21,4 @@ function InputField({type , label , placeholder , }) {
 }
 
 export default InputField;
+
