@@ -82,6 +82,12 @@ const venueDetails = [
         image: "./src/assets/Sathyabama.png",
         title: "Food Carnival",
         venue: "TBA",
+    },
+    {
+        id: 15,
+        image: "./src/assets/Sathyabama.png",
+        title: "Drones and Robotics Design challenge",
+        venue: "TBA",
     }
 ]
 

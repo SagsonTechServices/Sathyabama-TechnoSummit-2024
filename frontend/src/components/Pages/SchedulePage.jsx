@@ -1,9 +1,10 @@
 import React from 'react'
+import Schedule from '../app/ScheduleContainer'
 
 function SchedulePage() {
   return (
-    <div>
-      
+    <div className='container px-10 py-10 my-10'>
+      <Schedule></Schedule>
     </div>
   )
 }
