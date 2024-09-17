@@ -8,15 +8,11 @@
       }
     }
   ],
-  "rewrites": [
+  "routes": [
     {
-      "source": "/(.*)",
-      "destination": "/frontend/dist/index.html"
+      "src": "/(.*)",
+      "dest": "/frontend/dist/$1",
+      "continue": true
     }
   ]
 }
-
-
-
-
-  
