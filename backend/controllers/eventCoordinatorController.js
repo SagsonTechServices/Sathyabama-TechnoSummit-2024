@@ -1,28 +1,32 @@
 const db = require("../config/db.config");
 
-const coordinatorlogin = async (req, res) => {
-  const { phone_number,password,event_name } = req.body;
+const coordinatorLogin = async (req, res) => {
+  const { phone_number, password } = req.body;
 
   try {
-    const coordinator = await db.query(
-      'SELECT * FROM event_coordinator WHERE phone_number = ? AND password =?',
-      [phone_number,password]
+    const [coordinatorResult] = await db.query(
+      'SELECT * FROM event_coordinator WHERE phone_number = ? AND password = ?',
+      [phone_number, password]
     );
-    if (!coordinator) {
-      return res.status(401).json({ message: 'invalid login' });
+
+    if (coordinatorResult.length === 0) {
+      return res.status(401).json({ message: 'Invalid login credentials' });
     }
-    else{
-      const teams = await db.query(
-        'SELECT * FROM event_registrations WHERE EVENT_NAME = ?',
-        [event_name]
+
+    // Get the event
+    const event_name = coordinatorResult[0].event_name;
+
+    const [teams] = await db.query(
+      'SELECT * FROM EVENT_REGISTRATIONS WHERE EVENT_NAME = ? AND PAYMENT_STATUS=1',
+      [event_name]
     );
 
     res.status(200).json({ teams });
-    }
-  }
-  catch (error) {
+    
+  } catch (error) {
     console.error('Error during login:', error);
     res.status(500).json({ error: 'Server error' });
-}
+  }
 };
-module.exports=coordinatorlogin;
+
+module.exports = coordinatorLogin;
