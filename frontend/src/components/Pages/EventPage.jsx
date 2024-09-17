@@ -18,7 +18,7 @@ function Events() {
                     <Heading2 text={`${eventData.details.name}`} />
                     <span>
                         <div className="badge mt-2 badge-warning md:text-lg py-3 rounded-md">
-                            {`Rs.${eventData.details.fee} per member`}
+                            {`${eventData.details.feeDetails}`}
                         </div>
                     </span>
                     <p className='md:text-lg mt-2 mb-5 text-justify'>
@@ -36,7 +36,7 @@ function Events() {
                     <Heading2 text={`${eventData.details.name}`} />
                     <span>
                         <div className="badge mt-2 badge-warning text-lg py-3">
-                            {`Rs.${eventData.details.fee} per member`}
+                            {`${eventData.details.feeDetails}`}
                         </div>
                     </span>
                     <p className='text-lg mt-2 mb-5 text-justify'>
