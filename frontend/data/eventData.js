@@ -1,4 +1,4 @@
-import sathyabama from "../src/assets/venue.jpg"
+import sathyabama from "../src/assets/Sathyabama.png"
 import map from "../src/assets/map.png"
 import poster from "../src/assets/posters/dummy.jpeg"
 

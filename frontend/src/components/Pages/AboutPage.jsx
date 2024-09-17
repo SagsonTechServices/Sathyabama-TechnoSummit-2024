@@ -1,11 +1,12 @@
 import React from "react";
 import Heading2 from "../utils/Heading2";
+import logo from "../../assets/logo.jpeg";
 
 function AboutPage() {
     return (
         <div className="px-10 py-20">
             <div className="hero min-h-44">
-                <img src='./src/assets/logo.jpeg'></img>
+                <img src={logo}></img>
             </div>
             <div>
                 <Heading2 text={"About TechnoSummit"}></Heading2>

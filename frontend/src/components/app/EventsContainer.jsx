@@ -1,7 +1,6 @@
 import React from 'react'
 import DeskCard from '../utils/DeskCard'
 import Heading2 from '../utils/Heading2'
-import dummyPoster from '../../assets/posters/dummy.jpeg';
 import eventData from '../../../data/eventData';
 
 function EventsContainer() {
