@@ -3,6 +3,8 @@ const cors = require("cors");
 const db = require("./config/db.config");
 const dotenv = require("dotenv");
 const studentRoute = require('./routes/studentRoute');
+const departmentInchargeRoute = require('./routes/departmentInchargeRoute');
+const eventCoordinatorRoute = require('./routes/eventCoordinatorRoute');
 
 dotenv.config();
 
@@ -16,6 +18,8 @@ app.use(cors());
 
 // setting up the routes 
 app.use('/student' , studentRoute);
+app.use('/departmentIncharge' ,departmentInchargeRoute);
+app.use('/eventCoordinatorRoute' ,eventCoordinatorRoute);
 
 // starting the server 
 app.listen(port , () => {console.log("Server started at port" , port)});
