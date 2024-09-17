@@ -14,6 +14,7 @@ import RegisteredPageForDeptCoords from './components/Pages/RegisteredPageForDep
 import StaffLoginPage from './components/Pages/StaffLoginPage';
 import EventCoordinators from './components/Pages/EventCoordinatorsPage';
 import Guidelines from './components/Pages/GuidelinesPage';
+import './App.css'
 
 function App() {
   return (
