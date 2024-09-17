@@ -33,7 +33,7 @@ function App() {
         <Route path='/download-brochure' element={<DownloadBrochure></DownloadBrochure>}></Route>
         <Route path='/dept-coordinator/registered-students' element={<RegisteredPageForDeptCoords></RegisteredPageForDeptCoords>}></Route>
         <Route path='/staff/login' element={<StaffLoginPage></StaffLoginPage>}></Route>
-				<Route path='' element={<EventCoordinators></EventCoordinators>}></Route>
+				<Route path='/event-coordinator/registered-students' element={<EventCoordinators></EventCoordinators>}></Route>
       </Routes>  
 
       <Footer></Footer>

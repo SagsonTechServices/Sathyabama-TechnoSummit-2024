@@ -120,7 +120,7 @@ function RegistrationPage() {
 						amount: response.data.amountToBePaid,
 						noOfMembers: registrationData.numberOfMembers,
 					});
-					setIsModalOpen(!isModalOpen);
+					setIsModalOpen(true);
 				})
 				.catch((error) => {
 					console.log("error: ", error);
@@ -129,6 +129,10 @@ function RegistrationPage() {
 			console.log("Form validation failed.");
 		}
 	}
+
+  function handleCloseModal(){
+    setIsModalOpen(false);
+  }
 
 	return (
 		<div>
