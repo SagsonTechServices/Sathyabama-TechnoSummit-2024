@@ -29,4 +29,31 @@ const InchargeLogin = async (req, res) => {
   }
 };
 
-module.exports = InchargeLogin;
+
+const updatePaymentStatus = async (req, res) => {
+  const { teamIds } = req.body;
+
+  if (!teamIds || !teamIds.length) {
+    return res.status(400).json({ message: "No team IDs provided." });
+  }
+
+  try {
+    const placeholders = teamIds.map(() => "?").join(", ");
+    
+    const query = `UPDATE event_registrations SET PAYMENT_STATUS = 1 WHERE TEAM_ID IN (${placeholders})`;
+
+    const result = await db.query(query, teamIds);
+    
+    if (result[0].affectedRows > 0) {
+      res.status(200).json({ message: "Payment status updated successfully." });
+    } else {
+      res.status(400).json({ message: "No teams found to update." });
+    }
+  } catch (error) {
+    console.error('Error updating payment status:', error);
+    res.status(500).json({ error: "Failed to update payment status." });
+  }
+};
+
+
+module.exports = {updatePaymentStatus,InchargeLogin};
