@@ -3,7 +3,7 @@ import PatronCard from '../utils/PatronCard'
 import chancellor from '../../assets/Patrons/chancellor.jpg';
 import president from '../../assets/Patrons/president.jpg';
 import vp1 from '../../assets/Patrons/vp-1.jpeg';
-import vp2 from '../../assets/Patrons/vp-2.jpeg';
+import vp2 from '../../assets/Patrons/VP-2.jpeg';
 import vp from '../../assets/Patrons/vice-president.jpg';
 
 function PatronsPage() {
