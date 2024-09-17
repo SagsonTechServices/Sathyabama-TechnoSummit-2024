@@ -11,10 +11,11 @@
   "rewrites": [
     {
       "source": "/(.*)",
-      "destination": "/"
+      "destination": "/frontend/dist/index.html"
     }
   ]
 }
+
 
 
 
