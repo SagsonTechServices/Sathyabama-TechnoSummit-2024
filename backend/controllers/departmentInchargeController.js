@@ -5,7 +5,7 @@ const InchargeLogin = async (req, res) => {
 
   try {
     const [inchargeResult] = await db.query(
-      'SELECT * FROM dept_incharge WHERE phone_number = ? AND password = ?',
+      'SELECT * FROM dept_incharge WHERE contact = ? AND password = ?',
       [phone_number, password]
     );
 
@@ -14,7 +14,7 @@ const InchargeLogin = async (req, res) => {
     }
 
     // Get the department
-    const dept_name = inchargeResult[0].dept_name;
+    const dept_name = inchargeResult[0].dept;
 
     const [teams] = await db.query(
       'SELECT * FROM EVENT_REGISTRATIONS WHERE DEPARTMENT = ?',
@@ -32,6 +32,8 @@ const InchargeLogin = async (req, res) => {
 
 const updatePaymentStatus = async (req, res) => {
   const { teamIds } = req.body;
+
+  console.log(teamIds)
 
   if (!teamIds || !teamIds.length) {
     return res.status(400).json({ message: "No team IDs provided." });

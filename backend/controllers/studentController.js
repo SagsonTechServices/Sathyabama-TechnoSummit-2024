@@ -8,11 +8,14 @@ const register = async (req, res) => {
 
         const { teamName, leaderEmail, leaderContact, dept, numberOfMembers, members } = registrationData;
 
+        // calculate the amount to be paid 
+        const amountToBePaid = parseFloat(registrationData.event.details.fee * numberOfMembers);
+
         // Insert team data into event_registrations table
         const [teamResult] = await db.query(
-            `INSERT INTO event_registrations (TEAM_NAME, EVENT_NAME, DEPARTMENT, NO_OF_MEMBERS, TL_MAIL, PAYMENT_STATUS, TL_contact) 
-            VALUES (?, ?, ?, ?, ?, ?, ?)`,
-            [teamName, registrationData.event.details.name, dept, numberOfMembers, leaderEmail, registrationData.payment_status, leaderContact]
+            `INSERT INTO event_registrations (TEAM_NAME, EVENT_NAME, DEPARTMENT, NO_OF_MEMBERS, TL_MAIL, PAYMENT_STATUS, TL_contact, fee) 
+            VALUES (?, ?, ?, ?, ?, ?, ?, ?)`,
+            [teamName, registrationData.event.details.name, dept, numberOfMembers, leaderEmail, registrationData.payment_status, leaderContact, amountToBePaid]
         );
 
         const teamId = teamResult.insertId;
@@ -27,10 +30,6 @@ const register = async (req, res) => {
         });
 
         await Promise.all(memberPromises);
-
-        // calculate the amount to be paid 
-        const amountToBePaid = parseFloat(registrationData.event.details.fee * numberOfMembers);
-
 
         res.status(200).json({ message: "Success" , amountToBePaid: amountToBePaid, registrationData });
     } catch (error) {
