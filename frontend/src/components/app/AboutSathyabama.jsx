@@ -5,7 +5,7 @@ import Heading2 from '../utils/Heading2'
 
 function AboutSathyabama() {
 	return (
-		<div className="flex flex-col px-20 py-10">
+		<div className="flex flex-col px-10 md:px-20 py-10">
             <Heading2 text="About Sathyabama Institute of Science and Technology"></Heading2>
             <div className="flex flex-col gap-5 py-7 md:grid md:grid-cols-2">
                 <img src={sist1}></img>

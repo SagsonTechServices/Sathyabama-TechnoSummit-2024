@@ -3,7 +3,7 @@ import Schedule from '../app/ScheduleContainer'
 
 function SchedulePage() {
   return (
-    <div className='container md:px-10 py-10 my-10'>
+    <div className='container px-5 md:px-10 py-10 my-10'>
       <Schedule></Schedule>
     </div>
   )

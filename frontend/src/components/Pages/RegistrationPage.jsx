@@ -13,14 +13,14 @@ function RegistrationPage() {
 	const backendURL = import.meta.env.VITE_BACKEND_URL;
 
 
-  // modalState 
-  const [isModalOpen , setIsModalOpen] = useState(false);
-  const [modalData, setModalData] = useState({
-    eventName: "",
-    teamName: "",
-    noOfMembers: 0,
-    amount: 0
-  });
+	// modalState 
+	const [isModalOpen, setIsModalOpen] = useState(false);
+	const [modalData, setModalData] = useState({
+		eventName: "",
+		teamName: "",
+		noOfMembers: 0,
+		amount: 0
+	});
 	const [step, setStep] = useState(1); // Step tracking
 	const [step1Data, setStep1Data] = useState({
 		teamName: "",
@@ -30,7 +30,7 @@ function RegistrationPage() {
 		numberOfMembers: event.details.min !== "n" ? event.details.min : 1,
 	}); // State for step 1 data
 	const [membersData, setMembersData] = useState([]); // State for members data
-	const [errors, setErrors] = useState({}); 
+	const [errors, setErrors] = useState({});
 
 	// Validation function
 	function validateForm() {
@@ -49,7 +49,7 @@ function RegistrationPage() {
 		}
 
 		setErrors(newErrors);
-		return Object.keys(newErrors).length === 0; 
+		return Object.keys(newErrors).length === 0;
 	}
 
 	// Handle change in step 1 form inputs
@@ -130,9 +130,9 @@ function RegistrationPage() {
 		}
 	}
 
-  function handleCloseModal(){
-    setIsModalOpen(false);
-  }
+	function handleCloseModal() {
+		setIsModalOpen(false);
+	}
 
 	return (
 		<div>
@@ -289,30 +289,30 @@ function RegistrationPage() {
 					</button>
 				</div>
 			</div>
-      
-       {/* Modal */}
-      {isModalOpen && (
-        <dialog open className="modal">
-          <div className="modal-box w-2/4 max-w-5xl bg-base-200">
-            <h3 className="font-bold text-xl text-primary">Event: {modalData.eventName}</h3>
-            <h3 className="font-bold text-lg">Team Name: {modalData.teamName}</h3>
-            <p className="py-4">Registration successful for {modalData.noOfMembers} members.</p>
-            <h3 className="font-bold text-lg">
-              Registration fee to be paid: <span className="text-warning">{modalData.amount} INR</span>
-            </h3>
-            <div className="flex flex-wrap justify-start align-middle w-full mt-4 gap-5">
-              <LinkButton text={"View venues"} link={'/venues'}></LinkButton>
-              <LinkButton text={"View schedules"} link={'/technosummit/events/schedules'}></LinkButton>
-            </div>
-            <div className="modal-action">
-              <button className="btn btn-secondary" onClick={handleCloseModal}>
-                Close
-              </button>
-            </div>
-          </div>
-        </dialog>
-      )}
-			
+
+			{/* Modal */}
+			{isModalOpen && (
+				<dialog open className="modal">
+					<div className="modal-box w-2/4 max-w-5xl bg-base-200">
+						<h3 className="font-bold text-xl text-primary">Event: {modalData.eventName}</h3>
+						<h3 className="font-bold text-lg">Team Name: {modalData.teamName}</h3>
+						<p className="py-4">Registration successful for {modalData.noOfMembers} members.</p>
+						<h3 className="font-bold text-lg">
+							Registration fee to be paid: <span className="text-warning">{modalData.amount} INR</span>
+						</h3>
+						<div className="flex flex-wrap justify-start align-middle w-full mt-4 gap-5">
+							<LinkButton text={"View venues"} link={'/venues'}></LinkButton>
+							<LinkButton text={"View schedules"} link={'/technosummit/events/schedules'}></LinkButton>
+						</div>
+						<div className="modal-action">
+							<button className="btn btn-secondary" onClick={handleCloseModal}>
+								Close
+							</button>
+						</div>
+					</div>
+				</dialog>
+			)}
+
 		</div>
 	);
 }
