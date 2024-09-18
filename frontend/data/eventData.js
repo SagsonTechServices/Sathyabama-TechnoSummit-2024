@@ -1,6 +1,20 @@
-import sathyabama from "../src/assets/Sathyabama.png"
-import map from "../src/assets/map.png"
+import sathyabama from "../src/assets/venue.jpg"
 import poster from "../src/assets/posters/dummy.jpeg"
+import event1 from "../src/assets/map/event1.png"
+import event2 from "../src/assets/map/event2.png"
+import event3 from "../src/assets/map/event3.png"
+import event4 from "../src/assets/map/event4.png"
+import event5 from "../src/assets/map/event5.png"
+import event6 from "../src/assets/map/event6.png"
+import event7 from "../src/assets/map/event7.png"
+import event8 from "../src/assets/map/event8.png"
+import event9 from "../src/assets/map/event9.png"
+import event10 from "../src/assets/map/event10.png"
+import event11 from "../src/assets/map/event11.png"
+import event12 from "../src/assets/map/event12.png"
+import event13 from "../src/assets/map/event13.png"
+import event14 from "../src/assets/map/event14.png"
+import event15 from "../src/assets/map/event15.png"
 
 const eventData = [
     {
@@ -18,7 +32,7 @@ const eventData = [
             max: "n",
             min: "n",
             venueImg: sathyabama,
-            mapSS: map,
+            mapSS: event1,
             poster: poster
         }
     },
@@ -37,7 +51,7 @@ const eventData = [
             max: "n",
             min: "n",
             venueImg: sathyabama,
-            mapSS: map,
+            mapSS: event2,
             poster: poster
         }
     },
@@ -56,7 +70,7 @@ const eventData = [
             max: "6",
             min: "2",
             venueImg: sathyabama,
-            mapSS: map,
+            mapSS: event3,
             poster: poster
         }
     },
@@ -75,7 +89,7 @@ const eventData = [
             max: "n",
             min: "n",
             venueImg: sathyabama,
-            mapSS: map,
+            mapSS: event4,
             poster: poster
         }
     },
@@ -94,7 +108,7 @@ const eventData = [
             max: "2",
             min: "2",
             venueImg: sathyabama,
-            mapSS: map,
+            mapSS: event5,
             poster: poster
         }
     },
@@ -113,7 +127,7 @@ const eventData = [
             max: "4",
             min: "2",
             venueImg: sathyabama,
-            mapSS: map,
+            mapSS: event6,
             poster: poster
         }
     },
@@ -132,7 +146,7 @@ const eventData = [
             max: "6",
             min: "1",
             venueImg: sathyabama,
-            mapSS: map,
+            mapSS: event7,
             poster: poster
         }
     },
@@ -151,7 +165,7 @@ const eventData = [
             max: "5",
             min: "3",
             venueImg: sathyabama,
-            mapSS: map,
+            mapSS: event8,
             poster: poster
         }
     },
@@ -170,7 +184,7 @@ const eventData = [
             max: "5",
             min: "1",
             venueImg: sathyabama,
-            mapSS: map,
+            mapSS: event9,
             poster: poster
         }
     },
@@ -189,7 +203,7 @@ const eventData = [
             max: "6",
             min: "2",
             venueImg: sathyabama,
-            mapSS: map,
+            mapSS: event10,
             poster: poster
         }
     },
@@ -208,7 +222,7 @@ const eventData = [
             max: "6",
             min: "2",
             venueImg: sathyabama,
-            mapSS: map,
+            mapSS: event11,
             poster: poster
         }
     },
@@ -227,7 +241,7 @@ const eventData = [
             max: "3",
             min: "2",
             venueImg: sathyabama,
-            mapSS: map,
+            mapSS: event12,
             poster: poster
         }
     },
@@ -246,7 +260,7 @@ const eventData = [
             max: "3",
             min: "2",
             venueImg: sathyabama,
-            mapSS: map,
+            mapSS: event13,
             poster: poster
         }
     },
@@ -265,7 +279,7 @@ const eventData = [
             max: "3",
             min: "2",
             venueImg: sathyabama,
-            mapSS: map,
+            mapSS: event14,
             poster: poster
         }
     },
@@ -284,7 +298,7 @@ const eventData = [
             max: "3",
             min: "1",
             venueImg: sathyabama,
-            mapSS: map,
+            mapSS: event15,
             poster: poster
         }
     }
