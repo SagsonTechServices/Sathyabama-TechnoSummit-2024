@@ -15,6 +15,7 @@ const port = process.env.port || 5555;
 // setting up middlewares 
 app.use(express.json());
 app.use(cors());
+app.use(express.json());
 
 // setting up the routes 
 app.use('/student' , studentRoute);

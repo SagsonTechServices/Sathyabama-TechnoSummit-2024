@@ -8,29 +8,28 @@ const register = async (req, res) => {
 
         const { teamName, leaderEmail, leaderContact, dept, numberOfMembers, members } = registrationData;
 
-        // Insert team data into event_registrations table
-        // const [teamResult] = await db.query(
-        //     `INSERT INTO event_registrations (TEAM_NAME, EVENT_NAME, DEPARTMENT, NO_OF_MEMBERS, TL_MAIL, PAYMENT_STATUS, TL_contact) 
-        //     VALUES (?, ?, ?, ?, ?, ?, ?)`,
-        //     [teamName, registrationData.event.details.name, dept, numberOfMembers, leaderEmail, registrationData.payment_status, leaderContact]
-        // );
-
-        // const teamId = teamResult.insertId;
-
-        // // Insert members data into member_details table
-        // const memberPromises = members.map(member => {
-        //     return db.query(
-        //         `INSERT INTO member_details (TEAM_ID, DEPARTMENT, MEMBERS_NAME, REGISTER_NO, TEAM_NAME, YEAR_OF_STUDY) 
-        //         VALUES (?, ?, ?, ?, ?, ?)`,
-        //         [teamId, member.department, member.name, member.regNo, teamName, member.yearOfStudy]
-        //     );
-        // });
-
-        // await Promise.all(memberPromises);
-
         // calculate the amount to be paid 
         const amountToBePaid = parseFloat(registrationData.event.details.fee * numberOfMembers);
 
+        // Insert team data into event_registrations table
+        const [teamResult] = await db.query(
+            `INSERT INTO event_registrations (TEAM_NAME, EVENT_NAME, DEPARTMENT, NO_OF_MEMBERS, TL_MAIL, PAYMENT_STATUS, TL_contact, fee) 
+            VALUES (?, ?, ?, ?, ?, ?, ?, ?)`,
+            [teamName, registrationData.event.details.name, dept, numberOfMembers, leaderEmail, registrationData.payment_status, leaderContact, amountToBePaid]
+        );
+
+        const teamId = teamResult.insertId;
+
+        // Insert members data into member_details table
+        const memberPromises = members.map(member => {
+            return db.query(
+                `INSERT INTO member_details (TEAM_ID, DEPARTMENT, MEMBERS_NAME, REGISTER_NO, TEAM_NAME, YEAR_OF_STUDY) 
+                VALUES (?, ?, ?, ?, ?, ?)`,
+                [teamId, member.department, member.name, member.regNo, teamName, member.yearOfStudy]
+            );
+        });
+
+        await Promise.all(memberPromises);
 
         res.status(200).json({ message: "Success" , amountToBePaid: amountToBePaid, registrationData });
     } catch (error) {
@@ -40,4 +39,3 @@ const register = async (req, res) => {
 };
 
 module.exports = { register };
-
