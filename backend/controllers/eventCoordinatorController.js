@@ -5,7 +5,7 @@ const coordinatorLogin = async (req, res) => {
 
   try {
     const [coordinatorResult] = await db.query(
-      'SELECT * FROM event_coordinator WHERE phone_number = ? AND password = ?',
+      'SELECT * FROM event_incharge WHERE contact = ? AND password = ?',
       [phone_number, password]
     );
 
@@ -14,7 +14,7 @@ const coordinatorLogin = async (req, res) => {
     }
 
     // Get the event
-    const event_name = coordinatorResult[0].event_name;
+    const event_name = coordinatorResult[0].event;
 
     const [teams] = await db.query(
       'SELECT * FROM EVENT_REGISTRATIONS WHERE EVENT_NAME = ? AND PAYMENT_STATUS=1',

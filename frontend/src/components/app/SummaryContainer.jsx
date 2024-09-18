@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import LinkButton from "../utils/LinkButton";
 
-function SummaryContainer() {
+function SummaryContainer({teams}) {
     const [activeTeam, setActiveTeam] = useState(null);
 
     const showModal = (teamIndex) => {
@@ -13,22 +13,6 @@ function SummaryContainer() {
         document.getElementById(`modal_${teamIndex}`).close();
     };
 
-    const teams = Array(6).fill({
-        teamName: "Team Someone",
-        teamLeader: "Someone",
-        contact: "0000000000",
-        members: "3",
-        amount: "300"
-    });
-
-    const members = Array(3).fill({
-        name: "Someone",
-        regNo: "00000000",
-        email: "someone@example.com",
-        department: "be-cse",
-        yearOfStudy: "3"
-    })
-
     return (
         <div>
             <div className="overflow-x-auto">
@@ -38,7 +22,6 @@ function SummaryContainer() {
                         <tr>
                             <th>Serial No.</th>
                             <th>Team Name</th>
-                            <th>Team Leader's Name</th>
                             <th>Team Leader's Contact No.</th>
                             <th>No. of Members</th>
                             <th>Amount Paid</th>
@@ -48,18 +31,17 @@ function SummaryContainer() {
                     <tbody>
                         {/* Table Rows */}
                         {teams.map((team, idx) => (
-                            <tr key={idx}>
+                            <tr key={team.TEAM_ID}>
                                 <th>{idx + 1}</th>
-                                <td>{team.teamName}</td>
-                                <td>{team.teamLeader}</td>
-                                <td>{team.contact}</td>
-                                <td>{team.members}</td>
-                                <td>{team.amount}</td>
+                                <td>{team.TEAM_NAME}</td>
+                                <td>{team.TL_contact}</td>
+                                <td>{team.NO_OF_MEMBERS}</td>
+                                <td>{team.fee}</td>
                                 <td>
                                     <LinkButton
                                         text={"View Team Details"}
                                         className={"md:btn-sm"}
-                                        onClick={() => showModal(idx)}
+                                        onClick={() => showModal(team.TEAM_ID)}
                                     />
                                 </td>
                                 {/* Modal for Each Team */}
@@ -80,7 +62,7 @@ function SummaryContainer() {
                                                     </tr>
                                                 </thead>
                                                 <tbody>
-                                                    {/* Table Rows */}
+                                                    {/* Table Rows
                                                     {members.map((member, idx) => (
                                                         <tr key={idx}>
                                                             <th>{idx + 1}</th>
@@ -90,7 +72,7 @@ function SummaryContainer() {
                                                             <td>{member.department}</td>
                                                             <td>{member.yearOfStudy}</td>
                                                         </tr>
-                                                    ))}
+                                                    ))} */}
                                                 </tbody>
                                             </table>
                                         </div>
