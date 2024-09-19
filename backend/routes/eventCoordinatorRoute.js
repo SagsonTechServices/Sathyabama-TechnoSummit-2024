@@ -4,6 +4,5 @@ const router = express.Router();
 
 router.post('/login' ,eventCoordinatorController.coordinatorLogin);
 router.post('/download',eventCoordinatorController.download,eventCoordinatorController.linkdownload);
-router.post('/teamdetails',eventCoordinatorController.teamdetails);
 
 module.exports = router;
