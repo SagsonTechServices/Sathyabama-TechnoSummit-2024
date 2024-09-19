@@ -188,21 +188,4 @@ const convertJSONToCSV = (data) => {
   return csvRows.join("\n");
 };
 
-//To view the member_details
-const teamdetails = async (req, res) => {
-  const { team_id } = req.body;
-
-  try {
-    const [team] = await db.query(
-      "SELECT * FROM member_details WHERE TEAM_ID = ?",
-      [team_id]
-    );
-
-    res.status(200).json({ team });
-  } catch (error) {
-    console.error("Error during fetching team details:", error);
-    res.status(500).json({ error: "Server error" });
-  }
-};
-
-module.exports = { coordinatorLogin, download, linkdownload, teamdetails };
+module.exports = {coordinatorLogin,download,linkdownload};
