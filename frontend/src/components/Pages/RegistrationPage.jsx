@@ -148,7 +148,7 @@ function RegistrationPage() {
 					<InputField
 						type={"text"}
 						label={"Team Name"}
-						placeholder={"Enter your team's name / 'Individual' if you are individual"}
+						placeholder={"Enter your team's name / your name"}
 						name="teamName"
 						value={step1Data.teamName}
 						onChange={handleStep1Change}
@@ -203,7 +203,7 @@ function RegistrationPage() {
 							<span className="label-text font-bold">Department</span>
 						</div>
 						<select
-							className="select select-bordered w-full max-w-xs"
+							className="select select-bordered w-full"
 							value={step1Data.dept}
 							onChange={handleStep1Change}
 							name="dept"

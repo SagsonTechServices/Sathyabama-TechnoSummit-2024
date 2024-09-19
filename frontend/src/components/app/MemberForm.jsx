@@ -70,15 +70,67 @@ function MemberForm({ index, memberData = {}, onMemberChange }) {
             />
             {errors.email && <span className="text-red-500 text-sm">{errors.email}</span>}
 
-            <InputField
-                type={"text"}
-                placeholder={"Enter the member's department"}
-                label={"Department"}
-                name="department"
-                value={memberData.department || ''}
-                onChange={handleChange}
-                error={errors.department} 
-            />
+            {/* team's dept Input */}
+					<label className="form-control w-full mx-auto my-3">
+						<div className="label">
+							<span className="label-text font-bold">Department</span>
+						</div>
+						<select
+							className="select select-bordered w-full"
+							value={memberData.dept}
+							onChange={handleChange}
+							name="dept"
+						>
+							<option value="CSE regular">CSE regular</option>
+							<option value="CSE advance studies">CSE advance studies</option>
+							<option value="Law L.L.M">Law L.L.M</option>
+							<option value="Law L.L.B">Law L.L.B</option>
+							<option value="Automobile">Automobile</option>
+							<option value="Mechanical">Mechanical</option>
+							<option value="Aero">Aero</option>
+							<option value="Mechatronics">Mechatronics</option>
+							<option value="ECE">ECE</option>
+							<option value="EEE">EEE</option>
+							<option value="Pharmacy">Pharmacy</option>
+							<option value="Dental Surgery">Dental Surgery</option>
+							<option value="Nursing">Nursing</option>
+							<option value="Physiotherapy">Physiotherapy</option>
+							<option value="B.Sc Maths">B.Sc Maths</option>
+							<option value="B.Sc/M.Sc CS">B.Sc/M.Sc CS</option>
+							<option value="Chemistry">Chemistry</option>
+							<option value="Bioinfo">Bioinfo</option>
+							<option value="Physics">Physics</option>
+							<option value="MCA">MCA</option>
+							<option value="Viscom">Viscom</option>
+							<option value="M.A English">M.A English</option>
+							<option value="M.Sc BioInformatics and DS">
+								M.Sc BioInformatics and DS
+							</option>
+							<option value="M.Sc Medical Biotech and Clinical Research">
+								M.Sc Medical Biotech and Clinical Research
+							</option>
+							<option value="M.Sc Psychology">M.Sc Psychology</option>
+							<option value="Clinical Nutrition and Diabetics">
+								Clinical Nutrition and Diabetics
+							</option>
+							<option value="Medical Lab Technology">
+								Medical Lab Technology
+							</option>
+							<option value="Civil">Civil</option>
+							<option value="Architecture">Architecture</option>
+							<option value="Design">Design</option>
+							<option value="Fashion Design">Fashion Design</option>
+							<option value="B.B.A">B.B.A</option>
+							<option value="B.Com">B.Com</option>
+							<option value="MBA">MBA</option>
+							<option value="Biomedical">Biomedical</option>
+							<option value="Biotechnology">Biotechnology</option>
+							<option value="Chemical">Chemical</option>
+							<option value="Microbiology">Microbiology</option>
+							<option value="BioChemistry">BioChemistry</option>
+						</select>
+					</label>
+                    
             {errors.department && <span className="text-red-500 text-sm">{errors.department}</span>}
 
             <div>

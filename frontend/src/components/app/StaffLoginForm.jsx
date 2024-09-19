@@ -13,7 +13,7 @@ function StaffLoginForm() {
   });
 
   const [showPassword, setShowPassword] = useState(false);
-  const naviagte = useNavigate();
+  const navigate = useNavigate();
   const [isError, setIsError] = useState(false);
 
   const handleOnChange = (event) => {
@@ -38,8 +38,8 @@ function StaffLoginForm() {
         })
         .then((response) => {
           console.log(response.data.teams);
-          naviagte("/dept-coordinator/registered-students", {
-            state: response.data.teams,
+          navigate("/dept-coordinator/registered-students", {
+            state: response.data.teams
           });
         })
         .catch((error) => {
@@ -55,9 +55,10 @@ function StaffLoginForm() {
         })
         .then((response) => {
           console.log(response.data.teams);
-          naviagte("/event-coordinator/registered-students", {
-            state: response.data.teams,
-          });
+          localStorage.setItem("teams", JSON.stringify(response.data.teams)); // Ensure data is stringified
+          localStorage.setItem("eventName", response.data.event_name);
+          
+          navigate("/event-coordinator/registered-students");
         })
         .catch((error) => {
           console.log(error);
