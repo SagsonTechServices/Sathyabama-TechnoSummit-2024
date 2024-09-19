@@ -15,10 +15,12 @@ import StaffLoginPage from './components/Pages/StaffLoginPage';
 import EventCoordinators from './components/Pages/EventCoordinatorsPage';
 import Guidelines from './components/Pages/GuidelinesPage';
 import './App.css'
+import ScrollToTop from "../src/components/utils/ScrollToTop"
 
 function App() {
   return (
     <Router>
+    <ScrollToTop />
       <div>
         <Navbar />
         <Routes>

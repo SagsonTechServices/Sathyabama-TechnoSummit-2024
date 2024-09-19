@@ -13,7 +13,7 @@ function IconContainer() {
 
     return (
         <div>
-            <div className='container max-w-screen-2xl md:px-20 px-5 my-32 md:grid-cols-3 gap-10 grid-cols-1 grid'>
+            <div className='container max-w-screen-2xl md:px-20 px-5 mb-32 mt-16 md:grid-cols-3 gap-10 grid-cols-1 grid'>
                 {iconData.map((icon) => (
                     <IconCard
                         key={icon.id}

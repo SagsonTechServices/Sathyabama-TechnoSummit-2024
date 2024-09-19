@@ -37,7 +37,7 @@ function Events() {
                     </div>
                 </div>
                 <div className='flex flex-col gap-5 my-10'>
-                    <img src={eventData.details.venueImg} alt="Venue" />
+                    <img src={eventData.details.venueImg} alt="Venue"  />
                     <img src={eventData.details.mapSS} alt="Map" />
                 </div>
                 <div className='flex justify-center'>
@@ -47,11 +47,11 @@ function Events() {
 
             <div className='hidden md:block pt-20 pb-10 px-10'>
                 <div className='grid grid-cols-10 gap-5'>
-                    <div className='col-span-3'>
+                    <div className='col-span-4'>
                         <img src={eventData.details.poster} alt="Event Poster" className='rounded-md sticky top-20' />
                     </div>
-                    <div className='col-span-7'>
-                        <div className='flex justify-between fixed bg-base-100 mt-[-2px] pb-5 w-4/6'>
+                    <div className='col-span-6'>
+                        <div className='flex justify-between fixed bg-base-100 mt-[-2px] pb-5 w-[860px]'>
                             <div className='flex flex-col'>
                                 <Heading2 text={`${eventData.details.name}`} />
                                 <span>
@@ -71,14 +71,14 @@ function Events() {
                                     {eventData.details.desc}
                                 </p>
                             </div>
-                            <div className='grid grid-cols-10 gap-5 my-5'>
-                                <div className='flex flex-col w-full col-span-3 gap-5'>
-                                    <Badge text={`Date: ${eventData.details.date}`} className='p-5 md:p-10' />
-                                    <Badge text={`Time: ${eventData.details.time}`} className='py-10 px-5 md:py-12' />
-                                    <Badge text={`Venue: ${eventData.details.venue}`} className='py-12 px-5' />
+                            <div className=' flex flex-col gap-5 my-5'>
+                                <div className='flex w-full col-span-3 gap-5'>
+                                    <Badge text={`Date: ${eventData.details.date}`} className='py-8 px-5 h-full' />
+                                    <Badge text={`Time: ${eventData.details.time}`} className='py-8 px-5 h-full' />
+                                    <Badge text={`Venue: ${eventData.details.venue}`} className='py-8 px-5 h-full' />
                                 </div>
-                                <div className='col-span-7'>
-                                    <img src={eventData.details.venueImg} alt="Venue" />
+                                <div className=''>
+                                    <img src={eventData.details.venueImg} alt="Venue" className='h-auto w-auto'/>
                                 </div>
                             </div>
                             <div>

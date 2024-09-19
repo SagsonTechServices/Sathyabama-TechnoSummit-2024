@@ -1,13 +1,13 @@
 import React from 'react';
 
-function VenueCard({ image, title, venue, id }) {
+function VenueCard({ image, title, venue, id, map }) {
   return (
     <div className="card primary-shadow bg-base-200">
       <figure className="px-10 pt-10">
         <img
           src={image}
           alt="Venue"
-          className="rounded-xl object-cover w-full h-auto" 
+          className="rounded-xl object-cover h-48 w-auto" 
         />
       </figure>
       <div className="card-body items-center text-center">
@@ -23,7 +23,7 @@ function VenueCard({ image, title, venue, id }) {
           <h3 className="font-bold text-lg">{venue}</h3>
           <figure className="px-10 pt-10">
             <img
-              src={image}
+              src={map}
               alt="Venue"
               className="rounded-xl object-cover w-full h-auto"
             />

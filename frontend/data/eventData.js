@@ -12,9 +12,33 @@ import event9 from "../src/assets/map/event9.png"
 import event10 from "../src/assets/map/event10.png"
 import event11 from "../src/assets/map/event11.png"
 import event12 from "../src/assets/map/event12.png"
-import event13 from "../src/assets/map/event13.png"
 import event14 from "../src/assets/map/event14.png"
 import event15 from "../src/assets/map/event15.png"
+import hackathon from "../src/assets/venues/hackathon.jpg"
+import dc from "../src/assets/venues/dc.jpg"
+import gk from "../src/assets/venues/gk.jpg"
+import tq from "../src/assets/venues/tq.jpg"
+import aa from "../src/assets/venues/aa.jpg"
+import cc from "../src/assets/venues/cc.jpg"
+import buildathon from "../src/assets/venues/Buildathon.jpg"
+import stpauls from "../src/assets/venues/stpauls.jpg"
+import pe from "../src/assets/venues/pe.jpg"
+import drones from "../src/assets/venues/drones.jpg"
+import gamers from "../src/assets/venues/gamers.jpg"
+import arvr from "../src/assets/venues/arvr.jpg"
+import yt from "../src/assets/venues/yt.jpg"
+import coding from "../src/assets/posters/coding.jpg"
+import design from "../src/assets/posters/design.jpg"
+import build_athon from "../src/assets/posters/build-athon.jpg"
+import tpp from "../src/assets/posters/tpp.jpg"
+import app from "../src/assets/posters/app.jpg"
+import debate from "../src/assets/posters/debate.jpg"
+import expo from "../src/assets/posters/expo.jpg"
+import game from "../src/assets/posters/game.jpg"
+import ar_vr from "../src/assets/posters/ar_vr.jpg"
+import hack from "../src/assets/posters/hack.jpg"
+import ytc from "../src/assets/posters/ytc.jpg"
+import go from "../src/assets/posters/go.jpg"
 
 const eventData = [
     {
@@ -28,12 +52,12 @@ const eventData = [
             gpay: "8903676173",
             venue: "IT Tower Lab",
             time: "9:30 AM to 12:30 PM",
-            date: "16/10/2024",
+            date: "04/10/2024",
             max: "n",
             min: "n",
-            venueImg: sathyabama,
+            venueImg: cc,
             mapSS: event1,
-            poster: poster
+            poster: coding
         }
     },
     {
@@ -45,14 +69,14 @@ const eventData = [
             fee: 100,
             feeDetails: "Rs.100 per member",
             gpay: "9841777440",
-            venue: "CSE Seminar Hall 1",
+            venue: "CSE Laboratory block, first floor",
             time: "12:00 PM to 03:15 PM",
-            date: "15/10/2024",
-            max: "n",
-            min: "n",
-            venueImg: sathyabama,
-            mapSS: event2,
-            poster: poster
+            date: "03/10/2024",
+            max: "4",
+            min: "2",
+            venueImg: dc,
+            mapSS: event2, //
+            poster: design
         }
     },
     {
@@ -64,14 +88,14 @@ const eventData = [
             fee: 100,
             feeDetails: "Rs.100 per member",
             gpay: "9940284213",
-            venue: "Career Nexus Hub 1,\n Second Floor",
+            venue: "Career Nexus Hub 4, Second Floor of Appa Mess",
             time: "10:00 AM to 01:00 PM",
-            date: "15/10/2024",
+            date: "03/10/2024",
             max: "6",
             min: "2",
-            venueImg: sathyabama,
-            mapSS: event3,
-            poster: poster
+            venueImg: buildathon,
+            mapSS: event3, //
+            poster: build_athon
         }
     },
     {
@@ -83,14 +107,14 @@ const eventData = [
             fee: 100,
             feeDetails: "Rs.100 per member",
             gpay: "9443579393",
-            venue: "St.Paul's Block",
+            venue: "St.Paul's Block, classrooms",
             time: "10:00 AM to 03:15 PM",
-            date: "15/10/2024",
+            date: "03/10/2024",
             max: "n",
             min: "n",
-            venueImg: sathyabama,
-            mapSS: event4,
-            poster: poster
+            venueImg: stpauls,
+            mapSS: event4, //
+            poster: tpp
         }
     },
     {
@@ -102,13 +126,13 @@ const eventData = [
             desc: "This event aimed to promote knowledge sharing, critical thinking, and friendly competition among participants. This quiz event offers a diverse range of thought-provoking questions that will challenge and entertain you. Participants showcase their expertise in areas such as science, technology, engineering, and current affairs. It follows a dynamic format with multiple rounds, including an Engineered Round where Questions are covered from a wide range of different engineering stream. A general Knowledge Round where Questions covering a wide range of topics and a Rapid-Fire Round where Quick questions to test participant’s spontaneity. This round is aimed at verdict out the best team and the quiz masters. The team Which scores the highest point will be the winner.",
             fee: 100,
             gpay: "9443491990",
-            venue: "COE Block Second Floor Data Science Lab",
+            venue: "Data Science Lab CoE Block, Second Floor",
             time: "09:30 AM to 12:30 PM",
-            date: "16/10/2024",
+            date: "04/10/2024",
             max: "2",
             min: "2",
-            venueImg: sathyabama,
-            mapSS: event5,
+            venueImg: tq,
+            mapSS: event5, //
             poster: poster
         }
     },
@@ -122,13 +146,13 @@ const eventData = [
             feeDetails: "Rs.100 per member",
             gpay: "9566067363",
             venue: "IT Tower Lab",
-            time: "12:00 AM to 03:15 PM",
-            date: "15/10/2024",
+            time: "12:00 PM to 03:15 PM",
+            date: "03/10/2024",
             max: "4",
             min: "2",
-            venueImg: sathyabama,
+            venueImg: aa,
             mapSS: event6,
-            poster: poster
+            poster: app
         }
     },
     {
@@ -140,14 +164,14 @@ const eventData = [
             fee: 50,
             feeDetails: "Rs.50 per member",
             gpay: "9444200310",
-            venue: "Class Rooms",
+            venue: "St.Paul's Block, classrooms",
             time: "10:00 AM to 01:00 PM",
-            date: "15/10/2024",
-            max: "6",
-            min: "1",
-            venueImg: sathyabama,
-            mapSS: event7,
-            poster: poster
+            date: "03/10/2024",
+            max: "2",
+            min: "2",
+            venueImg: stpauls,
+            mapSS: event7, //
+            poster: debate
         }
     },
     {
@@ -159,14 +183,14 @@ const eventData = [
             fee: 0,
             feeDetails: "No registration fees",
             gpay: "7092072387",
-            venue: "Indoor Stadium",
-            time: "09:30 AM to 12:30 PM(15/10/24) and 09:30 AM to 12:30 PM(16/10/24)",
-            date: "15/10/2024 and 16/10/2024",
+            venue: "Information Security Lab, Third Floor, IT Dept",
+            time: "09:30 AM to 12:30 PM(03/10/24) and 09:30 AM to 12:30 PM(04/10/24)",
+            date: "03/10/2024 and 04/10/2024",
             max: "5",
             min: "3",
-            venueImg: sathyabama,
+            venueImg: pe,
             mapSS: event8,
-            poster: poster
+            poster: expo
         }
     },
     {
@@ -178,33 +202,33 @@ const eventData = [
             fee: 100,
             feeDetails: "Rs.100 per member",
             gpay: "9444157282",
-            venue: "St.Paul's Block Lab",
+            venue: "Machine Vision lab and Web 3.0 lab(Second floor and Third Floor) St.Pauls's Block",
             time: "1:00 PM to 3:15 PM",
-            date: "16/10/2024",
+            date: "04/10/2024",
             max: "5",
             min: "1",
-            venueImg: sathyabama,
+            venueImg: gamers,
             mapSS: event9,
-            poster: poster
+            poster: game
         }
     },
     {
         id: 10,
         details: {
-            name: "ARVR Challenges",
+            name: "AR VR Contest",
             facultyCoordinator: "DR.P.Jeyanthi",
             desc: "Augmented Reality and Virtual Reality Project: Students should come up with something innovative, engaging and technically sound. Topics or Concepts: 1. ECOQuest: Immersive AR/VR experience designed to raise awareness about environmental. Interactive environment Ex: Rainforest, Coral Reefs. 2. Agriculture – used in agriculture to improve crop management and Training Ex: Crop Monitoring 3. Healthcare-EX: Surgery planning simulation Pain Management Mental Health 4. Defense- Provide  Realistic Training Experience",
             fee: 100,
             feeDetails: "Rs.100 per member",
             gpay: "9384001375",
-            venue: "Metaverse Lab,\n Sathyabama Centre for Advanced Studies",
-            time: "10:00 AM to 01:00 PM",
-            date: "15/10/2024",
-            max: "6",
-            min: "2",
-            venueImg: sathyabama,
+            venue: "Metaverse Lab, Sathyabama Centre for Advanced Studies",
+            time: "10:00 AM to 03:15 PM PM",
+            date: "03/10/2024",
+            max: "2",
+            min: "1",
+            venueImg: arvr,
             mapSS: event10,
-            poster: poster
+            poster: ar_vr
         }
     },
     {
@@ -216,14 +240,14 @@ const eventData = [
             fee: 100,
             feeDetails: "Rs.100 per member",
             gpay: "9445265143",
-            venue: "Dr. Remibah Auditorium",
-            time: "10:00 AM(15.10.2024) to 10:00 AM(16.10.2024)",
-            date: "15/10/2024",
+            venue: "Indoor Auditorium",
+            time: "24 hours Hackathon Starts at 10:00 AM",
+            date: "03/10/2024",
             max: "6",
             min: "2",
-            venueImg: sathyabama,
-            mapSS: event11,
-            poster: poster
+            venueImg: hackathon,
+            mapSS: event11, //
+            poster: hack
         }
     },
     {
@@ -235,37 +259,18 @@ const eventData = [
             fee: 100,
             feeDetails: "Rs.100 per member",
             gpay: "9445265143",
-            venue: "Career Nexus Hub 1, Second Floor",
+            venue: "Career Nexus Hub 1, First Floor of Appa Mess",
             time: "9:30 AM to 12:30 PM",
-            date: "16/10/2024",
+            date: "04/10/2024",
             max: "3",
             min: "2",
-            venueImg: sathyabama,
-            mapSS: event12,
-            poster: poster
+            venueImg: yt,
+            mapSS: event12, //
+            poster: ytc
         }
     },
     {
         id: 13,
-        details: {
-            name: "Food Carnival",
-            facultyCoordinator: "Dr.S.Prayla Shyry",
-            desc: "A celebration of culinary delights, where people come together to indulge in a variety of dishes and experience the rich flavors of different cuisines. It is a vibrant and lively event that showcases the diversity and creativity of food. The atmosphere is filled with the aroma of spices, the sizzle of grills, and the laughter of people enjoying their meals. It is a feast for the senses, offering a unique opportunity to explore new flavors, discover local specialties, and connect with others who share a love for food.",
-            fee: 500,
-            feeDetails: "Rs.500 per stall",
-            gpay: "9445104773",
-            venue: "Remibai Auditorium Outside Stalls",
-            time: "10:00 AM to 3:15 PM(15/10/24) and 09:30 AM to 03:00 PM(16/10/24)",
-            date: "15/10/2024 and 16/10/2024",
-            max: "3",
-            min: "2",
-            venueImg: sathyabama,
-            mapSS: event13,
-            poster: poster
-        }
-    },
-    {
-        id: 14,
         details: {
             name: "Go Karting",
             facultyCoordinator: "Dr.Nancy Noella R S",
@@ -273,18 +278,18 @@ const eventData = [
             fee: 100,
             feeDetails: "Rs.100 per member",
             gpay: "9446329124",
-            venue: "CSE Laboratory Block First Floor and Outside Main Library",
-            time: "01:00 PM to 03:15 PM",
-            date: "16/10/2024",
+            venue: "CSE Laboratory Block First Floor(First FLoor) and Outside Main Library(final)",
+            time: "09:00 AM to 03:15 PM",
+            date: "04/10/2024",
             max: "3",
-            min: "2",
-            venueImg: sathyabama,
+            min: "1",
+            venueImg: gk,
             mapSS: event14,
-            poster: poster
+            poster: go
         }
     },
     {
-        id: 15,
+        id: 14,
         details: {
             name: "Drones and Robotics Design Challenge",
             facultyCoordinator: "Dr.Sonia Jenifer Rayen",
@@ -292,13 +297,13 @@ const eventData = [
             fee: 300,
             feeDetails: "Rs.300 per member",
             gpay: "9962742851",
-            venue: "Career Nexus Hub 2,\n Second Floor and OAT",
-            time: "11:00 PM to 03:15 PM",
-            date: "15/10/2024",
+            venue: "Career Nexus Hub 3, Second Floor of Appa Mess(prelims) and OAT(final)",
+            time: "11:00 AM to 03:15 PM",
+            date: "03/10/2024",
             max: "3",
             min: "1",
-            venueImg: sathyabama,
-            mapSS: event15,
+            venueImg: drones,
+            mapSS: event15, //
             poster: poster
         }
     }
