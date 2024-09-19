@@ -104,7 +104,7 @@ function RegistrationPage() {
 				...step1Data,
 				members: membersData,
 				event: event,
-				payment_status: 0,
+				payment_status: event.details.fee === 0 ? 1 : 0,
 			};
 			console.log("Registration Data:", registrationData);
 			// You can submit registrationData here (e.g., API call)
