@@ -14,19 +14,19 @@ import event11 from "../src/assets/map/event11.png"
 import event12 from "../src/assets/map/event12.png"
 import event14 from "../src/assets/map/event14.png"
 import event15 from "../src/assets/map/event15.png"
-import hackathon from "../src/assets/venues/hackathon.jpg"
-import dc from "../src/assets/venues/dc.jpg"
-import gk from "../src/assets/venues/gk.jpg"
-import tq from "../src/assets/venues/tq.jpg"
-import aa from "../src/assets/venues/aa.jpg"
-import cc from "../src/assets/venues/cc.jpg"
-import buildathon from "../src/assets/venues/Buildathon.jpg"
+import hackathon from "../src/assets/venues/h.png"
+import dc from "../src/assets/venues/IMG_0137.jpg"
+import gk from "../src/assets/venues/library.jpg"
+import tq from "../src/assets/venues/IMG_0439.png"
+import aa from "../src/assets/venues/it.jpg"
+import cc from "../src/assets/venues/it.jpg"
+import buildathon from "../src/assets/venues/IMG_7203.png"
 import stpauls from "../src/assets/venues/stpauls.jpg"
-import pe from "../src/assets/venues/pe.jpg"
-import drones from "../src/assets/venues/drones.jpg"
+import pe from "../src/assets/venues/IMG_2422.png"
+import drones from "../src/assets/venues/oat.jpg"
 import gamers from "../src/assets/venues/gamers.jpg"
-import arvr from "../src/assets/venues/arvr.jpg"
-import yt from "../src/assets/venues/yt.jpg"
+import arvr from "../src/assets/venues/meta.jpg"
+import yt from "../src/assets/venues/IMG_7203.png"
 import coding from "../src/assets/posters/coding.jpg"
 import design from "../src/assets/posters/design.jpg"
 import build_athon from "../src/assets/posters/build-athon.jpg"
@@ -39,6 +39,8 @@ import ar_vr from "../src/assets/posters/ar_vr.jpg"
 import hack from "../src/assets/posters/hack.jpg"
 import ytc from "../src/assets/posters/ytc.jpg"
 import go from "../src/assets/posters/go.jpg"
+import d from "../src/assets/posters/drones.jpg" 
+import q from "../src/assets/posters/quiz.jpg"
 
 const eventData = [
     {
@@ -103,9 +105,9 @@ const eventData = [
         details: {
             name: "Technical Paper Presentation",
             facultyCoordinator: "Dr.B.Ankayarkanni",
-            desc: "The goal is to share knowledge, present innovative solutions, and discuss advancements in a particular field of science, engineering, or technology.Individuals or teams submit technical papers for review before the event.Topics usually fall under a broad category (e.g., Engineering, Science, Medical Sciences,Management Studies,Law etc.), with participants presenting their work on niche or emerging areas.\nAll papers should be original, unpublished, not submitted to any other journal, in pdf format as per the guide lines. Please mail your original manuscript mentioning your name, contact details and e-mail id to technopresentation24@gmail.com\nAll submitted papers will be checked for plagiarism and papers which are not satisfying the criteria will be summarily rejected. Notification of acceptance will be through email.\nAll Accepted and presented papers will be published in Google Scholar..10 best papers will be selected and published in Scopus Indexed Journals with no publication charges.",
+            desc: "The goal is to share knowledge, present innovative solutions, and discuss advancements in a particular field of science, engineering, or technology.Individuals or teams submit technical papers for review before the event.Topics usually fall under a broad category (e.g., Engineering, Science, Medical Sciences,Management Studies,Law etc.), with participants presenting their work on niche or emerging areas.\nAll papers should be original, unpublished, not submitted to any other journal, in pdf format as per the guide lines. Please mail your original manuscript mentioning your name, contact details and e-mail id to technopresentation24@gmail.com\nAll submitted papers will be checked for plagiarism and papers which are not satisfying the criteria will be summarily rejected. Notification of acceptance will be through email.\nAll Accepted and presented papers will be published in Google Scholar.16 best papers will be selected and published in Scopus Indexed Journals with no publication charges.",
             fee: 100,
-            feeDetails: "Rs.100 per member",
+            feeDetails: "No registration fees",
             gpay: "9443579393",
             venue: "St.Paul's Block, classrooms",
             time: "10:00 AM to 03:15 PM",
@@ -133,7 +135,7 @@ const eventData = [
             min: "2",
             venueImg: tq,
             mapSS: event5, //
-            poster: poster
+            poster: q
         }
     },
     {
@@ -162,7 +164,7 @@ const eventData = [
             facultyCoordinator: "Dr.M.S.Godwin Premi",
             desc: "Debaters participate in teams to address the topic either from the affirmative side or the opposing side exploring their perspectives and opinions on a specific topic. Each team will address with opening statements, rebuttals, counterarguments, and end with closing statements.",
             fee: 50,
-            feeDetails: "Rs.50 per member",
+            feeDetails: "Rs.100 per member",
             gpay: "9444200310",
             venue: "St.Paul's Block, classrooms",
             time: "10:00 AM to 01:00 PM",
@@ -181,7 +183,7 @@ const eventData = [
             facultyCoordinator: "Dr. Shanmuga Prabha P",
             desc: "The Techno Summit 2k24 - Project Exhibition is an exciting event that brings together innovative projects from diverse academic disciplines. Students from fields such as engineering, computer science, business, arts, social sciences, and natural sciences showcase their creativity, research, and technical skills through interactive displays and presentations. The exhibition serves as a platform for students to present solutions to real-world challenges, cutting-edge technologies, and artistic expressions. Visitors have the opportunity to engage with the projects, discuss with the creators, and gain insights into the latest advancements and creative endeavors in each field. The exhibition encourages cross-disciplinary collaboration, fostering a learning environment that values innovation, practical solutions, and academic excellence.",
             fee: 0,
-            feeDetails: "No registration fees",
+            feeDetails: "Rs.100 per member",
             gpay: "7092072387",
             venue: "Information Security Lab, Third Floor, IT Dept",
             time: "09:30 AM to 12:30 PM(03/10/24) and 09:30 AM to 12:30 PM(04/10/24)",
@@ -295,7 +297,7 @@ const eventData = [
             facultyCoordinator: "Dr.Sonia Jenifer Rayen",
             desc: "Drones Gaming Challenge, where the thrill of drone racing meets the excitement of gaming! In this innovative competition, players will navigate high-speed drones and design drones.  With cutting-edge technology and heart-pumping action, this challenge demands skill, strategy, and quick reflexes. Join us as we take drone gaming to new heights!",
             fee: 300,
-            feeDetails: "Rs.300 per member",
+            feeDetails: "Rs.100 per member",
             gpay: "9962742851",
             venue: "Career Nexus Hub 3, Second Floor of Appa Mess(prelims) and OAT(final)",
             time: "11:00 AM to 03:15 PM",
@@ -304,7 +306,7 @@ const eventData = [
             min: "1",
             venueImg: drones,
             mapSS: event15, //
-            poster: poster
+            poster: d
         }
     }
 ]

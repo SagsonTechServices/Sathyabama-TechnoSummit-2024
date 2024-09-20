@@ -3,6 +3,7 @@ import Heading1 from "../utils/Heading1";
 import Heading0 from "../utils/Heading0";
 import sistLogo from '../../assets/sistlogo.png';
 import aPlus from '../../assets/a++.jpg';
+import acc from "../../assets/accreditions.jpg"
 
 function Sathyabama() {
     return (
@@ -17,7 +18,7 @@ function Sathyabama() {
                         <Heading1 text={"INSTITUE OF SCIENCE AND TECHNOLOGY"} className={'text-2xl text-white'}></Heading1>
                         <Heading1 text={"(DEEMED TO BE UNIVERSITY)"} className={'text-lg text-white'}></Heading1>
                         <Heading1 text={"CATEGORY-1 UNIVERSITY BY UGC"} className={'text-xl text-white'}></Heading1>
-                        <Heading1 text={"Accredited with Grade \"A++\" by NAAC | Approved by AICTE "} className={'text-xl text-white'}></Heading1>
+                        <img src={acc} className="pt-5"/>
                     </div>
                     <div>
                         <img src={aPlus} />
@@ -35,7 +36,7 @@ function Sathyabama() {
                         <Heading1 text={"INSTITUE OF SCIENCE AND TECHNOLOGY"} className={'text-[10px] text-white'}></Heading1>
                         <Heading1 text={"(DEEMED TO BE UNIVERSITY)"} className={'text-[8px] text-white'}></Heading1>
                         <Heading1 text={"CATEGORY-1 UNIVERSITY BY UGC"} className={'text-[10px] text-white'}></Heading1>
-                        <Heading1 text={"Accredited with Grade \"A++\" by NAAC | Approved by AICTE "} className={'text-[10px] text-white'}></Heading1>
+                        <img src={acc} className="pt-2"/>
                     </div>
                     <div>
                         <img src={aPlus} className="w-[100px] h-auto" />
