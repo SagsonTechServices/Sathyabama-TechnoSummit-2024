@@ -81,7 +81,7 @@ function Navbar() {
                                             <Link to={"/event/9"}>Next Gen Gamers</Link>
                                         </li>
                                         <li>
-                                            <Link to={"/event/10"}>AR VR Challenges</Link>
+                                            <Link to={"/event/10"}>AR VR Contest</Link>
                                         </li>
                                         <li>
                                             <Link to={"/event/11"}>Hackathon</Link>
@@ -90,13 +90,10 @@ function Navbar() {
                                             <Link to={"/event/12"}>Youtube Challenges</Link>
                                         </li>
                                         <li>
-                                            <Link to={"/event/13"}>Food carnival</Link>
+                                            <Link to={"/event/13"}>Go Karting</Link>
                                         </li>
                                         <li>
-                                            <Link to={"/event/14"}>Go Karting</Link>
-                                        </li>
-                                        <li>
-                                            <Link to={"/event/15"}>
+                                            <Link to={"/event/14"}>
                                                 Drones and Robotics Design challenge
                                             </Link>
                                         </li>
@@ -172,7 +169,7 @@ function Navbar() {
                                         <Link to={"/event/9"}>Next Gen Gamers</Link>
                                     </li>
                                     <li>
-                                        <Link to={"/event/10"}>AR VR Challenges</Link>
+                                        <Link to={"/event/10"}>AR VR Contest</Link>
                                     </li>
                                     <li>
                                         <Link to={"/event/11"}>Hackathon</Link>
@@ -181,13 +178,10 @@ function Navbar() {
                                         <Link to={"/event/12"}>Youtube Challenges</Link>
                                     </li>
                                     <li>
-                                        <Link to={"/event/13"}>Food carnival</Link>
+                                        <Link to={"/event/13"}>Go Karting</Link>
                                     </li>
                                     <li>
-                                        <Link to={"/event/14"}>Go Karting</Link>
-                                    </li>
-                                    <li>
-                                        <Link to={"/event/15"}>
+                                        <Link to={"/event/14"}>
                                             Drones and Robotics Design challenge
                                         </Link>
                                     </li>

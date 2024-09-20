@@ -10,7 +10,6 @@ import gamers from '../assets/icons/gamers.png';
 import arvr from '../assets/icons/arvr.png';
 import hackathon from '../assets/icons/hackathon.png';
 import youtube from '../assets/icons/youtube.png';
-import foodcarnival from '../assets/icons/foodcarnival.png';
 import karting from '../assets/icons/karting.png';
 import drone from '../assets/icons/drone.png';
 
@@ -101,20 +100,13 @@ const iconData = [
     },
     {
         id: 13,
-        image: foodcarnival,
-        title: "Food Carnival",
-        desc: "A celebration of culinary delights, where people come together to indulge in a variety of dishes and experience the rich flavors of different cuisines. It is a vibrant and lively event that showcases the diversity and creativity of food. The atmosphere is filled with the aroma of spices, the sizzle of grills, and the laughter of people enjoying their meals. It is a feast for the senses, offering a unique opportunity to explore new flavors, discover local specialties, and connect with others who share a love for food.",
-        alt: "Food Carnival"
-    },
-    {
-        id: 14,
         image: karting,
         title: "Go Karting",
         desc: "The Go-Karting Challenge is a thrilling motorsport event where students race karts, testing speed, maneuverability, and driver skill. Teams compete in multiple races to earn the championship title, fostering teamwork and technical skills with practical experience in automotive engineering. Level 1: Digital Assembly Task - Teams assemble puzzle models with the criteria being the number of turns and time taken.  The criteria considered for selection to the next level are the number of turns and time taken to assemble the given puzzle model. Based on the score obtained, the top teams will be selected for the final level. Final Level: Go-Karting - Eligible participants race in provided karts on a lap-based track. Teams must adhere to track boundaries, with penalties for violations. A team can have maximum of 3 members. And if the team gets qualified for the final round, the driver should have a valid Four Wheeler Driving License.",
         alt: "Go Karting"
     },
     {
-        id: 15,
+        id: 14,
         image: drone,
         title: "Drones and Robotics Design Challenge",
         desc: "Drones Gaming Challenge, where the thrill of drone racing meets the excitement of gaming! In this innovative competition, players will navigate high-speed drones and design drones.  With cutting-edge technology and heart-pumping action, this challenge demands skill, strategy, and quick reflexes. Join us as we take drone gaming to new heights!",
