@@ -22,5 +22,9 @@ app.use('/student' , studentRoute);
 app.use('/departmentIncharge' ,departmentInchargeRoute);
 app.use('/eventCoordinatorRoute' ,eventCoordinatorRoute);
 
+app.get('/' , (req , res) => {
+    res.send("Poda potta");
+})
+
 // starting the server 
 app.listen(port , () => {console.log("Server started at port" , port)});
