@@ -23,7 +23,7 @@ app.use('/departmentIncharge' ,departmentInchargeRoute);
 app.use('/eventCoordinatorRoute' ,eventCoordinatorRoute);
 
 app.get('/' , (req , res) => {
-    res.send("Poda potta");
+    res.send("Server started bro");
 })
 
 // starting the server 
