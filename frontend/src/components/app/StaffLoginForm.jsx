@@ -49,7 +49,7 @@ function StaffLoginForm() {
     }
     else{
       axios
-        .post(`${import.meta.env.VITE_BACKEND_URL}/eventCoordinatorRoute/login`, {
+        .post(`${import.meta.env.VITE_BACKEND_URL}/eventCoordinator/login`, {
           phone_number: loginData.mobileNo,
           password: loginData.password,
         })
