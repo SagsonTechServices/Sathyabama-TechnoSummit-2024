@@ -26,8 +26,8 @@ function Events() {
                         {eventData.details.desc}
                     </p>
                 </div>
-                <div className='mb-10'>
-                    <img src={eventData.details.poster} alt="Event Poster" className='rounded-md' />
+                <div className='mb-10 w-full'>
+                    <img src={eventData.details.poster} alt="Event Poster" className='rounded-md w-full h-full object-cover' />
                 </div>
                 <div>
                     <div className='flex flex-col w-full col-span-3 gap-5'>
@@ -51,7 +51,7 @@ function Events() {
                         <img src={eventData.details.poster} alt="Event Poster" className='rounded-md sticky top-20' />
                     </div>
                     <div className='col-span-6'>
-                        <div className='flex justify-between fixed bg-base-100 mt-[-2px] pb-5 w-[860px]'>
+                        <div className='flex justify-between fixed bg-base-100 mt-[-10px] pb-5 w-[860px]'>
                             <div className='flex flex-col'>
                                 <Heading2 text={`${eventData.details.name}`} />
                                 <span>

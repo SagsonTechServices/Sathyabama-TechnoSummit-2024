@@ -24,7 +24,7 @@ function Footer() {
 				<nav>
 					<h6 className="footer-title">About</h6>
 					<a className="link link-hover"><Link to={'/about'}>TechnoSummit</Link></a>
-					<a className="link link-hover"><Link to={'/patrons'}>Our Patrons</Link></a>
+					<a className="link link-hover"><Link to={'/patrons'}>Patrons</Link></a>
 				</nav>
 				<nav>
 					<h6 className="footer-title">Socials</h6>
@@ -32,7 +32,7 @@ function Footer() {
 						<div className='flex flex-col gap-3'>
 							<a className="link link-hover" href='https://www.sathyabama.ac.in/' target='_blank'><div className='flex gap-2'><img src={web}></img><p>Website</p></div></a>
 							<a className="link link-hover" href='https://www.facebook.com/SathyabamaOfficial/' target='_blank'><div className='flex gap-2'><img src={fb}></img><p>Facebook</p></div></a>
-							<a className="link link-hover" href='https://www.instagram.com/sathyabama.official/' target='_blank'><div className='flex gap-2'><img src={ig}></img><p>Instagram</p></div></a>
+							<a className="link link-hover" href='https://www.instagram.com/technosummit2024/' target='_blank'><div className='flex gap-2'><img src={ig}></img><p>Instagram</p></div></a>
 						</div>
 						<div className='flex flex-col gap-3'>
 							<a className="link link-hover" href='https://x.com/sathyabamaSIST' target='_blank'><div className='flex gap-2'><img src={x}></img><p>X(Twitter)</p></div></a>
