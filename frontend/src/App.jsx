@@ -16,6 +16,7 @@ import EventCoordinators from './components/Pages/EventCoordinatorsPage';
 import Guidelines from './components/Pages/GuidelinesPage';
 import './App.css'
 import ScrollToTop from "../src/components/utils/ScrollToTop"
+import Depts from "../src/components/Pages/DeptList"
 
 function App() {
   return (
@@ -33,6 +34,7 @@ function App() {
           <Route path='/event/registration/:eventId' element={<RegistrationPage />} />
           <Route path='/patrons' element={<PatronsPage />} />
           <Route path='/technosummit/events/schedules' element={<SchedulePage />} />
+          <Route path='/depts' element={<Depts></Depts>} />
           <Route path='/dept-coordinator/registered-students' element={<RegisteredPageForDeptCoords />} />
           <Route path='/staff/login' element={<StaffLoginPage />} />
           <Route path='/event-coordinator/registered-students' element={<EventCoordinators />} />

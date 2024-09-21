@@ -84,7 +84,7 @@ function RegistrationPage() {
 					name: "",
 					regNo: "",
 					email: "",
-					department: "",
+					department: "dept",
 					yearOfStudy: "",
 				}))
 			);
