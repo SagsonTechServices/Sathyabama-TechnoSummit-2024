@@ -39,14 +39,14 @@ const venueDetails = [
         id: 2,
         image: dc,
         title: "Design Challenges",
-        venue: "CSE Laboratory block, first floor",
+        venue: "CSE Block Laboratory, First Floor",
         mapSS: event2,
     },
     {
         id: 3,
         image: buildathon,
         title: "Buildathon",
-        venue: "Career Nexus Hub 1, Second Floor of Appa Mess",
+        venue: "Career Nexus Hub 4, Second Floor of Appa Mess",
         mapSS: event3,
     },
     {
@@ -60,7 +60,7 @@ const venueDetails = [
         id: 5,
         image: tq,
         title: "Technical Quiz",
-        venue: "Data Science Lab, CoE Block, Second Floor",
+        venue: "Data Science Lab, CoE Block - Second Floor",
         mapSS: event5,
     },
     {
@@ -81,14 +81,14 @@ const venueDetails = [
         id: 8,
         image: pe,
         title: "Project Exhibition",
-        venue: "Information Security Lab, Third FLoor, IT Dept",
+        venue: "Information Security Lab, Third FLoor, IT Department",
         mapSS: event8,
     },
     {
         id: 9,
         image: gamers,
         title: "Next Gen Gamers",
-        venue: "Machine Vision Lab and Web 3.0 Lab(Second FLoor and Third Floor) St.Pauls's Block",
+        venue: "St.Paul's Block. Machine Vision Lab and  Web 3.0 Lab(Second & Third Floor)",
         mapSS: event9,
     },
     {
@@ -102,7 +102,7 @@ const venueDetails = [
         id: 11,
         image: hackathon,
         title: "Hackathon",
-        venue: "Indoor Auditorium",
+        venue: "Indoor Stadium",
         mapSS: event11,
     },
     {
@@ -116,14 +116,14 @@ const venueDetails = [
         id: 13,
         image: gk,
         title: "Go Karting",
-        venue: "CSE Laboratory Block First Floor(prelims) and Outside Main Library(final)",
+        venue: "CSE Lab Block First Floor(prelims) and Outside Main Library(final)",
         mapSS: event14,
     },
     {
         id: 14,
         image: drones,
         title: "Drones and Robotics Design challenge",
-        venue: "Career Nexus Hub 2, Second Floor of Appa Mess(prelims) and OAT(final)",
+        venue: "Career Nexus Hub 3, Second Floor of Appa Mess(prelims) and OAT(final)",
         mapSS: event15,
     }
 ]
