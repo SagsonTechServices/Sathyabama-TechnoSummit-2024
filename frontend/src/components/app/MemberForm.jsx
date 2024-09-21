@@ -78,7 +78,7 @@ function MemberForm({ index, memberData = {}, onMemberChange }) {
 						<select
 							className="select select-bordered w-full"
                             name="department"
-							value={memberData.department}
+							value={memberData.department || 'CSE regular'}
 							onChange={handleChange}
 							
 						>

@@ -185,8 +185,8 @@ function RegistrationPage() {
 							</div>
 							<input
 								type="number"
-								min={event.details.min !== "n" ? event.details.min : 1}
-								max={event.details.max !== "n" ? event.details.max : 10}
+								min={event.details.min}
+								max={event.details.max}
 								placeholder="Enter the number of team members"
 								className="input input-bordered w-full bg-base-200"
 								name="numberOfMembers"
