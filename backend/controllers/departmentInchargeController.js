@@ -6,7 +6,7 @@ const InchargeLogin = async (req, res) => {
 
   try {
     const [inchargeResult] = await db.query(
-      'SELECT * FROM dept_incharge WHERE phone_number = ? AND password = ?',
+      'SELECT * FROM dept_incharge WHERE contact = ? AND password = ?',
       [phone_number, password]
     );
 
@@ -15,7 +15,7 @@ const InchargeLogin = async (req, res) => {
     }
 
     // Get the department
-    const dept_name = inchargeResult[0].dept_name;
+    const dept_name = inchargeResult[0].dept;
 
     const [teams] = await db.query(
       'SELECT * FROM EVENT_REGISTRATIONS WHERE DEPARTMENT = ?',
@@ -31,8 +31,28 @@ const InchargeLogin = async (req, res) => {
 };
 
 
+const eventFormLinks = {
+  'Coding Challenge': 'https://docs.google.com/forms/d/e/1FAIpQLSeLwI-5p7tRRW8Pd8OElJgH3RAlc4leqaRKePvQ-tImpfxJTw/viewform',//
+  'Design Challenges': 'https://forms.gle/ukCajXJnA6xnSSz59',//
+  'Buildathon': 'https://forms.gle/t9kMba643EfiRXYa8',//
+  'Technical Paper Presentation': 'https://forms.gle/link_for_technical_paper',
+  'Technical Quiz': 'https://forms.gle/link_for_technical_quiz',
+  'App Arena': 'https://forms.gle/link_for_app_arena',
+  'Technical Debate': 'https://forms.gle/MGPSyiP1ePiudstp8',//
+  'Project Exhibition': 'https://forms.gle/link_for_project_exhibition',
+  'Next Gen Gamers': 'https://forms.gle/A9vmQkd7siAVEzgcA',//
+  'AR VR Contest': 'https://docs.google.com/forms/d/e/1FAIpQLSfrN-l_OQmBNjfvpVKs0a5dXamlIPeOLK-QeQnIJgJKRStpLA/viewform?usp=sf_link',//
+  'Hackathon': 'https://docs.google.com/forms/d/e/1FAIpQLSfx8KbdHlLg1HGs8H-HSxsDIyrvt99KlZVVHHnw_dyKzEfCuw/viewform?usp=sharing',//
+  'Youtube Challenges': 'https://forms.gle/ncyk2HJBKMV6kh9y8',//
+  'Go Karting': 'https://forms.gle/VUbt1qFV82BeQmWm6',//
+  'Drones and Robotics Design Challenge': 'https://forms.gle/wa4xfjzcJjRJW8eE6'//
+};
+
+
 const updatePaymentStatus = async (req, res) => {
   const { teamIds } = req.body;
+
+  console.log(teamIds)
 
   if (!teamIds || !teamIds.length) {
     return res.status(400).json({ message: "No team IDs provided." });
@@ -49,7 +69,7 @@ const updatePaymentStatus = async (req, res) => {
       res.status(200).json({ message: "Payment status updated successfully." });
       console.log("Payment status updated successfully.");
 
-      const [dbdata] = await db.query(`SELECT TL_MAIL, TEAM_NAME, EVENT_NAME, AMOUNT, NO_OF_MEMBERS FROM event_registrations WHERE TEAM_ID IN (${placeholders})`, teamIds);
+      const [dbdata] = await db.query(`SELECT TL_MAIL, TEAM_NAME, EVENT_NAME, fee, NO_OF_MEMBERS FROM event_registrations WHERE TEAM_ID IN (${placeholders})`, teamIds);
 
       const transporter = nodemailer.createTransport({
         service: 'gmail',
@@ -64,7 +84,7 @@ const updatePaymentStatus = async (req, res) => {
           from: 'sathyabama.technosummit2024@gmail.com',
           to: recipientEmail,
           subject: subject,
-          text: message
+          html: message
         };
 
         transporter.sendMail(mailOptions, (error, info) => {
@@ -81,11 +101,36 @@ const updatePaymentStatus = async (req, res) => {
         const recipientEmail = entry.TL_MAIL;
         const eventName = entry.EVENT_NAME;
         const teamName = entry.TEAM_NAME;
-        const amount = entry.AMOUNT;
+        const amount = entry.fee;
         const members = entry.NO_OF_MEMBERS;
 
+        const formLink = eventFormLinks[eventName];
+
         const subject = 'TechnoSummit-2024 Payment Updated';
-        const message = `Greetings, Your team ${teamName} has successfully registered for ${eventName}. Payment of Rs.${amount} has been received and updated. Number of members in your team: ${members}`;
+        const message = `
+  <div style="font-family: Arial, sans-serif; color: #333; line-height: 1.6; padding: 20px; border: 1px solid #ddd; border-radius: 10px; background-color: #f9f9f9;">
+    <h2 style="color: #4CAF50;">🎉 Congratulations, Team <strong>${teamName}!</strong> 🎉</h2>
+    <p style="font-size: 16px;">We are thrilled to inform you that your team has successfully registered for the <strong>${eventName}</strong> event!</p>
+    
+    <h3 style="color: #FF5722;">✔️ Payment Confirmation</h3>
+    <p>Your payment of <strong>Rs.${amount}</strong> has been <strong style="color: #4CAF50;">received</strong> and updated in our records.</p>
+
+    <h3 style="color: #007BFF;">👥 Team Details</h3>
+    <ul style="list-style-type: none; padding-left: 0;">
+      <li><strong>Team Name:</strong> ${teamName}</li>
+      <li><strong>Number of Members:</strong> ${members}</li>
+    </ul>
+    
+    <p style="font-size: 16px; margin-top: 20px;">We wish you and your team the best of luck in the competition! If you have any questions or need further assistance, feel free to reach out to us.</p>
+
+    <p>Please complete the event registration by filling out this <a href="${formLink}" style="color: #007BFF;">Google Form</a>.</p>
+    
+    <p style="font-size: 14px; color: #999;">Thank you for being part of Techno Summit 2024. Let’s make this event a memorable one! 🚀</p>
+
+    <p style="font-size: 12px; color: #aaa; text-align: center;">For more information, contact us at <a href="mailto:sathyabama.technosummit2024@gmail.com" style="color: #007BFF;">sathyabama.technosummit2024@gmail.com</a></p>
+  </div>
+`;
+
 
         sendEmail(recipientEmail, subject, message);
       });
