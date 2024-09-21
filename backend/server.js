@@ -8,10 +8,6 @@ const eventCoordinatorRoute = require('./routes/eventCoordinatorRoute');
 
 dotenv.config();
 
-// creating the express app 
-const app = express();
-const port = process.env.SERVER_PORT || 5555;
-
 // setting up middlewares 
 const corsOptions = {
   origin: 'https://sathyabama-techno-summit-2024.vercel.app/', // replace with your Vercel frontend URL
@@ -19,6 +15,11 @@ const corsOptions = {
 };
 
 app.use(cors(corsOptions));
+
+// creating the express app 
+const app = express();
+const port = process.env.SERVER_PORT || 5555;
+
 
 app.use(express.json());
 
