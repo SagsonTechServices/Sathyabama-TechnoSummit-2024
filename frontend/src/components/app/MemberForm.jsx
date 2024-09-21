@@ -77,9 +77,10 @@ function MemberForm({ index, memberData = {}, onMemberChange }) {
 						</div>
 						<select
 							className="select select-bordered w-full"
-							value={memberData.dept}
+                            name="department"
+							value={memberData.department}
 							onChange={handleChange}
-							name="dept"
+							
 						>
 							<option value="CSE regular">CSE regular</option>
 							<option value="CSE advance studies">CSE advance studies</option>
