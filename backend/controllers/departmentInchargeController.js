@@ -31,6 +31,24 @@ const InchargeLogin = async (req, res) => {
 };
 
 
+const eventFormLinks = {
+  'Coding Challenge': 'https://docs.google.com/forms/d/e/1FAIpQLSeLwI-5p7tRRW8Pd8OElJgH3RAlc4leqaRKePvQ-tImpfxJTw/viewform',//
+  'Design Challenges': 'https://forms.gle/ukCajXJnA6xnSSz59',//
+  'Buildathon': 'https://forms.gle/t9kMba643EfiRXYa8',//
+  'Technical Paper Presentation': 'https://forms.gle/link_for_technical_paper',
+  'Technical Quiz': 'https://forms.gle/link_for_technical_quiz',
+  'App Arena': 'https://forms.gle/link_for_app_arena',
+  'Technical Debate': 'https://forms.gle/MGPSyiP1ePiudstp8',//
+  'Project Exhibition': 'https://forms.gle/link_for_project_exhibition',
+  'Next Gen Gamers': 'https://forms.gle/A9vmQkd7siAVEzgcA',//
+  'AR VR Contest': 'https://docs.google.com/forms/d/e/1FAIpQLSfrN-l_OQmBNjfvpVKs0a5dXamlIPeOLK-QeQnIJgJKRStpLA/viewform?usp=sf_link',//
+  'Hackathon': 'https://docs.google.com/forms/d/e/1FAIpQLSfx8KbdHlLg1HGs8H-HSxsDIyrvt99KlZVVHHnw_dyKzEfCuw/viewform?usp=sharing',//
+  'Youtube Challenges': 'https://forms.gle/ncyk2HJBKMV6kh9y8',//
+  'Go Karting': 'https://forms.gle/VUbt1qFV82BeQmWm6',//
+  'Drones and Robotics Design Challenge': 'https://forms.gle/wa4xfjzcJjRJW8eE6'//
+};
+
+
 const updatePaymentStatus = async (req, res) => {
   const { teamIds } = req.body;
 
@@ -86,6 +104,8 @@ const updatePaymentStatus = async (req, res) => {
         const amount = entry.fee;
         const members = entry.NO_OF_MEMBERS;
 
+        const formLink = eventFormLinks[eventName];
+
         const subject = 'TechnoSummit-2024 Payment Updated';
         const message = `
   <div style="font-family: Arial, sans-serif; color: #333; line-height: 1.6; padding: 20px; border: 1px solid #ddd; border-radius: 10px; background-color: #f9f9f9;">
@@ -102,6 +122,8 @@ const updatePaymentStatus = async (req, res) => {
     </ul>
     
     <p style="font-size: 16px; margin-top: 20px;">We wish you and your team the best of luck in the competition! If you have any questions or need further assistance, feel free to reach out to us.</p>
+
+    <p>Please complete the event registration by filling out this <a href="${formLink}" style="color: #007BFF;">Google Form</a>.</p>
     
     <p style="font-size: 14px; color: #999;">Thank you for being part of Techno Summit 2024. Let’s make this event a memorable one! 🚀</p>
 
