@@ -72,13 +72,23 @@ function validateForm() {
 
 	// Handle member data changes in each MemberForm
 	function handleMemberChange(index, e) {
-		const { name, value } = e.target;
-		const updatedMembers = [...membersData];
-		updatedMembers[index] = {
-			...updatedMembers[index],
-			[name]: value,
-		};
-		setMembersData(updatedMembers);
+		function handleMemberChange(index, e) {
+			const { name, value } = e.target;
+			const updatedMembers = [...membersData];
+		
+			// Check if the department is being updated and set to "CSE regular" if it's empty
+			if (name === "department" && value.trim() === "") {
+				value = "CSE regular"; // Set default department if the value is empty
+			}
+		
+			updatedMembers[index] = {
+				...updatedMembers[index],
+				[name]: value,
+			};
+		
+			setMembersData(updatedMembers);
+		}
+		
 	}
 
 	// Handle Next button
