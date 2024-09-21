@@ -32,25 +32,31 @@ function RegistrationPage() {
 	const [membersData, setMembersData] = useState([]); // State for members data
 	const [errors, setErrors] = useState({});
 
-	// Validation function
-	function validateForm() {
-		const newErrors = {};
-		if (!/^[a-zA-Z\s]+$/.test(step1Data.teamName)) {
-			newErrors.teamName = "Team name should only contain letters and spaces.";
-		}
-		if (!/^\S+@\S+\.\S+$/.test(step1Data.leaderEmail)) {
-			newErrors.leaderEmail = "Enter a valid email address.";
-		}
-		if (!/^\d{10}$/.test(step1Data.leaderContact)) {
-			newErrors.leaderContact = "Contact number should be exactly 10 digits.";
-		}
-		if (step1Data.numberOfMembers < event.details.min || step1Data.numberOfMembers > event.details.max) {
-			newErrors.numberOfMembers = `Number of members should be between ${event.details.min} and ${event.details.max}.`;
-		}
+// Validation function
+function validateForm() {
+    const newErrors = {};
 
-		setErrors(newErrors);
-		return Object.keys(newErrors).length === 0;
-	}
+    // Convert min and max values to integers
+    const minMembers = parseInt(event.details.min, 10);
+    const maxMembers = parseInt(event.details.max, 10);
+
+    if (!/^[a-zA-Z\s]+$/.test(step1Data.teamName)) {
+        newErrors.teamName = "Team name should only contain letters and spaces.";
+    }
+    if (!/^\S+@\S+\.\S+$/.test(step1Data.leaderEmail)) {
+        newErrors.leaderEmail = "Enter a valid email address.";
+    }
+    if (!/^\d{10}$/.test(step1Data.leaderContact)) {
+        newErrors.leaderContact = "Contact number should be exactly 10 digits.";
+    }
+    if (step1Data.numberOfMembers < minMembers || step1Data.numberOfMembers > maxMembers) {
+        newErrors.numberOfMembers = `Number of members should be between ${minMembers} and ${maxMembers}.`;
+    }
+
+    setErrors(newErrors);
+    return Object.keys(newErrors).length === 0;
+}
+
 
 	// Handle change in step 1 form inputs
 	function handleStep1Change(e) {
@@ -185,8 +191,8 @@ function RegistrationPage() {
 							</div>
 							<input
 								type="number"
-								min={event.details.min}
-								max={event.details.max}
+								min={parseInt(event.details.min, 10)}
+								max={parseInt(event.details.max, 10)}
 								placeholder="Enter the number of team members"
 								className="input input-bordered w-full bg-base-200"
 								name="numberOfMembers"
