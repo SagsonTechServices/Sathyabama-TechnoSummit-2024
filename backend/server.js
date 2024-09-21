@@ -22,8 +22,14 @@ app.use('/student' , studentRoute);
 app.use('/departmentIncharge' ,departmentInchargeRoute);
 app.use('/eventCoordinatorRoute' ,eventCoordinatorRoute);
 
-app.get('/' , (req , res) => {
-    res.send("Server started bro");
+app.get('/' , async (req , res) => {
+    try {
+        const [rows, fields] = await db.query('SELECT * FROM dept_incharge;'); // example query
+        res.json(rows);
+      } catch (err) {
+        console.error(err);
+        res.status(500).json({ message: 'Database query failed' });
+      }
 })
 
 // starting the server 

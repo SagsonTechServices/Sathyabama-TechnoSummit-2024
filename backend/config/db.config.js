@@ -3,9 +3,6 @@ const dotenv = require('dotenv');
 
 dotenv.config();
 
-console.log('DB_HOST:', process.env.DB_HOST);
-console.log('DB_USER:', process.env.DB_USER);
-
 // Create a connection pool
 const pool = mysql.createPool({
     host: '88.222.244.21',
