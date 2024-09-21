@@ -13,8 +13,13 @@ const app = express();
 const port = process.env.SERVER_PORT || 5555;
 
 // setting up middlewares 
-app.use(express.json());
-app.use(cors());
+const corsOptions = {
+  origin: 'https://sathyabama-techno-summit-2024.vercel.app/', // replace with your Vercel frontend URL
+  optionsSuccessStatus: 200,
+};
+
+app.use(cors(corsOptions));
+
 app.use(express.json());
 
 // setting up the routes 
