@@ -18,7 +18,7 @@ const InchargeLogin = async (req, res) => {
     const dept_name = inchargeResult[0].dept;
 
     const [teams] = await db.query(
-      'SELECT * FROM EVENT_REGISTRATIONS WHERE DEPARTMENT = ?',
+      'SELECT * FROM event_registrations WHERE DEPARTMENT = ?',
       [dept_name]
     );
 
