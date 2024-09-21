@@ -10,7 +10,7 @@ function EventCoordinators() {
   const eventName = localStorage.getItem("eventName");
 
   const downLoadAttendance = () => {
-    axios.post(`${import.meta.env.VITE_BACKEND_URL}/eventCoordinatorRoute/download` , {event: eventName} , {responseType: "blob"}).then((response) => {
+    axios.post(`${import.meta.env.VITE_BACKEND_URL}/eventCoordinator/download` , {event: eventName} , {responseType: "blob"}).then((response) => {
         // create the url 
         const url = window.URL.createObjectURL(new Blob([response.data]));
 
