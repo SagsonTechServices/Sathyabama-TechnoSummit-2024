@@ -33,17 +33,22 @@ function Navbar() {
                                 <Link to={"/"}>Home</Link>
                             </li>
                             <li>
-                                <Link to={"/about"}>About TechnoSummit</Link>
+                                <Link to={"/about"}>TechnoSummit</Link>
                             </li>
                             <li>
                                 <Link to={"/guidelines"}>Guidelines</Link>
                             </li>
                             <li>
-                                <Link to={"/patrons"}>Our Patrons</Link>
+                                <Link to={"/patrons"}>Patrons</Link>
                             </li>
                             <li>
                                 <Link to={"/technosummit/events/schedules"}>
-                                    Event Schedules
+                                    Event Schedule
+                                </Link>
+                            </li>
+                            <li>
+                                <Link to={"/depts"}>
+                                    Department Coordinators
                                 </Link>
                             </li>
                             <li>
@@ -105,7 +110,7 @@ function Navbar() {
                             </li>
                             <li>
                                 <Link to={"/staff/login"}>
-                                    <button className="btn btn-primary btn-sm">Login (Only staff)</button>
+                                    <button className="btn btn-primary btn-sm">Faculty Login</button>
                                 </Link>
                             </li>
                         </ul>
@@ -120,16 +125,21 @@ function Navbar() {
                             <Link to={"/"}>Home</Link>
                         </li>
                         <li>
-                            <Link to={"/about"}>About TechnoSummit</Link>
+                            <Link to={"/about"}>TechnoSummit</Link>
                         </li>
                         <li>
                             <Link to={"/guidelines"}>Guidelines</Link>
                         </li>
                         <li>
-                            <Link to={"/patrons"}>Our Patrons</Link>
+                            <Link to={"/patrons"}>Patrons</Link>
                         </li>
                         <li>
-                            <Link to={"/technosummit/events/schedules"}>Event Schedules</Link>
+                            <Link to={"/technosummit/events/schedules"}>Event Schedule</Link>
+                        </li>
+                        <li>
+                            <Link to={"/depts"}>
+                                Department Coordinators
+                            </Link>
                         </li>
                         <li>
                             <button onClick={DownloadBrochure}>Download Brochure</button>
@@ -193,7 +203,7 @@ function Navbar() {
                 <div className="navbar-end">
                     <Link to={"/staff/login"}>
                         <button className="btn btn-primary btn-sm md:block hidden">
-                            Login (Only staff)
+                            Faculty Login
                         </button>
                     </Link>
                 </div>
