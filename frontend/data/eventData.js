@@ -55,8 +55,8 @@ const eventData = [
             venue: "IT Tower Lab",
             time: "9:30 AM to 12:30 PM",
             date: "04/10/2024",
-            max: "n",
-            min: "n",
+            max: "10",
+            min: "1",
             venueImg: cc,
             mapSS: event1, //
             poster: coding
@@ -112,8 +112,8 @@ const eventData = [
             venue: "St.Paul's Block, Classrooms",
             time: "10:00 AM to 03:15 PM",
             date: "03/10/2024",
-            max: "n",
-            min: "n",
+            max: "10",
+            min: "1",
             venueImg: stpauls,
             mapSS: event4, //
             poster: tpp

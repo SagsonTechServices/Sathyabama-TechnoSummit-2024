@@ -83,7 +83,9 @@ function MemberForm({ index, memberData = {}, onMemberChange }) {
 							
 						>
 							<option value="CSE regular">CSE regular</option>
-							<option value="CSE advance studies">CSE advance studies</option>
+							<option value="CSE specialization 1 (AI,AIML, DS)">CSE specialization 1 (AI,AIML, DS)</option>
+							<option value="CSE Specialization 2 (IOT, blockchain, cybersecurity, AI and Robotics)">CSE Specialization 2 (IOT, blockchain, cybersecurity, AI and Robotics)</option>
+							<option value="IT">IT</option>
 							<option value="Law L.L.M">Law L.L.M</option>
 							<option value="Law L.L.B">Law L.L.B</option>
 							<option value="Automobile">Automobile</option>
@@ -97,38 +99,24 @@ function MemberForm({ index, memberData = {}, onMemberChange }) {
 							<option value="Nursing">Nursing</option>
 							<option value="Physiotherapy">Physiotherapy</option>
 							<option value="B.Sc Maths">B.Sc Maths</option>
-							<option value="B.Sc/M.Sc CS">B.Sc/M.Sc CS</option>
+							<option value="Bsc. CS">Bsc. CS</option>
+							<option value="M.sc CS">M.sc CS</option>
 							<option value="Chemistry">Chemistry</option>
 							<option value="Bioinfo">Bioinfo</option>
 							<option value="Physics">Physics</option>
 							<option value="MCA">MCA</option>
 							<option value="Viscom">Viscom</option>
-							<option value="M.A English">M.A English</option>
+							<option value="B.A., M.A., English">B.A., M.A., English</option>
 							<option value="M.Sc BioInformatics and DS">
 								M.Sc BioInformatics and DS
 							</option>
-							<option value="M.Sc Medical Biotech and Clinical Research">
-								M.Sc Medical Biotech and Clinical Research
-							</option>
-							<option value="M.Sc Psychology">M.Sc Psychology</option>
-							<option value="Clinical Nutrition and Diabetics">
-								Clinical Nutrition and Diabetics
-							</option>
-							<option value="Medical Lab Technology">
-								Medical Lab Technology
-							</option>
 							<option value="Civil">Civil</option>
 							<option value="Architecture">Architecture</option>
-							<option value="Design">Design</option>
 							<option value="Fashion Design">Fashion Design</option>
-							<option value="B.B.A">B.B.A</option>
-							<option value="B.Com">B.Com</option>
 							<option value="MBA">MBA</option>
 							<option value="Biomedical">Biomedical</option>
 							<option value="Biotechnology">Biotechnology</option>
 							<option value="Chemical">Chemical</option>
-							<option value="Microbiology">Microbiology</option>
-							<option value="BioChemistry">BioChemistry</option>
 						</select>
 					</label>
                     
