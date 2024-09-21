@@ -18,7 +18,7 @@ const port = process.env.SERVER_PORT || 5555; // HTTPS port should be 443
 
 // Setting up middlewares
 const corsOptions = {
-  origin: 'https://sathyabama-techno-summit-2024-279q.vercel.app/', // Replace with your Vercel frontend URL (remove trailing slash)
+  origin: '*', // Replace with your Vercel frontend URL (remove trailing slash)
   optionsSuccessStatus: 200,
 };
 
