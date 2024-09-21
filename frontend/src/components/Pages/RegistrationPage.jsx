@@ -281,7 +281,7 @@ function RegistrationPage() {
 			{/* Modal */}
 			{isModalOpen && (
 				<dialog open className="modal">
-					<div className="modal-box w-2/4 max-w-5xl bg-base-200">
+					<div className="modal-box md:w-2/4 w-full max-w-5xl bg-base-200">
 						<h3 className="font-bold text-xl text-primary">Event: {modalData.eventName}</h3>
 						<h3 className="font-bold text-lg">Team Name: {modalData.teamName}</h3>
 						<p className="py-4">Registration successful for {modalData.noOfMembers} members.</p>
