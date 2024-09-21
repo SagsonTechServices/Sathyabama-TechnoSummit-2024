@@ -58,7 +58,7 @@ const eventData = [
             max: "n",
             min: "n",
             venueImg: cc,
-            mapSS: event1,
+            mapSS: event1, //
             poster: coding
         }
     },
