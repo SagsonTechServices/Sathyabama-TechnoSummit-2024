@@ -78,9 +78,8 @@ function MemberForm({ index, memberData = {}, onMemberChange }) {
 						<select
 							className="select select-bordered w-full"
                             name="department"
-							value={memberData.department || 'CSE regular'}
-							onChange={handleChange}
-							
+                            value={memberData.department || 'CSE regular'}  // Default to CSE regular
+                            onChange={handleChange}
 						>
 							<option value="CSE regular">CSE regular</option>
 							<option value="CSE specialization 1 (AI,AIML, DS)">CSE specialization 1 (AI,AIML, DS)</option>

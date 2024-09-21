@@ -26,7 +26,7 @@ function RegistrationPage() {
 		teamName: "",
 		leaderEmail: "",
 		leaderContact: "",
-		dept: "department",
+		dept: "CSE regular",
 		numberOfMembers: event.details.min !== "n" ? event.details.min : 1,
 	}); // State for step 1 data
 	const [membersData, setMembersData] = useState([]); // State for members data
