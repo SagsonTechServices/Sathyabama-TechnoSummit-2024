@@ -18,9 +18,7 @@ const port = process.env.SERVER_PORT || 5555; // HTTPS port should be 443
 
 // Setting up middlewares
 const corsOptions = {
-  origin: 'https://www.sathyabama-technosummit-2024.in',
-  methods: 'GET,POST,PUT,DELETE', // Specifies allowed methods
-  credentials: true, // Allows cookies or credentials (JWTs, etc.)
+  origin: '*',
   optionsSuccessStatus: 200,
 };
 
