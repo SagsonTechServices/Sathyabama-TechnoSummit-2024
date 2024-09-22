@@ -6,8 +6,6 @@ import { useNavigate } from "react-router-dom"; // useNavigate for routing
 import axios from "axios";
 
 function EventCoordinators() {
-  const teams = JSON.parse(localStorage.getItem("teams"));
-  const eventName = localStorage.getItem("eventName");
   const navigate = useNavigate();
 
   // LOGIN CHECK - useEffect to check if the user is logged in
@@ -20,6 +18,9 @@ function EventCoordinators() {
       navigate("/staff/login");
     }
   }, [navigate]);
+
+  const teams = JSON.parse(localStorage.getItem("teams"));
+  const eventName = localStorage.getItem("eventName");
 
   const downLoadAttendance = () => {
     axios
@@ -56,6 +57,22 @@ function EventCoordinators() {
     localStorage.removeItem("eventName"); // Clear eventName from localStorage
     navigate("/staff/login"); // Redirect to login page
   };
+
+  // Check if teams is null or undefined
+  if (!teams) {
+    return (
+      <div className="container justify-center my-20 px-10 md:px-40">
+        <h1 className="text-3xl mb-10 text-primary text-center">
+          No teams data found. Please log in again.
+        </h1>
+        <div className="flex justify-center mt-10">
+          <button className="btn btn-primary" onClick={handleLogout}>
+            Go to Login
+          </button>
+        </div>
+      </div>
+    );
+  }
 
   return (
     <div className="container justify-center my-20 px-10 md:px-40">
