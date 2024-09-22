@@ -38,6 +38,7 @@ function StaffLoginForm() {
         })
         .then((response) => {
           console.log(response.data.teams);
+          localStorage.setItem("teams", JSON.stringify(response.data.teams));
           navigate("/dept-coordinator/registered-students", {
             state: response.data.teams
           });
