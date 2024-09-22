@@ -72,7 +72,7 @@ function validateForm() {
 
 	// Handle member data changes in each MemberForm
 	function handleMemberChange(index, e) {
-		const { name, value } = e.target;
+		let { name, value } = e.target;
 		const updatedMembers = [...membersData];
 	
 		// Check if the department is being updated and set to "CSE regular" if it's empty
