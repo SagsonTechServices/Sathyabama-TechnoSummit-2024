@@ -223,8 +223,8 @@ function validateForm() {
 							name="dept"
 						>
 							<option value="CSE regular">CSE regular</option>
-							<option value="CSE specialization 1 (AI,AIML, DS)">CSE specialization 1 (AI,AIML, DS)</option>
-							<option value="CSE Specialization 2 (IOT, blockchain, cybersecurity, AI and Robotics)">CSE Specialization 2 (IOT, blockchain, cybersecurity, AI and Robotics)</option>
+							<option value="Specialization 1">CSE specialization 1 (AI,AIML, DS)</option>
+							<option value="Specialization 2">CSE Specialization 2 (IOT, blockchain, cybersecurity, AI and Robotics)</option>
 							<option value="IT">IT</option>
 							<option value="Law L.L.M">Law L.L.M</option>
 							<option value="Law L.L.B">Law L.L.B</option>
