@@ -17,7 +17,7 @@ function EventCoordinators() {
 
     if (!storedTeams || !storedEventName) {
       // Redirect to login page if teams or eventName is missing
-      navigate("/login");
+      navigate("/staff/login");
     }
   }, [navigate]);
 
@@ -54,7 +54,7 @@ function EventCoordinators() {
   const handleLogout = () => {
     localStorage.removeItem("teams"); // Clear teams from localStorage
     localStorage.removeItem("eventName"); // Clear eventName from localStorage
-    navigate("/login"); // Redirect to login page
+    navigate("/staff/login"); // Redirect to login page
   };
 
   return (

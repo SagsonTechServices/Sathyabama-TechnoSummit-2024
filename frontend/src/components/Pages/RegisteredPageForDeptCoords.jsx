@@ -41,7 +41,7 @@ function RegisteredPageForDeptCoords() {
   // Function to handle logout
   const handleLogout = () => {
     localStorage.removeItem("teams"); // Clear teams from localStorage
-    navigate("/login"); // Redirect to login page
+    navigate("/staff/login"); // Redirect to login page
   };
 
   // LOGIN CHECK - useEffect for checking if the user is logged in
@@ -49,7 +49,7 @@ function RegisteredPageForDeptCoords() {
     const storedTeams = localStorage.getItem("teams");
     if (!storedTeams) {
       // If teams are not found in localStorage, redirect to login page
-      navigate("/login");
+      navigate("/staff/login");
     }
   }, [navigate]); // Dependency on navigate to avoid warning
 
