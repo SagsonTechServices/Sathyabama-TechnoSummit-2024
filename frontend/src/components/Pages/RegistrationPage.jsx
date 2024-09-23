@@ -1,17 +1,18 @@
 import React, { useState } from "react";
 import InputField from "../utils/InputField";
 import Heading1 from "../utils/Heading1";
-import { useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import eventData from "../../../data/eventData";
 import MemberForm from "../app/MemberForm";
 import axios from "axios";
 import LinkButton from '../utils/LinkButton'
+import { useNavigate } from "react-router-dom";
 
 function RegistrationPage() {
 	const { eventId } = useParams();
 	const event = eventData.find((event) => event.id === parseInt(eventId));
 	const backendURL = import.meta.env.VITE_BACKEND_URL;
-
+	const navigate = useNavigate();
 
 	// modalState 
 	const [isModalOpen, setIsModalOpen] = useState(false);
@@ -146,6 +147,7 @@ function validateForm() {
 
 	function handleCloseModal() {
 		setIsModalOpen(false);
+		navigate('/');
 	}
 
 	return (
