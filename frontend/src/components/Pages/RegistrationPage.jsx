@@ -80,10 +80,23 @@ function RegistrationPage() {
             value = "Select"; // Set default department if the value is empty
         }
 
-        updatedMembers[index] = {
-            ...updatedMembers[index],
-            [name]: value,
-        };
+	// Handle member data changes in each MemberForm
+	function handleMemberChange(index, e) {
+		let { name, value } = e.target;
+		const updatedMembers = [...membersData];
+	
+		// Check if the department is being updated and set to "CSE regular" if it's empty
+		if (name === "department" && value.trim() === "") {
+			value = "CSE Regular"; // Set default department if the value is empty
+		}
+	
+		updatedMembers[index] = {
+			...updatedMembers[index],
+			[name]: value,
+		};
+	
+		setMembersData(updatedMembers);
+	}
 
         setMembersData(updatedMembers);
     }

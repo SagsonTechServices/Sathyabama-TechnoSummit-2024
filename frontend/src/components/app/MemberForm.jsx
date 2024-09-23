@@ -34,7 +34,8 @@ function MemberForm({ index, memberData = {}, onMemberChange }) {
             newErrors.department = "Department can only contain letters, spaces, and hyphens.";
         } else {
             delete newErrors.department;
-        }*/
+        }
+        */
 
         // Year of Study validation (between 1 and 5)
         if (name === "yearOfStudy" && (value < 1 || value > 5)) {
@@ -93,10 +94,9 @@ function MemberForm({ index, memberData = {}, onMemberChange }) {
                 <select
                     className="select select-bordered w-full"
                     name="department"
-                    value={memberData.department || "select"}  // Default to CSE regular
+                    value={memberData.department || "CSE Regular"}  // Default to CSE regular
                     onChange={handleChange}
                 >
-                    <option value="select">Select</option>
                     <option value="CSE regular">CSE regular</option>
                     <option value="Specialization 1">CSE specialization 1 (AI, AIML, DS)</option>
                     <option value="Specialization 2">CSE specialization 2 (IoT, Blockchain, Cybersecurity, AI and Robotics)</option>
