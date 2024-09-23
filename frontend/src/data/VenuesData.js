@@ -31,7 +31,7 @@ const venueDetails = [
     {
         id: 1,
         image: cc,
-        title: "Coding Challenge",
+        title: "Coding Challenges",
         venue: "IT Tower Lab",
         mapSS: event1,
     },

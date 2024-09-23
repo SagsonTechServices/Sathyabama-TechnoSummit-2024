@@ -68,7 +68,7 @@ const details = [
     {
         id: 12,
         name: "Ms. Shamili",
-        dept: "Bsc/Msc CS",
+        dept: "M.Sc CS",
         contact: "7397270081",
     },
     {
@@ -79,7 +79,7 @@ const details = [
     },
     {
         id: 14,
-        name: "Dr.D.Kanimozhi",
+        name: "Dr.J.Anita Lett",
         dept: "Physics",
         contact: "9500354780",
     },
@@ -155,7 +155,32 @@ const details = [
         name: "Ms. Madhumathy",
         dept: "Cse Specialization 2 ( IOT, blockchain,cybersecurity, AI and Robotics)",
         contact: "7604854992",
+    },
+    {
+        id: 27,
+        name: "Dr. Esther Joshua",
+        dept: "B.A., M.A., English",
+        contact: "9840982868",
+    },
+    {
+        id: 28,
+        name: "Ms. Aishwarya",
+        dept: "B.Sc CS",
+        contact: "7305502626",
+    },
+    {
+        id: 29,
+        name: "Ms.N. Saranya",
+        dept: "Fashion Design",
+        contact: "9499968865",
+    },
+    {
+        id: 30,
+        name: "Dr. Viswanath Balaji",
+        dept: "Dental Surgery",
+        contact: "8838373247",
     }
+
 ]
 
 export default details
