@@ -77,7 +77,7 @@ function validateForm() {
 	
 		// Check if the department is being updated and set to "CSE regular" if it's empty
 		if (name === "department" && value.trim() === "") {
-			value = "CSE regular"; // Set default department if the value is empty
+			value = "Select"; // Set default department if the value is empty
 		}
 	
 		updatedMembers[index] = {

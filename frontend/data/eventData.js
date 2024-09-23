@@ -46,7 +46,7 @@ const eventData = [
     {
         id: 1,
         details: {
-            name: "Coding Challenge",
+            name: "Coding Challenges",
             facultyCoordinator: "Dr Kamatchi K S",
             desc: "A Coding challenge contest is an exhilarating event where participants are tasked with solving complex algorithmic problems within a set timeframe. Contestants range from amateur enthusiasts to seasoned professionals, all vying to demonstrate their coding prowess and problem-solving skills. These contests often feature a variety of problems, from basic to highly intricate, requiring not only knowledge of programming languages but also critical thinking and creativity. Competitors must efficiently write and test code to achieve optimal solutions, often under pressure. Prizes, recognition, and the thrill of competition motivate many to excel. Additionally, such contests foster a sense of community and collaboration among participants, who share a passion for coding and innovation. Whether online or in-person, these challenges are a celebrated opportunity for developers to showcase their talent and push the boundaries of their technical abilities.",
             fee: 100,
