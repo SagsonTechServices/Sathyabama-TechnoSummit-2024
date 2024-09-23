@@ -40,10 +40,12 @@ const register = async (req, res) => {
         const facultyContact = deptCoord[0][0].contact;
 
         var transporter = mailer.createTransport({
+          host: 'smtp.gmail.com',
+          port: 465,
           service: 'gmail',
           auth: {
-            user: 'sathyabama.technosummit2024@gmail.com',
-            pass: 'jabn sluk lmum hpml'
+            user: 'sist.technosummit24@gmail.com',
+            pass: 'dbhw llzg plkh outp'
           }
         });
       
@@ -60,7 +62,6 @@ const register = async (req, res) => {
               <ul style="list-style-type: none; padding-left: 0;">
                 <li><strong>Amount to be Paid:</strong> <span style="color: #4CAF50;">${amountToBePaid} INR</span></li>
                 <li><strong>Department Coordinator:</strong> ${faculty}</li>
-                <li><strong>Contact:</strong> ${facultyContact}</li>
               </ul>
         
               <p>If you have any questions, feel free to reach out to us at <a href="mailto:sathyabama.technosummit2024@gmail.com" style="color: #007BFF;">sathyabama.technosummit2024@gmail.com</a>.</p>

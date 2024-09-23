@@ -35,11 +35,11 @@ const eventFormLinks = {
   'Coding Challenge': 'https://docs.google.com/forms/d/e/1FAIpQLSeLwI-5p7tRRW8Pd8OElJgH3RAlc4leqaRKePvQ-tImpfxJTw/viewform',//
   'Design Challenges': 'https://forms.gle/ukCajXJnA6xnSSz59',//
   'Buildathon': 'https://forms.gle/t9kMba643EfiRXYa8',//
-  'Technical Paper Presentation': 'https://forms.gle/link_for_technical_paper',
-  'Technical Quiz': 'https://forms.gle/link_for_technical_quiz',
-  'App Arena': 'https://forms.gle/link_for_app_arena',
+  'Technical Paper Presentation': 'link_not_provided_no_need_to_fill_googleform',
+  'Technical Quiz': 'link_not_provided',
+  'App Arena': 'link_not_provided',
   'Technical Debate': 'https://forms.gle/MGPSyiP1ePiudstp8',//
-  'Project Exhibition': 'https://forms.gle/link_for_project_exhibition',
+  'Project Exhibition': 'link_not_provided',
   'Next Gen Gamers': 'https://forms.gle/A9vmQkd7siAVEzgcA',//
   'AR VR Contest': 'https://docs.google.com/forms/d/e/1FAIpQLSfrN-l_OQmBNjfvpVKs0a5dXamlIPeOLK-QeQnIJgJKRStpLA/viewform?usp=sf_link',//
   'Hackathon': 'https://docs.google.com/forms/d/e/1FAIpQLSfx8KbdHlLg1HGs8H-HSxsDIyrvt99KlZVVHHnw_dyKzEfCuw/viewform?usp=sharing',//
@@ -72,10 +72,12 @@ const updatePaymentStatus = async (req, res) => {
       const [dbdata] = await db.query(`SELECT TL_MAIL, TEAM_NAME, EVENT_NAME, fee, NO_OF_MEMBERS FROM event_registrations WHERE TEAM_ID IN (${placeholders})`, teamIds);
 
       const transporter = nodemailer.createTransport({
+        host: 'smtp.gmail.com',
+        port: 465,
         service: 'gmail',
         auth: {
-          user: 'sathyabama.technosummit2024@gmail.com',
-          pass: 'jabn sluk lmum hpml'
+          user: 'sist.technosummit24@gmail.com',
+          pass: 'dbhw llzg plkh outp'
         }
       });
 

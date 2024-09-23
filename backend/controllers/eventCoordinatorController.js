@@ -84,7 +84,7 @@ const download = async (req, res, next) => {
   const { event } = req.body;
   try {
     const [data] = await db.query(
-      "SELECT e.TEAM_ID,e.TEAM_NAME,e.EVENT_NAME,e.NO_OF_MEMBERS,e.TL_MAIL,e.PAYMENT_STATUS,e.TL_CONTACT,m.MEMBERS_NAME,m.REGISTER_NO,m.YEAR_OF_STUDY FROM event_registrations e INNER JOIN member_details m ON e.TEAM_ID = m.TEAM_ID WHERE e.PAYMENT_STATUS = 1 AND e.EVENT_NAME = ?",
+      "SELECT e.TEAM_ID,e.TEAM_NAME,e.EVENT_NAME,e.NO_OF_MEMBERS,e.TL_MAIL,e.PAYMENT_STATUS,e.TL_CONTACT,m.MEMBERS_NAME,m.REGISTER_NO,m.YEAR_OF_STUDY,m.department FROM event_registrations e INNER JOIN member_details m ON e.TEAM_ID = m.TEAM_ID WHERE e.PAYMENT_STATUS = 1 AND e.EVENT_NAME = ?",
       [event]
     );
 
