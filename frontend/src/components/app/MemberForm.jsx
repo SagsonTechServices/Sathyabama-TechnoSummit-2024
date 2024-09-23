@@ -29,12 +29,13 @@ function MemberForm({ index, memberData = {}, onMemberChange }) {
             delete newErrors.email;
         }
 
-        // Department validation
+        /*// Department validation
         if (name === "department" && !/^[a-zA-Z\s-]+$/.test(value)) {
             newErrors.department = "Department can only contain letters, spaces, and hyphens.";
         } else {
             delete newErrors.department;
         }
+        */
 
         // Year of Study validation (between 1 and 5)
         if (name === "yearOfStudy" && (value < 1 || value > 5)) {
