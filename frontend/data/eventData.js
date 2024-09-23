@@ -27,26 +27,26 @@ import drones from "../src/assets/venues/oat.jpg"
 import gamers from "../src/assets/venues/gamers.jpg"
 import arvr from "../src/assets/venues/meta.jpg"
 import yt from "../src/assets/venues/IMG_7203.png"
-import coding from "../src/assets/posters/coding.jpg"
-import design from "../src/assets/posters/design.jpg"
-import build_athon from "../src/assets/posters/build-athon.jpg"
-import tpp from "../src/assets/posters/tpp.jpg"
-import app from "../src/assets/posters/app.jpg"
-import debate from "../src/assets/posters/debate.jpg"
+import coding from "../src/assets/posters/coding.jpeg"
+import design from "../src/assets/posters/design.jpeg"
+import build_athon from "../src/assets/posters/build-athon.jpeg"
+import tpp from "../src/assets/posters/tpp.jpeg"
+import app from "../src/assets/posters/app.jpeg"
+import debate from "../src/assets/posters/debate.jpeg"
 import expo from "../src/assets/posters/expo.jpg"
-import game from "../src/assets/posters/game.jpg"
-import ar_vr from "../src/assets/posters/ar_vr.jpg"
-import hack from "../src/assets/posters/hack.jpg"
-import ytc from "../src/assets/posters/ytc.jpg"
-import go from "../src/assets/posters/go.jpg"
-import d from "../src/assets/posters/drones.jpg" 
-import q from "../src/assets/posters/quiz.jpg"
+import game from "../src/assets/posters/game.jpeg"
+import ar_vr from "../src/assets/posters/ar_vr.jpeg"
+import hack from "../src/assets/posters/hack.jpeg"
+import ytc from "../src/assets/posters/ytc.jpeg"
+import go from "../src/assets/posters/go.jpeg"
+import d from "../src/assets/posters/drones.jpeg" 
+import q from "../src/assets/posters/quiz.jpeg"
 
 const eventData = [
     {
         id: 1,
         details: {
-            name: "Coding Challenge",
+            name: "Coding Challenges",
             facultyCoordinator: "Dr Kamatchi K S",
             desc: "A Coding challenge contest is an exhilarating event where participants are tasked with solving complex algorithmic problems within a set timeframe. Contestants range from amateur enthusiasts to seasoned professionals, all vying to demonstrate their coding prowess and problem-solving skills. These contests often feature a variety of problems, from basic to highly intricate, requiring not only knowledge of programming languages but also critical thinking and creativity. Competitors must efficiently write and test code to achieve optimal solutions, often under pressure. Prizes, recognition, and the thrill of competition motivate many to excel. Additionally, such contests foster a sense of community and collaboration among participants, who share a passion for coding and innovation. Whether online or in-person, these challenges are a celebrated opportunity for developers to showcase their talent and push the boundaries of their technical abilities.",
             fee: 100,
@@ -55,8 +55,8 @@ const eventData = [
             venue: "IT Tower Lab",
             time: "9:30 AM to 12:30 PM",
             date: "04/10/2024",
-            max: "n",
-            min: "n",
+            max: "10",
+            min: "1",
             venueImg: cc,
             mapSS: event1, //
             poster: coding
@@ -112,8 +112,8 @@ const eventData = [
             venue: "St.Paul's Block, Classrooms",
             time: "10:00 AM to 03:15 PM",
             date: "03/10/2024",
-            max: "n",
-            min: "n",
+            max: "10",
+            min: "1",
             venueImg: stpauls,
             mapSS: event4, //
             poster: tpp

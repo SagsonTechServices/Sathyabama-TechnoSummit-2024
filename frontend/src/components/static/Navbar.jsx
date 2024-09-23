@@ -59,10 +59,10 @@ function Navbar() {
                                     <summary>Events</summary>
                                     <ul className="p-2 bg-white text-base-100 font-semibold w-52">
                                         <li>
-                                            <Link to={"/event/1"}>Coding Challenge</Link>
+                                            <Link to={"/event/1"}>Coding Challenges</Link>
                                         </li>
                                         <li>
-                                            <Link to={"/event/2"}>Design Challenge</Link>
+                                            <Link to={"/event/2"}>Design Challenges</Link>
                                         </li>
                                         <li>
                                             <Link to={"/event/3"}>Buildathon</Link>
@@ -152,10 +152,10 @@ function Navbar() {
                                 <summary>Events</summary>
                                 <ul className="p-2 bg-white text-base-100 font-semibold w-52">
                                     <li>
-                                        <Link to={"/event/1"}>Coding Challenge</Link>
+                                        <Link to={"/event/1"}>Coding Challenges</Link>
                                     </li>
                                     <li>
-                                        <Link to={"/event/2"}>Design Challenge</Link>
+                                        <Link to={"/event/2"}>Design Challenges</Link>
                                     </li>
                                     <li>
                                         <Link to={"/event/3"}>Buildathon</Link>

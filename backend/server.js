@@ -12,9 +12,13 @@ dotenv.config();
 const app = express();
 const port = process.env.port || 5555;
 
-// setting up middlewares 
-app.use(express.json());
-app.use(cors());
+// Setting up middlewares
+const corsOptions = {
+  origin: '*', // Replace with your Vercel frontend URL (remove trailing slash)
+  optionsSuccessStatus: 200,
+};
+
+app.use(cors(corsOptions));
 app.use(express.json());
 
 // setting up the routes 

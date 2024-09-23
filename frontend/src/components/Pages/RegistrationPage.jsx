@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import InputField from "../utils/InputField";
 import Heading1 from "../utils/Heading1";
-import { useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import eventData from "../../../data/eventData";
 import MemberForm from "../app/MemberForm";
 import axios from "axios";
@@ -11,7 +11,7 @@ function RegistrationPage() {
 	const { eventId } = useParams();
 	const event = eventData.find((event) => event.id === parseInt(eventId));
 	const backendURL = import.meta.env.VITE_BACKEND_URL;
-
+	const navigate = useNavigate();
 
 	// modalState 
 	const [isModalOpen, setIsModalOpen] = useState(false);
@@ -26,31 +26,37 @@ function RegistrationPage() {
 		teamName: "",
 		leaderEmail: "",
 		leaderContact: "",
-		dept: "department",
+		dept: "CSE regular",
 		numberOfMembers: event.details.min !== "n" ? event.details.min : 1,
 	}); // State for step 1 data
 	const [membersData, setMembersData] = useState([]); // State for members data
 	const [errors, setErrors] = useState({});
 
-	// Validation function
-	function validateForm() {
-		const newErrors = {};
-		if (!/^[a-zA-Z\s]+$/.test(step1Data.teamName)) {
-			newErrors.teamName = "Team name should only contain letters and spaces.";
-		}
-		if (!/^\S+@\S+\.\S+$/.test(step1Data.leaderEmail)) {
-			newErrors.leaderEmail = "Enter a valid email address.";
-		}
-		if (!/^\d{10}$/.test(step1Data.leaderContact)) {
-			newErrors.leaderContact = "Contact number should be exactly 10 digits.";
-		}
-		if (step1Data.numberOfMembers < event.details.min || step1Data.numberOfMembers > event.details.max) {
-			newErrors.numberOfMembers = `Number of members should be between ${event.details.min} and ${event.details.max}.`;
-		}
+// Validation function
+function validateForm() {
+    const newErrors = {};
 
-		setErrors(newErrors);
-		return Object.keys(newErrors).length === 0;
-	}
+    // Convert min and max values to integers
+    const minMembers = parseInt(event.details.min, 10);
+    const maxMembers = parseInt(event.details.max, 10);
+
+    if (!/^[a-zA-Z\s]+$/.test(step1Data.teamName)) {
+        newErrors.teamName = "Team name should only contain letters and spaces.";
+    }
+    if (!/^\S+@\S+\.\S+$/.test(step1Data.leaderEmail)) {
+        newErrors.leaderEmail = "Enter a valid email address.";
+    }
+    if (!/^\d{10}$/.test(step1Data.leaderContact)) {
+        newErrors.leaderContact = "Contact number should be exactly 10 digits.";
+    }
+    if (step1Data.numberOfMembers < minMembers || step1Data.numberOfMembers > maxMembers) {
+        newErrors.numberOfMembers = `Number of members should be between ${minMembers} and ${maxMembers}.`;
+    }
+
+    setErrors(newErrors);
+    return Object.keys(newErrors).length === 0;
+}
+
 
 	// Handle change in step 1 form inputs
 	function handleStep1Change(e) {
@@ -66,14 +72,22 @@ function RegistrationPage() {
 
 	// Handle member data changes in each MemberForm
 	function handleMemberChange(index, e) {
-		const { name, value } = e.target;
+		let { name, value } = e.target;
 		const updatedMembers = [...membersData];
+	
+		// Check if the department is being updated and set to "CSE regular" if it's empty
+		if (name === "department" && value.trim() === "") {
+			value = "CSE Regular"; // Set default department if the value is empty
+		}
+	
 		updatedMembers[index] = {
 			...updatedMembers[index],
 			[name]: value,
 		};
+	
 		setMembersData(updatedMembers);
 	}
+	
 
 	// Handle Next button
 	function handleNext() {
@@ -132,6 +146,7 @@ function RegistrationPage() {
 
 	function handleCloseModal() {
 		setIsModalOpen(false);
+		navigate('/');
 	}
 
 	return (
@@ -185,8 +200,8 @@ function RegistrationPage() {
 							</div>
 							<input
 								type="number"
-								min={event.details.min !== "n" ? event.details.min : 1}
-								max={event.details.max !== "n" ? event.details.max : 10}
+								min={parseInt(event.details.min, 10)}
+								max={parseInt(event.details.max, 10)}
 								placeholder="Enter the number of team members"
 								className="input input-bordered w-full bg-base-200"
 								name="numberOfMembers"
@@ -209,7 +224,9 @@ function RegistrationPage() {
 							name="dept"
 						>
 							<option value="CSE regular">CSE regular</option>
-							<option value="CSE advance studies">CSE advance studies</option>
+							<option value="Specialization 1">CSE specialization 1 (AI,AIML, DS)</option>
+							<option value="Specialization 2">CSE Specialization 2 (IOT, blockchain, cybersecurity, AI and Robotics)</option>
+							<option value="IT">IT</option>
 							<option value="Law L.L.M">Law L.L.M</option>
 							<option value="Law L.L.B">Law L.L.B</option>
 							<option value="Automobile">Automobile</option>
@@ -223,38 +240,24 @@ function RegistrationPage() {
 							<option value="Nursing">Nursing</option>
 							<option value="Physiotherapy">Physiotherapy</option>
 							<option value="B.Sc Maths">B.Sc Maths</option>
-							<option value="B.Sc/M.Sc CS">B.Sc/M.Sc CS</option>
+							<option value="Bsc. CS">Bsc. CS</option>
+							<option value="M.sc CS">M.sc CS</option>
 							<option value="Chemistry">Chemistry</option>
 							<option value="Bioinfo">Bioinfo</option>
 							<option value="Physics">Physics</option>
 							<option value="MCA">MCA</option>
 							<option value="Viscom">Viscom</option>
-							<option value="M.A English">M.A English</option>
+							<option value="B.A., M.A., English">B.A., M.A., English</option>
 							<option value="M.Sc BioInformatics and DS">
 								M.Sc BioInformatics and DS
 							</option>
-							<option value="M.Sc Medical Biotech and Clinical Research">
-								M.Sc Medical Biotech and Clinical Research
-							</option>
-							<option value="M.Sc Psychology">M.Sc Psychology</option>
-							<option value="Clinical Nutrition and Diabetics">
-								Clinical Nutrition and Diabetics
-							</option>
-							<option value="Medical Lab Technology">
-								Medical Lab Technology
-							</option>
 							<option value="Civil">Civil</option>
 							<option value="Architecture">Architecture</option>
-							<option value="Design">Design</option>
 							<option value="Fashion Design">Fashion Design</option>
-							<option value="B.B.A">B.B.A</option>
-							<option value="B.Com">B.Com</option>
 							<option value="MBA">MBA</option>
 							<option value="Biomedical">Biomedical</option>
 							<option value="Biotechnology">Biotechnology</option>
 							<option value="Chemical">Chemical</option>
-							<option value="Microbiology">Microbiology</option>
-							<option value="BioChemistry">BioChemistry</option>
 						</select>
 					</label>
 
@@ -293,12 +296,15 @@ function RegistrationPage() {
 			{/* Modal */}
 			{isModalOpen && (
 				<dialog open className="modal">
-					<div className="modal-box w-2/4 max-w-5xl bg-base-200">
+					<div className="modal-box md:w-2/4 w-full max-w-5xl bg-base-200">
 						<h3 className="font-bold text-xl text-primary">Event: {modalData.eventName}</h3>
 						<h3 className="font-bold text-lg">Team Name: {modalData.teamName}</h3>
 						<p className="py-4">Registration successful for {modalData.noOfMembers} members.</p>
 						<h3 className="font-bold text-lg">
 							Registration fee to be paid: <span className="text-warning">{modalData.amount} INR</span>
+						</h3>
+						<h3 className="font-bold text-lg">
+							Kindly check you mail for payment details and confirmation.
 						</h3>
 						<div className="flex flex-wrap justify-start align-middle w-full mt-4 gap-5">
 							<LinkButton text={"View venues"} link={'/venues'}></LinkButton>
