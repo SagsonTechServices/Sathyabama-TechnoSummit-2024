@@ -302,6 +302,9 @@ function validateForm() {
 						<h3 className="font-bold text-lg">
 							Registration fee to be paid: <span className="text-warning">{modalData.amount} INR</span>
 						</h3>
+						<h3 className="font-bold text-lg">
+							Kindly check you mail for payment details and confirmation.
+						</h3>
 						<div className="flex flex-wrap justify-start align-middle w-full mt-4 gap-5">
 							<LinkButton text={"View venues"} link={'/venues'}></LinkButton>
 							<LinkButton text={"View schedules"} link={'/technosummit/events/schedules'}></LinkButton>
