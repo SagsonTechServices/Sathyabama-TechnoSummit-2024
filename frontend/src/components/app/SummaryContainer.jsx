@@ -26,7 +26,6 @@ function SummaryContainer({ teams }) {
               <th>Team Name</th>
               <th>Team Leader's Contact No.</th>
               <th>No. of Members</th>
-              <th>Team Department</th>
               <th>Amount Paid</th>
               <th>Member Details</th>
             </tr>
@@ -38,7 +37,6 @@ function SummaryContainer({ teams }) {
                 <td>{team.TEAM_NAME}</td>
                 <td>{team.TL_contact}</td>
                 <td>{team.NO_OF_MEMBERS}</td>
-                <td>{team.DEPARTMENT}</td>
                 <td>{team.fee}</td>
                 <td>
                   <LinkButton
@@ -73,7 +71,6 @@ function SummaryContainer({ teams }) {
                       <th>Name</th>
                       <th>Register no.</th>
                       <th>Year Of Study</th>
-                      <th>Department</th>
                     </tr>
                   </thead>
                   <tbody>
@@ -83,7 +80,6 @@ function SummaryContainer({ teams }) {
                         <td>{member.MEMBERS_NAME}</td>
                         <td>{member.REGISTER_NO}</td>
                         <td>{member.YEAR_OF_STUDY}</td>
-                        <td>{member.department}</td>
                       </tr>
                     ))}
                   </tbody>
