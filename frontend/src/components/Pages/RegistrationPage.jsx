@@ -6,7 +6,6 @@ import eventData from "../../../data/eventData";
 import MemberForm from "../app/MemberForm";
 import axios from "axios";
 import LinkButton from '../utils/LinkButton'
-import { useNavigate } from "react-router-dom";
 
 function RegistrationPage() {
 	const { eventId } = useParams();
