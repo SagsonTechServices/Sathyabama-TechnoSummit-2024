@@ -239,6 +239,40 @@ function RegistrationPage() {
                         >
                             <option value="CSE regular">CSE regular</option>
                             {/* Add other department options here */}
+							<option value="Specialization 1">CSE specialization 1 (AI, AIML, DS)</option>
+                    <option value="Specialization 2">CSE specialization 2 (IoT, Blockchain, Cybersecurity, AI and Robotics)</option>
+                    <option value="IT">IT</option>
+                    <option value="Law L.L.M">Law L.L.M</option>
+                    <option value="Law L.L.B">Law L.L.B</option>
+                    <option value="Automobile">Automobile</option>
+                    <option value="Mechanical">Mechanical</option>
+                    <option value="Aero">Aero</option>
+                    <option value="Mechatronics">Mechatronics</option>
+                    <option value="ECE">ECE</option>
+                    <option value="EEE">EEE</option>
+                    <option value="Pharmacy">Pharmacy</option>
+                    <option value="Dental Surgery">Dental Surgery</option>
+                    <option value="Nursing">Nursing</option>
+                    <option value="Physiotherapy">Physiotherapy</option>
+                    <option value="B.Sc Maths">B.Sc Maths</option>
+                    <option value="Bsc. CS">B.Sc CS</option>
+                    <option value="M.sc CS">M.Sc CS</option>
+                    <option value="Chemistry">Chemistry</option>
+                    <option value="Bioinfo">Bioinfo</option>
+                    <option value="Physics">Physics</option>
+                    <option value="MCA">MCA</option>
+                    <option value="Viscom">Viscom</option>
+                    <option value="B.A., M.A., English">B.A., M.A., English</option>
+                    <option value="M.Sc BioInformatics and DS">
+                        M.Sc BioInformatics and DS
+                    </option>
+                    <option value="Civil">Civil</option>
+                    <option value="Architecture">Architecture</option>
+                    <option value="Fashion Design">Fashion Design</option>
+                    <option value="MBA">MBA</option>
+                    <option value="Biomedical">Biomedical</option>
+                    <option value="Biotechnology">Biotechnology</option>
+                    <option value="Chemical">Chemical</option>
                         </select>
                     </label>
 
