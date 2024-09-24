@@ -284,6 +284,8 @@ function RegistrationPage() {
               <option value="Biomedical">Biomedical</option>
               <option value="Biotechnology">Biotechnology</option>
               <option value="Chemical">Chemical</option>
+		<option value="Psychology">Psychology</option>
+		<option value="Maths">Maths</option>
             </select>
           </label>
 
