@@ -113,6 +113,7 @@ function RegistrationPage() {
   }
 
   // Handle Submit button (for processing data)
+	//my commit
   function handleSubmit() {
     document.getElementById("loading").style.display = "block";
     document.getElementById("submitBtn").disabled = true;
