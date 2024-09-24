@@ -132,6 +132,8 @@ function MemberForm({ index, memberData = {}, onMemberChange }) {
                     <option value="Biomedical">Biomedical</option>
                     <option value="Biotechnology">Biotechnology</option>
                     <option value="Chemical">Chemical</option>
+                    <option value="Psychology">Psychology</option>
+		            <option value="Maths">Maths</option>
                 </select>
             </label>
             {errors.department && <span className="text-red-500 text-sm">{errors.department}</span>}

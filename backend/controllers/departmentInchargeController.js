@@ -36,10 +36,10 @@ const eventFormLinks = {
   'Design Challenges': 'https://forms.gle/ukCajXJnA6xnSSz59',//
   'Buildathon': 'https://forms.gle/t9kMba643EfiRXYa8',//
   'Technical Paper Presentation': 'link_not_provided_no_need_to_fill_googleform',
-  'Technical Quiz': 'link_not_provided',
+  'Technical Quiz': '',
   'App Arena': 'link_not_provided',
   'Technical Debate': 'https://forms.gle/MGPSyiP1ePiudstp8',//
-  'Project Exhibition': 'link_not_provided',
+  'Project Exhibition': '',
   'Next Gen Gamers': 'https://forms.gle/A9vmQkd7siAVEzgcA',//
   'AR VR Contest': 'https://docs.google.com/forms/d/e/1FAIpQLSfrN-l_OQmBNjfvpVKs0a5dXamlIPeOLK-QeQnIJgJKRStpLA/viewform?usp=sf_link',//
   'Hackathon': 'https://docs.google.com/forms/d/e/1FAIpQLSfx8KbdHlLg1HGs8H-HSxsDIyrvt99KlZVVHHnw_dyKzEfCuw/viewform?usp=sharing',//
