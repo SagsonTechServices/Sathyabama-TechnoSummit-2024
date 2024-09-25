@@ -48,7 +48,7 @@ const register = async (req, res) => {
             pass: 'mgyv txha qlmf nyun'
           }
         });
-      
+      //
         var mail = {
           from: 'sist.technosummit24@gmail.com',
           to: leaderEmail,
