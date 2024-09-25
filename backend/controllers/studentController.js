@@ -45,7 +45,7 @@ const register = async (req, res) => {
           service: 'gmail',
           auth: {
             user: 'sist.technosummit24@gmail.com',
-            pass: 'dbhw llzg plkh outp'
+            pass: 'mgyv txha qlmf nyun'
           }
         });
       

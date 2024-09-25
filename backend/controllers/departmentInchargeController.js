@@ -36,10 +36,10 @@ const eventFormLinks = {
   'Design Challenges': 'https://forms.gle/ukCajXJnA6xnSSz59',//
   'Buildathon': 'https://forms.gle/t9kMba643EfiRXYa8',//
   'Technical Paper Presentation': 'link_not_provided_no_need_to_fill_googleform',
-  'Technical Quiz': '',
+  'Technical Quiz': 'https://docs.google.com/forms/d/e/1FAIpQLScw3JicU_6vwMBxZgokm2uHlppUM6pRK-RuwJrM1cwP0Xwaig/viewform?usp=sf_link',
   'App Arena': 'link_not_provided',
   'Technical Debate': 'https://forms.gle/MGPSyiP1ePiudstp8',//
-  'Project Exhibition': '',
+  'Project Exhibition': 'https://forms.gle/YHGCcvfc5wh1m9zi8',
   'Next Gen Gamers': 'https://forms.gle/A9vmQkd7siAVEzgcA',//
   'AR VR Contest': 'https://docs.google.com/forms/d/e/1FAIpQLSfrN-l_OQmBNjfvpVKs0a5dXamlIPeOLK-QeQnIJgJKRStpLA/viewform?usp=sf_link',//
   'Hackathon': 'https://docs.google.com/forms/d/e/1FAIpQLSfx8KbdHlLg1HGs8H-HSxsDIyrvt99KlZVVHHnw_dyKzEfCuw/viewform?usp=sharing',//
@@ -77,7 +77,7 @@ const updatePaymentStatus = async (req, res) => {
         service: 'gmail',
         auth: {
           user: 'sist.technosummit24@gmail.com',
-          pass: 'dbhw llzg plkh outp'
+          pass: 'mgyv txha qlmf nyun'
         }
       });
 
