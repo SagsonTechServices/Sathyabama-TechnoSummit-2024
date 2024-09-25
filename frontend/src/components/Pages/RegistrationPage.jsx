@@ -358,7 +358,7 @@ function RegistrationPage() {
               <span className="text-warning">{modalData.amount} INR</span>
             </h3>
             <h3 className="font-bold text-lg">
-              Kindly check you mail for payment details and confirmation.
+              Kindly Pay the amount to your respective department coordinator. Get their contact from <span><LinkButton text={"Dept Coordinator contact"} link={"/depts"}></LinkButton></span>
             </h3>
             <div className="flex flex-wrap justify-start align-middle w-full mt-4 gap-5">
               <LinkButton text={"View venues"} link={"/venues"}></LinkButton>
