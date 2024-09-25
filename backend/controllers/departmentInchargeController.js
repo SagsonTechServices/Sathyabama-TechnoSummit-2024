@@ -76,8 +76,8 @@ const updatePaymentStatus = async (req, res) => {
         port: 465,
         service: 'gmail',
         auth: {
-          user: 'sist.technosummit24@gmail.com',
-          pass: 'mgyv txha qlmf nyun'
+          user: 'technosummit.sist.2024@gmail.com',
+          pass: 'rswx prgu jofx ffpk'
         }
       });
       //updated

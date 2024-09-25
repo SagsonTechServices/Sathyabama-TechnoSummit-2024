@@ -280,7 +280,7 @@ function RegistrationPage() {
               <option value="Civil">Civil</option>
               <option value="Architecture">Architecture</option>
               <option value="Fashion Design">Fashion Design</option>
-              <option value="MBA">MBA</option>
+              <option value="MBA">MBA or BCom or BBA</option>
               <option value="Biomedical">Biomedical</option>
               <option value="Biotechnology">Biotechnology</option>
               <option value="Chemical">Chemical</option>
