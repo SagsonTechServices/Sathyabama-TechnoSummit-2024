@@ -1,8 +1,7 @@
 const db = require("../config/db.config");
 const ExcelJS = require("exceljs");
-const path = require("path");
-const fs = require("fs");
 
+// Coordinator login function (unchanged)
 const coordinatorLogin = async (req, res) => {
   const { phone_number, password } = req.body;
 
@@ -24,49 +23,27 @@ const coordinatorLogin = async (req, res) => {
       [event_name]
     );
 
-    // initialize the teamMap 
+    // Initialize the teamMap 
     const teamsMap = {};
 
-    // fill the teamMap with entries 
+    // Fill the teamMap with entries 
     result.forEach((row) => {
-      // fetch the fields from the row
       const {
-        TEAM_ID,
-        TEAM_NAME,
-        EVENT_NAME,
-        TEAM_DEPARTMENT,
-        NO_OF_MEMBERS,
-        TL_MAIL,
-        TL_contact,
-        fee,
-        MEMBERS_NAME,
-        REGISTER_NO,
-        YEAR_OF_STUDY
+        TEAM_ID, TEAM_NAME, EVENT_NAME, TEAM_DEPARTMENT, NO_OF_MEMBERS, TL_MAIL,
+        TL_contact, fee, MEMBERS_NAME, REGISTER_NO, YEAR_OF_STUDY
       } = row;
 
-      // if the teamsMap doesnt contain the team then add the team inside it 
-      if(!teamsMap[TEAM_ID]){
+      if (!teamsMap[TEAM_ID]) {
         teamsMap[TEAM_ID] = {
-          TEAM_ID,
-          TEAM_NAME,
-          EVENT_NAME,
-          TEAM_DEPARTMENT,
-          NO_OF_MEMBERS,
-          TL_MAIL,
-          TL_contact,
-          fee,
-          members: [] // Initialize members array
+          TEAM_ID, TEAM_NAME, EVENT_NAME, TEAM_DEPARTMENT, NO_OF_MEMBERS,
+          TL_MAIL, TL_contact, fee, members: []  // Initialize members array
         };
       }
 
-      // now add the team members inside the members array of teamsMap 
-      teamsMap[TEAM_ID].members.push(
-        {
-          MEMBERS_NAME,
-          REGISTER_NO,
-          YEAR_OF_STUDY
-        }
-      );
+      // Add the team members inside the members array of teamsMap 
+      teamsMap[TEAM_ID].members.push({
+        MEMBERS_NAME, REGISTER_NO, YEAR_OF_STUDY
+      });
     });
 
     const teams = Object.values(teamsMap);
@@ -78,27 +55,22 @@ const coordinatorLogin = async (req, res) => {
   }
 };
 
-//To download the team data in excel format
+// To download the team data in Excel format
 const download = async (req, res, next) => {
-  console.log("checking");
   const { event } = req.body;
+
   try {
     const [data] = await db.query(
-      "SELECT e.TEAM_ID,e.TEAM_NAME,e.EVENT_NAME,e.NO_OF_MEMBERS,e.TL_MAIL,e.PAYMENT_STATUS,e.TL_CONTACT,m.MEMBERS_NAME,m.REGISTER_NO,m.YEAR_OF_STUDY,m.department FROM event_registrations e INNER JOIN member_details m ON e.TEAM_ID = m.TEAM_ID WHERE e.PAYMENT_STATUS = 1 AND e.EVENT_NAME = ?",
+      "SELECT e.TEAM_ID, e.TEAM_NAME, e.EVENT_NAME, e.NO_OF_MEMBERS, e.TL_MAIL, e.PAYMENT_STATUS, e.TL_CONTACT, m.MEMBERS_NAME, m.REGISTER_NO, m.YEAR_OF_STUDY, m.department FROM event_registrations e INNER JOIN member_details m ON e.TEAM_ID = m.TEAM_ID WHERE e.PAYMENT_STATUS = 1 AND e.EVENT_NAME = ?",
       [event]
     );
-
-    console.log(data);
 
     if (!data || !Array.isArray(data) || data.length === 0) {
       return res.status(400).send("Invalid or no data provided");
     }
 
-    //Convert JSON to CSV manually
+    // Convert JSON to CSV manually
     const csv = convertJSONToCSV(data);
-    console.log("CSV created manually");
-    console.log(csv);
-
     req.csvData = csv;
     req.eventName = event;
 
@@ -109,10 +81,11 @@ const download = async (req, res, next) => {
   }
 };
 
-//CSV to Excel conversion
+// Stream CSV data as Excel file without saving to the file system
 const linkdownload = async (req, res) => {
   try {
-    const { csvData , eventName } = req;
+    const { csvData, eventName } = req;
+
     if (!csvData) {
       return res.status(400).send("No CSV data available");
     }
@@ -120,50 +93,37 @@ const linkdownload = async (req, res) => {
     const workbook = new ExcelJS.Workbook();
     const worksheet = workbook.addWorksheet("Sheet1");
 
+    // Split CSV data into rows and cells, and add to the worksheet
     const rows = csvData.split("\n").map((row) => row.split(","));
-
     rows.forEach((row) => {
       worksheet.addRow(row);
     });
 
-    const filePath = path.join(__dirname, `${eventName}.xlsx`);
-
-    await workbook.xlsx.writeFile(filePath);
-
+    // Set headers to trigger download in the browser
     res.setHeader(
       "Content-Type",
       "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
     );
-    res.setHeader("Content-Disposition", `attachment; filename="${eventName}.xlsx"`);
-    
+    res.setHeader(
+      "Content-Disposition",
+      `attachment; filename="${eventName}.xlsx"`
+    );
+
+    // Stream the Excel file directly to the client
     await workbook.xlsx.write(res);
-
     res.end();
-
-    setTimeout(() => {
-      fs.unlink(filePath, (err) => {
-        if (err) {
-          console.error(`Could not delete file: ${err.message}`);
-        } else {
-          console.log("Deleted the file after download.");
-        }
-      });
-    }, 30000);
   } catch (error) {
     console.error("Error while converting CSV to Excel:", error);
     res.status(500).send("Failed to convert CSV to Excel");
   }
 };
 
+// Convert JSON to CSV format
 const convertJSONToCSV = (data) => {
   const flattenObject = (obj, parent = "", res = {}) => {
     for (let key in obj) {
       const propName = parent ? `${parent}.${key}` : key;
-      if (
-        typeof obj[key] === "object" &&
-        obj[key] !== null &&
-        !Array.isArray(obj[key])
-      ) {
+      if (typeof obj[key] === "object" && obj[key] !== null && !Array.isArray(obj[key])) {
         flattenObject(obj[key], propName, res);
       } else {
         res[propName] = obj[key];
@@ -178,14 +138,11 @@ const convertJSONToCSV = (data) => {
   const csvRows = [headers.join(",")];
 
   flatData.forEach((row) => {
-    const values = headers.map((header) => {
-      const escapedValue = ("" + (row[header] || "")).replace(/"/g, '\\"');
-      return `${escapedValue}`;
-    });
+    const values = headers.map((header) => (row[header] || ""));
     csvRows.push(values.join(","));
   });
 
   return csvRows.join("\n");
 };
 
-module.exports = {coordinatorLogin,download,linkdownload};
+module.exports = { coordinatorLogin, download, linkdownload };
