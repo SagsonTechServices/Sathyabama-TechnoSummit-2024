@@ -50,7 +50,7 @@ const register = async (req, res) => {
         });
       
         var mail = {
-          from: 'sathyabama.technosummit2024@gmail.com',
+          from: 'sist.technosummit24@gmail.com',
           to: leaderEmail,
           subject: `🎉 Congratulations ${teamName}! 🎉`,
           html: `
