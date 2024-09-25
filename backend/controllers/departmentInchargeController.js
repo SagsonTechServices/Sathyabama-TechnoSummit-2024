@@ -80,6 +80,7 @@ const updatePaymentStatus = async (req, res) => {
           pass: 'mgyv txha qlmf nyun'
         }
       });
+      //updated
 
       const sendEmail = (recipientEmail, subject, message) => {
         const mailOptions = {
