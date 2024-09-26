@@ -31,7 +31,8 @@ function RegistrationPage() {
   }); // State for step 1 data
   const [membersData, setMembersData] = useState([]); // State for members data
   const [errors, setErrors] = useState({});
-
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  
   // Validation function
   function validateForm() {
     const newErrors = {};
@@ -113,47 +114,55 @@ function RegistrationPage() {
   }
 
   // Handle Submit button (for processing data)
-  function handleSubmit() {
-    document.getElementById("loading").style.display = "block";
-    document.getElementById("submitBtn").disabled = true;
+function handleSubmit() {
+  // Check if form is already submitting
+  if (isSubmitting) return;
 
-    if (validateForm()) {
-      const registrationData = {
-        ...step1Data,
-        members: membersData,
-        event: event,
-        payment_status: event.details.fee === 0 ? 1 : 0,
-      };
-      console.log("Registration Data:", registrationData);
-      // You can submit registrationData here (e.g., API call)
-      axios
-        .post(`${backendURL}/student/register`, registrationData)
-        .then((response) => {
-          document.getElementById("loading").style.display = "none";
-          document.getElementById("submitBtn").disabled = false;
+  // Set the form as submitting and disable the button
+  setIsSubmitting(true);
+  document.getElementById("loading").style.display = "block";
+  document.getElementById("submitBtn").disabled = true;
 
-          console.log(response.data.message);
+  if (validateForm()) {
+    const registrationData = {
+      ...step1Data,
+      members: membersData,
+      event: event,
+      payment_status: event.details.fee === 0 ? 1 : 0,
+    };
+    console.log("Registration Data:", registrationData);
 
-          // Setup the modal config
-          setModalData({
-            eventName: event.details.name,
-            teamName: registrationData.teamName,
-            amount: response.data.amountToBePaid,
-            noOfMembers: registrationData.numberOfMembers,
-          });
-          setIsModalOpen(true);
-        })
-        .catch((error) => {
-			document.getElementById("loading").style.display = "none";
-          	document.getElementById("submitBtn").disabled = false;
-          console.log("error: ", error);
+    axios
+      .post(`${backendURL}/student/register`, registrationData)
+      .then((response) => {
+        document.getElementById("loading").style.display = "none";
+        document.getElementById("submitBtn").disabled = false;
+        setIsSubmitting(false); // Reset submission flag
+
+        console.log(response.data.message);
+
+        // Setup the modal config
+        setModalData({
+          eventName: event.details.name,
+          teamName: registrationData.teamName,
+          amount: response.data.amountToBePaid,
+          noOfMembers: registrationData.numberOfMembers,
         });
-    } else {
-		document.getElementById("loading").style.display = "none";
-          document.getElementById("submitBtn").disabled = false;
-      console.log("Form validation failed.");
-    }
+        setIsModalOpen(true);
+      })
+      .catch((error) => {
+        document.getElementById("loading").style.display = "none";
+        document.getElementById("submitBtn").disabled = false;
+        setIsSubmitting(false); // Reset submission flag on error
+        console.log("error: ", error);
+      });
+  } else {
+    document.getElementById("loading").style.display = "none";
+    document.getElementById("submitBtn").disabled = false;
+    setIsSubmitting(false); // Reset submission flag if validation fails
+    console.log("Form validation failed.");
   }
+}
 
   function handleCloseModal() {
     setIsModalOpen(false);
