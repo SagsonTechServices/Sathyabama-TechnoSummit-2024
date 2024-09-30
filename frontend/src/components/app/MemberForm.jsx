@@ -122,9 +122,6 @@ function MemberForm({ index, memberData = {}, onMemberChange }) {
                     <option value="MCA">MCA</option>
                     <option value="Viscom">Viscom</option>
                     <option value="B.A., M.A., English">B.A., M.A., English</option>
-                    <option value="M.Sc BioInformatics and DS">
-                        M.Sc BioInformatics and DS
-                    </option>
                     <option value="Civil">Civil</option>
                     <option value="Architecture">Architecture</option>
                     <option value="Fashion Design">Fashion Design</option>
