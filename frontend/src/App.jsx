@@ -17,6 +17,7 @@ import Guidelines from './components/Pages/GuidelinesPage';
 import './App.css'
 import ScrollToTop from "../src/components/utils/ScrollToTop"
 import Depts from "../src/components/Pages/DeptList"
+import RegistrationsClosedPage from './components/Pages/RegistrationsClosedPage';
 
 function App() {
   return (
@@ -31,7 +32,7 @@ function App() {
           <Route path='/event/:eventId' element={<EventPage />} />
           <Route path='/venues' element={<VenuesPage />} />
           <Route path='/payment/details' element={<PaymentDetailsPage />} />
-          <Route path='/event/registration/:eventId' element={<RegistrationPage />} />
+          <Route path='/event/registration/:eventId' element={<RegistrationsClosedPage></RegistrationsClosedPage>} />
           <Route path='/patrons' element={<PatronsPage />} />
           <Route path='/technosummit/events/schedules' element={<SchedulePage />} />
           <Route path='/depts' element={<Depts></Depts>} />
