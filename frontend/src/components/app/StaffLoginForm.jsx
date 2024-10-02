@@ -31,43 +31,43 @@ function StaffLoginForm() {
   const handleOnSubmit = () => {
     navigate('/closed');
     // make post request to the api
-    // if (loginData.role === "deptCoord") {
-    //   // axios
-    //   //   .post(`${import.meta.env.VITE_BACKEND_URL}/departmentIncharge/login`, {
-    //   //     phone_number: loginData.mobileNo,
-    //   //     password: loginData.password,
-    //   //   })
-    //   //   .then((response) => {
-    //   //     console.log(response.data.teams);
-    //   //     localStorage.setItem("teams", JSON.stringify(response.data.teams));
-    //   //     navigate("/dept-coordinator/registered-students", {
-    //   //       state: response.data.teams
-    //   //     });
-    //   //   })
-    //   //   .catch((error) => {
-    //   //     console.log(error);
-    //   //     setIsError(true);
-    //   //   });
-    //   navigate("/closed");
-    // }
-    // else{
-    // //   axios
-    // //     .post(`${import.meta.env.VITE_BACKEND_URL}/eventCoordinator/login`, {
-    // //       phone_number: loginData.mobileNo,
-    // //       password: loginData.password,
-    // //     })
-    // //     .then((response) => {
-    // //       console.log(response.data.teams);
-    // //       localStorage.setItem("teams", JSON.stringify(response.data.teams)); // Ensure data is stringified
-    // //       localStorage.setItem("eventName", response.data.event_name);
+    if (loginData.role === "deptCoord") {
+      // axios
+      //   .post(`${import.meta.env.VITE_BACKEND_URL}/departmentIncharge/login`, {
+      //     phone_number: loginData.mobileNo,
+      //     password: loginData.password,
+      //   })
+      //   .then((response) => {
+      //     console.log(response.data.teams);
+      //     localStorage.setItem("teams", JSON.stringify(response.data.teams));
+      //     navigate("/dept-coordinator/registered-students", {
+      //       state: response.data.teams
+      //     });
+      //   })
+      //   .catch((error) => {
+      //     console.log(error);
+      //     setIsError(true);
+      //   });
+      navigate("/closed");
+    }
+    else{
+      axios
+        .post(`${import.meta.env.VITE_BACKEND_URL}/eventCoordinator/login`, {
+          phone_number: loginData.mobileNo,
+          password: loginData.password,
+        })
+        .then((response) => {
+          console.log(response.data.teams);
+          localStorage.setItem("teams", JSON.stringify(response.data.teams)); // Ensure data is stringified
+          localStorage.setItem("eventName", response.data.event_name);
           
-    // //       navigate("/event-coordinator/registered-students");
-    // //     })
-    // //     .catch((error) => {
-    // //       console.log(error);
-    // //       setIsError(true);
-    // //     });
-    // // }
+          navigate("/event-coordinator/registered-students");
+        })
+        .catch((error) => {
+          console.log(error);
+          setIsError(true);
+        });
+    }
   };
 
   return (
