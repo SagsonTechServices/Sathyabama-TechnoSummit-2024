@@ -39,6 +39,7 @@ function App() {
           <Route path='/dept-coordinator/registered-students' element={<RegisteredPageForDeptCoords />} />
           <Route path='/staff/login' element={<StaffLoginPage />} />
           <Route path='/event-coordinator/registered-students' element={<EventCoordinators />} />
+          <Route path='/closed' element={<RegistrationsClosedPage></RegistrationsClosedPage>}></Route>
         </Routes>
         <Footer />
       </div>

@@ -31,22 +31,23 @@ function StaffLoginForm() {
   const handleOnSubmit = () => {
     // make post request to the api
     if (loginData.role === "deptCoord") {
-      axios
-        .post(`${import.meta.env.VITE_BACKEND_URL}/departmentIncharge/login`, {
-          phone_number: loginData.mobileNo,
-          password: loginData.password,
-        })
-        .then((response) => {
-          console.log(response.data.teams);
-          localStorage.setItem("teams", JSON.stringify(response.data.teams));
-          navigate("/dept-coordinator/registered-students", {
-            state: response.data.teams
-          });
-        })
-        .catch((error) => {
-          console.log(error);
-          setIsError(true);
-        });
+      // axios
+      //   .post(`${import.meta.env.VITE_BACKEND_URL}/departmentIncharge/login`, {
+      //     phone_number: loginData.mobileNo,
+      //     password: loginData.password,
+      //   })
+      //   .then((response) => {
+      //     console.log(response.data.teams);
+      //     localStorage.setItem("teams", JSON.stringify(response.data.teams));
+      //     navigate("/dept-coordinator/registered-students", {
+      //       state: response.data.teams
+      //     });
+      //   })
+      //   .catch((error) => {
+      //     console.log(error);
+      //     setIsError(true);
+      //   });
+      navigate("/closed");
     }
     else{
       axios
