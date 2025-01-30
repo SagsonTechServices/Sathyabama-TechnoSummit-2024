@@ -29,7 +29,6 @@ function StaffLoginForm() {
   };
 
   const handleOnSubmit = () => {
-    navigate('/closed');
     // make post request to the api
     if (loginData.role === "deptCoord") {
       // axios
