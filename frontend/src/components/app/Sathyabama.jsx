@@ -46,6 +46,12 @@ function Sathyabama() {
                         <Heading1 text={"(DEEMED TO BE UNIVERSITY)"} className={'text-[8px] text-white'}></Heading1>
                         <Heading1 text={"CATEGORY-1 UNIVERSITY BY UGC"} className={'text-[10px] text-white'}></Heading1>
                         <img src={acc} className="pt-2"/>
+                        <Link to={'/team'}>
+                        <div className="flex justify-center mt-5 items-center gap-4 bg-base-200 py-2 px-3 mx-auto rounded-lg border border-gray-600 hover:bg-base-300 cursor-pointer">
+                        <p className="text-sm font-medium text-blue-300">Powered by SagsonTech</p>
+                        <img src={sagsonTechLogo} className="w-12 rounded-full" alt="Sagsontech logo" />
+                        </div>
+                        </Link>
                     </div>
                     <div>
                         <img src={aPlus} className="w-[100px] h-auto" />
