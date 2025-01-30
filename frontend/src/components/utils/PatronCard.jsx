@@ -7,7 +7,7 @@ function PatronCard({ name, designation, image, alt, className }) {
                 <img
                     src={image}
                     alt={alt}
-                    className="rounded-xl" />
+                    className="rounded-xl h-42" />
             </figure>
             <div className="card-body items-center text-center">
                 <h2 className="card-title text-primary">{name}</h2>

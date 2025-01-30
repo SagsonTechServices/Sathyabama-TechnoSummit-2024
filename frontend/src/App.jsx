@@ -18,6 +18,7 @@ import './App.css'
 import ScrollToTop from "../src/components/utils/ScrollToTop"
 import Depts from "../src/components/Pages/DeptList"
 import RegistrationsClosedPage from './components/Pages/RegistrationsClosedPage';
+import Team from './components/Pages/Team';
 
 function App() {
   return (
@@ -40,6 +41,7 @@ function App() {
           <Route path='/staff/login' element={<StaffLoginPage />} />
           <Route path='/event-coordinator/registered-students' element={<EventCoordinators />} />
           <Route path='/closed' element={<RegistrationsClosedPage></RegistrationsClosedPage>}></Route>
+          <Route path='/team' element={<Team></Team>}></Route>
         </Routes>
         <Footer />
       </div>

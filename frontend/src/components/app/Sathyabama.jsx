@@ -4,6 +4,8 @@ import Heading0 from "../utils/Heading0";
 import sistLogo from '../../assets/sistlogo.png';
 import aPlus from '../../assets/a++.jpg';
 import acc from "../../assets/accreditions.jpg"
+import sagsonTechLogo from "../../assets/sagsontech-logo.jpeg";
+import { Link } from "react-router-dom";
 
 function Sathyabama() {
     return (
@@ -19,6 +21,13 @@ function Sathyabama() {
                         <Heading1 text={"(DEEMED TO BE UNIVERSITY)"} className={'text-lg text-white'}></Heading1>
                         <Heading1 text={"CATEGORY-1 UNIVERSITY BY UGC"} className={'text-xl text-white'}></Heading1>
                         <img src={acc} className="pt-5"/>
+                        
+                        <Link to={'/team'}>
+                        <div className="flex justify-center mt-5 items-center gap-4 bg-base-200 py-2 w-1/2 mx-auto rounded-lg border border-gray-600 hover:bg-base-300 cursor-pointer">
+                        <p className="text-2xl font-medium text-blue-300">Powered by SagsonTech</p>
+                        <img src={sagsonTechLogo} className="w-12 rounded-full" alt="Sagsontech logo" />
+                        </div>
+                        </Link>
                     </div>
                     <div>
                         <img src={aPlus} />
